@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { FirestoreService } from '../../services/firestore.service';
 import * as firebase from 'firebase';
 
@@ -18,11 +18,19 @@ export class VerProductoComponent implements OnInit {
     email: '',
     pujas: []
   }
+
+  modificarProducto: any = {
+    id: "",
+    nombre: "",
+    precioSalida: "",
+    pujaActual: "",
+    precioCompraYa: ""
+  }
   usuarioActivoEmail:any;
 
   usuarios:any;
   aux:any[];
-  constructor(private ruta:ActivatedRoute, private servicio:FirestoreService) {
+  constructor(private ruta:ActivatedRoute, private servicio:FirestoreService, private router:Router) {
     this.ruta.params.subscribe(params=>{
       this.id = params['id'];
     })
@@ -31,6 +39,7 @@ export class VerProductoComponent implements OnInit {
       for (let p of this.productos){
         if (p.id == this.id){
           this.productoPagina = p;
+          console.log(this.productoPagina)
         }
       }
     })
@@ -73,5 +82,25 @@ export class VerProductoComponent implements OnInit {
     else{
       console.log("Shit")
     }
+  }
+
+  ModificarProducto(producto) {
+    this.modificarProducto.id = producto.id;
+    this.modificarProducto.nombre = producto.nombre;
+    this.modificarProducto.precioSalida = producto.precioSalida;
+    this.modificarProducto.pujaActual = producto.pujaActual;
+    this.modificarProducto.precioCompraYa = producto.precioCompraYa;
+  }
+
+  AgregarProductoModificado(){
+    this.servicio.editProducto(this.modificarProducto)
+  }
+
+  EliminarProducto(producto){
+    this.servicio.removeProducto(producto);
+    var i = this.productos.indexOf(producto)
+    this.productos.splice(i, 1)
+    alert("El producto se ha borrado correctamente")
+    this.router.navigate(["/home"])
   }
 }
