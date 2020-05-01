@@ -18,6 +18,8 @@ export class VerProductoComponent implements OnInit {
     email: '',
     pujas: []
   }
+  usuarioActivoEmail:any;
+
   usuarios:any;
   aux:any[];
   constructor(private ruta:ActivatedRoute, private servicio:FirestoreService) {
@@ -34,6 +36,7 @@ export class VerProductoComponent implements OnInit {
     })
     this.servicio.listaUsuario().subscribe(usuario=>{
       this.usuarios = usuario;
+      this.usuarioActivoEmail = firebase.auth().currentUser.email
     })
    }
 
