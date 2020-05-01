@@ -117,7 +117,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n<div class=\"bg-white text-black\">\n  <img class= \"logo\" [src] = \"logotipo\"/>\n</div>\n<nav class=\"navbar navbar-expand-lg navbar navbar-dark bg-primary\">\n    <a class=\"navbar-brand\" [routerLink]=\"['/home']\">Home</a>\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n      <span class=\"navbar-toggler-icon\"></span>\n    </button>\n  \n    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n      <ul class=\"navbar-nav mr-auto\">\n        <li class=\"nav-item\" routerLinkActive=\"active\">\n          <a class=\"nav-link\" [routerLink]=\"['/ver']\">Pujador <span class=\"sr-only\">(current)</span></a>\n        </li>\n        <li class=\"nav-item\" routerLinkActive=\"active\">\n          <a class=\"nav-link\" [routerLink]=\"['/subida']\">Subir producto</a>\n        </li>\n        <li class=\"nav-item\"routerLinkActive=\"active\">\n          <a class=\"nav-link\" [routerLink]=\"['/conocenos']\">Conócenos</a>\n        </li>\n        <li class=\"nav-item\"routerLinkActive=\"active\">\n          <a class=\"nav-link\" (click)=\"redirigirPerfil()\">Perfil</a>\n        </li>\n      </ul>\n      <form class=\"form-inline my-2 my-lg-0\">\n        <input class=\"form-control mr-sm-2\" type=\"search\" name=\"filtroHome\" placeholder=\"Search\" aria-label=\"Search\" [(ngModel)]=\"filtroHome\">\n        <button class=\"btn btn-outline-dark my-2 my-sm-0 bg-success\" type=\"submit\">Search</button>\n      </form>\n    </div>\n  </nav>\n";
+    __webpack_exports__["default"] = "\n<div class=\"bg-white text-black\">\n  <img class= \"logo\" [src] = \"logotipo\"/>\n</div>\n<nav class=\"navbar navbar-expand-lg navbar navbar-dark bg-primary\">\n    <a class=\"navbar-brand\" [routerLink]=\"['/home']\">Home</a>\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n      <span class=\"navbar-toggler-icon\"></span>\n    </button>\n  \n    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n      <ul class=\"navbar-nav mr-auto\">\n        <li class=\"nav-item\" routerLinkActive=\"active\">\n          <a class=\"nav-link\" (click)=\"redirigirMisPujas()\">Pujador <span class=\"sr-only\">(current)</span></a>\n        </li>\n        <li class=\"nav-item\" routerLinkActive=\"active\">\n          <a class=\"nav-link\" [routerLink]=\"['/subida']\">Subir producto</a>\n        </li>\n        <li class=\"nav-item\"routerLinkActive=\"active\">\n          <a class=\"nav-link\" [routerLink]=\"['/conocenos']\">Conócenos</a>\n        </li>\n        <li class=\"nav-item\"routerLinkActive=\"active\">\n          <a class=\"nav-link\" (click)=\"redirigirPerfil()\">Perfil</a>\n        </li>\n      </ul>\n      <form class=\"form-inline my-2 my-lg-0\">\n        <input class=\"form-control mr-sm-2\" type=\"search\" name=\"filtroHome\" placeholder=\"Search\" aria-label=\"Search\" [(ngModel)]=\"filtroHome\">\n        <button class=\"btn btn-outline-dark my-2 my-sm-0 bg-success\" type=\"submit\">Search</button>\n      </form>\n    </div>\n  </nav>\n";
     /***/
   },
 
@@ -142,6 +142,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   },
 
   /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/inside/mispujas/mispujas.component.html":
+  /*!***********************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/inside/mispujas/mispujas.component.html ***!
+    \***********************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppInsideMispujasMispujasComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<app-encabezado></app-encabezado>\n<div class = \"container\">\n    <div class=\"row\">\n        <div class=\"alert alert-warning col-lg-4 col-md-4 col-sm-6 col-xs-12\" role=\"alert\" *ngFor=\"let producto of productosPujados\">\n            <div class=\"float-right\" (click)=\"EliminarProducto(producto)\">\n                <i class=\"far fa-trash-alt\"></i>\n            </div>\n            <div >Hola {{producto.tiempoFin}}</div>\n            <h6>Nombre: {{producto.nombre}}</h6>\n            <h6>Precio de salida: {{producto.precioSalida}} $</h6>\n            <h6>Puja actual: {{producto.pujaActual}} $</h6>\n            <h6>Precio de CompraYa: {{producto.precioCompraYa}} $</h6>\n        </div>\n    </div>\n</div>\n";
+    /***/
+  },
+
+  /***/
   "./node_modules/raw-loader/dist/cjs.js!./src/app/inside/perfil/perfil.component.html":
   /*!*******************************************************************************************!*\
     !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/inside/perfil/perfil.component.html ***!
@@ -157,7 +177,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<app-encabezado></app-encabezado>\n\n<div class = \"container\">\n    <div class=\"row\">\n        <div class=\"alert alert-warning col-lg-4 col-md-4 col-sm-6 col-xs-12\" role=\"alert\" *ngFor=\"let producto of productos\">\n            <div class=\"float-right\" (click)=\"EliminarProducto(producto)\">\n                <i class=\"far fa-trash-alt\"></i>\n            </div>\n            <div class=\"float-right mr-3\" (click)=\"ModificarProducto(producto)\" data-toggle=\"modal\" data-target=\"#exampleModal\">\n                <i class=\"fas fa-pencil-alt\"></i>\n            </div>\n            <h6>Nombre: {{producto.nombre}}</h6>\n            <h6>Precio de salida: {{producto.precioSalida}} $</h6>\n            <h6>Puja actual: {{producto.pujaActual}} $</h6>\n            <h6>Precio de CompraYa: {{producto.precioCompraYa}} $</h6>\n        </div>\n    </div>\n</div>\n\n<p (click)=\"oberserableTimer()\">Start Observable timer</p> {{subscribeTimer}}\n\n<div (click)=\"myTimer()\" >Hola {{hora}}</div>\n<div class=\"modal fade\" id=\"exampleModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\n    <div class=\"modal-dialog\" role=\"document\">\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <h5 class=\"modal-title\" id=\"exampleModalLabel\">Modificar: {{modificarProducto.nombre}}</h5>\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n            <span aria-hidden=\"true\">&times;</span>\n          </button>\n        </div>\n        <div class=\"modal-body\">\n            <div class = \"container\">\n\n                <form (ngSubmit) = \"AgregarProductoModificado()\">\n                    <input type=\"text\" placeholder=\"Ingresa el nombre del producto\" name=\"nombre\" class=\"form-control  mt-4\" [(ngModel)]=\"modificarProducto.nombre\">\n                    <input type=\"number\" placeholder=\"Ingresa el precio de salida del producto\" name=\"precioSalida\" class=\"form-control  mt-4\" [(ngModel)]=\"modificarProducto.precioSalida\">\n                    <input type=\"number\" placeholder=\"Ingresa el precio de CompraYa del producto\" name=\"precioCompraYa\" class=\"form-control  mt-4\" [(ngModel)]=\"modificarProducto.precioCompraYa\">\n                    <button class=\"btn btn-warning mt-4\" type=\"submit\">Guardar cambios</button>\n                </form>\n            \n            </div>\n        </div>\n        <div class=\"modal-footer\">\n          <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Close</button>\n        </div>\n      </div>\n    </div>\n  </div>\n";
+    __webpack_exports__["default"] = "<app-encabezado></app-encabezado>\n<div class = \"container\">\n    <div class=\"row\">\n        <div class=\"alert alert-warning col-lg-4 col-md-4 col-sm-6 col-xs-12\" role=\"alert\" *ngFor=\"let producto of productos\">\n            <div class=\"float-right\" (click)=\"EliminarProducto(producto)\">\n                <i class=\"far fa-trash-alt\"></i>\n            </div>\n            <div class=\"float-right mr-3\" (click)=\"ModificarProducto(producto)\" data-toggle=\"modal\" data-target=\"#exampleModal\">\n                <i class=\"fas fa-pencil-alt\"></i>\n            </div>\n            <div>Hola {{producto.tiempoFin}}</div>\n            <h6>Nombre: {{producto.nombre}}</h6>\n            <h6>Precio de salida: {{producto.precioSalida}} $</h6>\n            <h6>Puja actual: {{producto.pujaActual}} $</h6>\n            <h6>Precio de CompraYa: {{producto.precioCompraYa}} $</h6>\n        </div>\n    </div>\n</div>\n\n<div class=\"modal fade\" id=\"exampleModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\n    <div class=\"modal-dialog\" role=\"document\">\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <h5 class=\"modal-title\" id=\"exampleModalLabel\">Modificar: {{modificarProducto.nombre}}</h5>\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n            <span aria-hidden=\"true\">&times;</span>\n          </button>\n        </div>\n        <div class=\"modal-body\">\n            <div class = \"container\">\n\n                <form (ngSubmit) = \"AgregarProductoModificado()\">\n                    <input type=\"text\" placeholder=\"Ingresa el nombre del producto\" name=\"nombre\" class=\"form-control  mt-4\" [(ngModel)]=\"modificarProducto.nombre\">\n                    <input type=\"number\" placeholder=\"Ingresa el precio de salida del producto\" name=\"precioSalida\" class=\"form-control  mt-4\" [(ngModel)]=\"modificarProducto.precioSalida\">\n                    <input type=\"number\" placeholder=\"Ingresa el precio de CompraYa del producto\" name=\"precioCompraYa\" class=\"form-control  mt-4\" [(ngModel)]=\"modificarProducto.precioCompraYa\">\n                    <button class=\"btn btn-warning mt-4\" type=\"submit\">Guardar cambios</button>\n                </form>\n            \n            </div>\n        </div>\n        <div class=\"modal-footer\">\n          <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Close</button>\n        </div>\n      </div>\n    </div>\n  </div>\n";
     /***/
   },
 
@@ -197,7 +217,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<app-encabezado></app-encabezado>\n\n<div class = \"container\">\n    \n    <h1>Nombre: {{productoPagina.nombre}}</h1>\n    <h1>Precio de salida: {{productoPagina.precioSalida}} $</h1>\n    <h1>Puja actual: {{productoPagina.pujaActual}} $</h1>\n    <h1>Precio de CompraYa: {{productoPagina.precioCompraYa}} $</h1>\n\n    <!--<br>\n<br>\n<img [src] = \"imagen\"/>\n<br>\n<br>\n<img [src] = \"imagen\"/>\n<br>\n<br>\n<img [src] = \"imagen\"/>\n<br>\n<br>\n<br>\n<br>-->\n</div>\n\n";
+    __webpack_exports__["default"] = "<app-encabezado></app-encabezado>\n\n<div class = \"container\">\n    \n    <h1>Nombre: {{productoPagina.nombre}}</h1>\n    <h1>Precio de salida: {{productoPagina.precioSalida}} $</h1>\n    <h1>Puja actual: {{productoPagina.pujaActual}} $</h1>\n    <h1>Precio de CompraYa: {{productoPagina.precioCompraYa}} $</h1>\n    <input type=\"number\" placeholder=\"Ingresa el precio de CompraYa del producto\" name=\"precioCompraYa\" class=\"form-control  mt-4\" [(ngModel)]=\"nuevaPuja\">\n    <button class=\"btn btn-warning mt-4\" (click)=\"cambiarPuja(nuevaPuja)\"type=\"button\">Guardar cambios</button>\n\n    <!--<br>\n<br>\n<img [src] = \"imagen\"/>\n<br>\n<br>\n<img [src] = \"imagen\"/>\n<br>\n<br>\n<img [src] = \"imagen\"/>\n<br>\n<br>\n<br>\n<br>-->\n</div>\n\n";
     /***/
   },
 
@@ -979,6 +999,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _inside_perfil_perfil_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
     /*! ./inside/perfil/perfil.component */
     "./src/app/inside/perfil/perfil.component.ts");
+    /* harmony import */
+
+
+    var _inside_mispujas_mispujas_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+    /*! ./inside/mispujas/mispujas.component */
+    "./src/app/inside/mispujas/mispujas.component.ts");
 
     var routes = [{
       path: 'subida',
@@ -989,6 +1015,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }, {
       path: 'home',
       component: _inside_home_home_component__WEBPACK_IMPORTED_MODULE_5__["HomeComponent"]
+    }, {
+      path: 'mispujas/:id',
+      component: _inside_mispujas_mispujas_component__WEBPACK_IMPORTED_MODULE_11__["MispujasComponent"]
     }, {
       path: 'presentacion',
       component: _presentacion_presentacion_component__WEBPACK_IMPORTED_MODULE_6__["PresentacionComponent"]
@@ -1282,13 +1311,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _filtro_filtro_pipe__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(
     /*! ./filtro/filtro.pipe */
     "./src/app/filtro/filtro.pipe.ts");
+    /* harmony import */
+
+
+    var _inside_mispujas_mispujas_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(
+    /*! ./inside/mispujas/mispujas.component */
+    "./src/app/inside/mispujas/mispujas.component.ts");
 
     var AppModule = function AppModule() {
       _classCallCheck(this, AppModule);
     };
 
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
-      declarations: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"], _inside_encabezado_encabezado_component__WEBPACK_IMPORTED_MODULE_5__["EncabezadoComponent"], _footer_footer_component__WEBPACK_IMPORTED_MODULE_6__["FooterComponent"], _inside_subir_producto_subir_producto_component__WEBPACK_IMPORTED_MODULE_7__["SubirProductoComponent"], _inside_ver_producto_ver_producto_component__WEBPACK_IMPORTED_MODULE_8__["VerProductoComponent"], _inside_home_home_component__WEBPACK_IMPORTED_MODULE_9__["HomeComponent"], _presentacion_presentacion_component__WEBPACK_IMPORTED_MODULE_10__["PresentacionComponent"], _presentacion_registro_registro_component__WEBPACK_IMPORTED_MODULE_11__["RegistroComponent"], _presentacion_inicio_sesion_inicio_sesion_component__WEBPACK_IMPORTED_MODULE_12__["InicioSesionComponent"], _presentacion_encabezado_principal_encabezado_principal_component__WEBPACK_IMPORTED_MODULE_13__["EncabezadoPrincipalComponent"], _presentacion_footer_principal_footer_principal_component__WEBPACK_IMPORTED_MODULE_14__["FooterPrincipalComponent"], _inside_conocer_conocer_component__WEBPACK_IMPORTED_MODULE_15__["ConocerComponent"], _inside_perfil_perfil_component__WEBPACK_IMPORTED_MODULE_16__["PerfilComponent"], _filtro_filtro_pipe__WEBPACK_IMPORTED_MODULE_24__["FiltroPipe"]],
+      declarations: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"], _inside_encabezado_encabezado_component__WEBPACK_IMPORTED_MODULE_5__["EncabezadoComponent"], _footer_footer_component__WEBPACK_IMPORTED_MODULE_6__["FooterComponent"], _inside_subir_producto_subir_producto_component__WEBPACK_IMPORTED_MODULE_7__["SubirProductoComponent"], _inside_ver_producto_ver_producto_component__WEBPACK_IMPORTED_MODULE_8__["VerProductoComponent"], _inside_home_home_component__WEBPACK_IMPORTED_MODULE_9__["HomeComponent"], _presentacion_presentacion_component__WEBPACK_IMPORTED_MODULE_10__["PresentacionComponent"], _presentacion_registro_registro_component__WEBPACK_IMPORTED_MODULE_11__["RegistroComponent"], _presentacion_inicio_sesion_inicio_sesion_component__WEBPACK_IMPORTED_MODULE_12__["InicioSesionComponent"], _presentacion_encabezado_principal_encabezado_principal_component__WEBPACK_IMPORTED_MODULE_13__["EncabezadoPrincipalComponent"], _presentacion_footer_principal_footer_principal_component__WEBPACK_IMPORTED_MODULE_14__["FooterPrincipalComponent"], _inside_conocer_conocer_component__WEBPACK_IMPORTED_MODULE_15__["ConocerComponent"], _inside_perfil_perfil_component__WEBPACK_IMPORTED_MODULE_16__["PerfilComponent"], _filtro_filtro_pipe__WEBPACK_IMPORTED_MODULE_24__["FiltroPipe"], _inside_mispujas_mispujas_component__WEBPACK_IMPORTED_MODULE_25__["MispujasComponent"]],
       imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"], angularfire2__WEBPACK_IMPORTED_MODULE_17__["AngularFireModule"].initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_21__["environment"].firebase), angularfire2_firestore__WEBPACK_IMPORTED_MODULE_18__["AngularFirestoreModule"], angularfire2_storage__WEBPACK_IMPORTED_MODULE_19__["AngularFireStorageModule"], angularfire2_auth__WEBPACK_IMPORTED_MODULE_20__["AngularFireAuthModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_23__["FormsModule"]],
       providers: [_services_firestore_service__WEBPACK_IMPORTED_MODULE_22__["FirestoreService"]],
       bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
@@ -1466,7 +1501,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "#prueba {\n  margin-right: 50%;\n  float: right;\n}\n\n#flechaDer {\n  width: 5%;\n  float: right;\n  margin-right: 40%;\n  margin-bottom: 5%;\n}\n\n#flechaIzq {\n  width: 5%;\n  float: left;\n  margin-left: 40%;\n  margin-bottom: 5%;\n  transform: rotate(180deg);\n}\n\n#foto1 {\n  height: 20%;\n  width: 25%;\n  margin-bottom: -10%;\n}\n\n#foto2 {\n  height: 40%;\n  width: 30%;\n  margin-top: 6%;\n  margin-right: 1%;\n}\n\n#foto3 {\n  margin-top: 3%;\n  height: 40%;\n  width: 30%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3VjM20vRG9jdW1lbnRvcy9EU0kvVGhlLUF1Y3Rpb25lZXIvc3JjL2FwcC9pbnNpZGUvY29ub2Nlci9jb25vY2VyLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9pbnNpZGUvY29ub2Nlci9jb25vY2VyLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksaUJBQUE7RUFDQSxZQUFBO0FDQ0o7O0FERUE7RUFDSSxTQUFBO0VBQ0EsWUFBQTtFQUNBLGlCQUFBO0VBQ0EsaUJBQUE7QUNDSjs7QURFQTtFQUNJLFNBQUE7RUFDQSxXQUFBO0VBQ0EsZ0JBQUE7RUFDQSxpQkFBQTtFQUNBLHlCQUFBO0FDQ0o7O0FERUE7RUFDSSxXQUFBO0VBQ0EsVUFBQTtFQUNBLG1CQUFBO0FDQ0o7O0FERUE7RUFDSSxXQUFBO0VBQ0EsVUFBQTtFQUNBLGNBQUE7RUFDQSxnQkFBQTtBQ0NKOztBREVBO0VBQ0ksY0FBQTtFQUNBLFdBQUE7RUFDQSxVQUFBO0FDQ0oiLCJmaWxlIjoic3JjL2FwcC9pbnNpZGUvY29ub2Nlci9jb25vY2VyLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiI3BydWViYXtcbiAgICBtYXJnaW4tcmlnaHQ6IDUwJTtcbiAgICBmbG9hdDogcmlnaHQ7XG59XG5cbiNmbGVjaGFEZXJ7XG4gICAgd2lkdGg6IDUlO1xuICAgIGZsb2F0OiByaWdodDtcbiAgICBtYXJnaW4tcmlnaHQ6IDQwJTtcbiAgICBtYXJnaW4tYm90dG9tOiA1JTtcbn1cblxuI2ZsZWNoYUl6cXtcbiAgICB3aWR0aDogNSU7XG4gICAgZmxvYXQ6IGxlZnQ7XG4gICAgbWFyZ2luLWxlZnQ6IDQwJTtcbiAgICBtYXJnaW4tYm90dG9tOiA1JTtcbiAgICB0cmFuc2Zvcm06IHJvdGF0ZSgxODBkZWcpO1xufVxuXG4jZm90bzF7XG4gICAgaGVpZ2h0OiAyMCU7XG4gICAgd2lkdGg6IDI1JTtcbiAgICBtYXJnaW4tYm90dG9tOiAtMTAlO1xufVxuXG4jZm90bzJ7XG4gICAgaGVpZ2h0OiA0MCU7XG4gICAgd2lkdGg6IDMwJTtcbiAgICBtYXJnaW4tdG9wOiA2JTtcbiAgICBtYXJnaW4tcmlnaHQ6IDElO1xufVxuXG4jZm90bzN7XG4gICAgbWFyZ2luLXRvcDogMyU7XG4gICAgaGVpZ2h0OiA0MCU7XG4gICAgd2lkdGg6IDMwJTtcbn0iLCIjcHJ1ZWJhIHtcbiAgbWFyZ2luLXJpZ2h0OiA1MCU7XG4gIGZsb2F0OiByaWdodDtcbn1cblxuI2ZsZWNoYURlciB7XG4gIHdpZHRoOiA1JTtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBtYXJnaW4tcmlnaHQ6IDQwJTtcbiAgbWFyZ2luLWJvdHRvbTogNSU7XG59XG5cbiNmbGVjaGFJenEge1xuICB3aWR0aDogNSU7XG4gIGZsb2F0OiBsZWZ0O1xuICBtYXJnaW4tbGVmdDogNDAlO1xuICBtYXJnaW4tYm90dG9tOiA1JTtcbiAgdHJhbnNmb3JtOiByb3RhdGUoMTgwZGVnKTtcbn1cblxuI2ZvdG8xIHtcbiAgaGVpZ2h0OiAyMCU7XG4gIHdpZHRoOiAyNSU7XG4gIG1hcmdpbi1ib3R0b206IC0xMCU7XG59XG5cbiNmb3RvMiB7XG4gIGhlaWdodDogNDAlO1xuICB3aWR0aDogMzAlO1xuICBtYXJnaW4tdG9wOiA2JTtcbiAgbWFyZ2luLXJpZ2h0OiAxJTtcbn1cblxuI2ZvdG8zIHtcbiAgbWFyZ2luLXRvcDogMyU7XG4gIGhlaWdodDogNDAlO1xuICB3aWR0aDogMzAlO1xufSJdfQ== */";
+    __webpack_exports__["default"] = "#prueba {\n  margin-right: 50%;\n  float: right;\n}\n\n#flechaDer {\n  width: 5%;\n  float: right;\n  margin-right: 40%;\n  margin-bottom: 5%;\n}\n\n#flechaIzq {\n  width: 5%;\n  float: left;\n  margin-left: 40%;\n  margin-bottom: 5%;\n  transform: rotate(180deg);\n}\n\n#foto1 {\n  height: 20%;\n  width: 25%;\n  margin-bottom: -10%;\n}\n\n#foto2 {\n  height: 40%;\n  width: 30%;\n  margin-top: 6%;\n  margin-right: 1%;\n}\n\n#foto3 {\n  margin-top: 3%;\n  height: 40%;\n  width: 30%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3VjM20vRXNjcml0b3Jpby9BdWN0aW9uZWVyL3NyYy9hcHAvaW5zaWRlL2Nvbm9jZXIvY29ub2Nlci5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvaW5zaWRlL2Nvbm9jZXIvY29ub2Nlci5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGlCQUFBO0VBQ0EsWUFBQTtBQ0NKOztBREVBO0VBQ0ksU0FBQTtFQUNBLFlBQUE7RUFDQSxpQkFBQTtFQUNBLGlCQUFBO0FDQ0o7O0FERUE7RUFDSSxTQUFBO0VBQ0EsV0FBQTtFQUNBLGdCQUFBO0VBQ0EsaUJBQUE7RUFDQSx5QkFBQTtBQ0NKOztBREVBO0VBQ0ksV0FBQTtFQUNBLFVBQUE7RUFDQSxtQkFBQTtBQ0NKOztBREVBO0VBQ0ksV0FBQTtFQUNBLFVBQUE7RUFDQSxjQUFBO0VBQ0EsZ0JBQUE7QUNDSjs7QURFQTtFQUNJLGNBQUE7RUFDQSxXQUFBO0VBQ0EsVUFBQTtBQ0NKIiwiZmlsZSI6InNyYy9hcHAvaW5zaWRlL2Nvbm9jZXIvY29ub2Nlci5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIiNwcnVlYmF7XG4gICAgbWFyZ2luLXJpZ2h0OiA1MCU7XG4gICAgZmxvYXQ6IHJpZ2h0O1xufVxuXG4jZmxlY2hhRGVye1xuICAgIHdpZHRoOiA1JTtcbiAgICBmbG9hdDogcmlnaHQ7XG4gICAgbWFyZ2luLXJpZ2h0OiA0MCU7XG4gICAgbWFyZ2luLWJvdHRvbTogNSU7XG59XG5cbiNmbGVjaGFJenF7XG4gICAgd2lkdGg6IDUlO1xuICAgIGZsb2F0OiBsZWZ0O1xuICAgIG1hcmdpbi1sZWZ0OiA0MCU7XG4gICAgbWFyZ2luLWJvdHRvbTogNSU7XG4gICAgdHJhbnNmb3JtOiByb3RhdGUoMTgwZGVnKTtcbn1cblxuI2ZvdG8xe1xuICAgIGhlaWdodDogMjAlO1xuICAgIHdpZHRoOiAyNSU7XG4gICAgbWFyZ2luLWJvdHRvbTogLTEwJTtcbn1cblxuI2ZvdG8ye1xuICAgIGhlaWdodDogNDAlO1xuICAgIHdpZHRoOiAzMCU7XG4gICAgbWFyZ2luLXRvcDogNiU7XG4gICAgbWFyZ2luLXJpZ2h0OiAxJTtcbn1cblxuI2ZvdG8ze1xuICAgIG1hcmdpbi10b3A6IDMlO1xuICAgIGhlaWdodDogNDAlO1xuICAgIHdpZHRoOiAzMCU7XG59IiwiI3BydWViYSB7XG4gIG1hcmdpbi1yaWdodDogNTAlO1xuICBmbG9hdDogcmlnaHQ7XG59XG5cbiNmbGVjaGFEZXIge1xuICB3aWR0aDogNSU7XG4gIGZsb2F0OiByaWdodDtcbiAgbWFyZ2luLXJpZ2h0OiA0MCU7XG4gIG1hcmdpbi1ib3R0b206IDUlO1xufVxuXG4jZmxlY2hhSXpxIHtcbiAgd2lkdGg6IDUlO1xuICBmbG9hdDogbGVmdDtcbiAgbWFyZ2luLWxlZnQ6IDQwJTtcbiAgbWFyZ2luLWJvdHRvbTogNSU7XG4gIHRyYW5zZm9ybTogcm90YXRlKDE4MGRlZyk7XG59XG5cbiNmb3RvMSB7XG4gIGhlaWdodDogMjAlO1xuICB3aWR0aDogMjUlO1xuICBtYXJnaW4tYm90dG9tOiAtMTAlO1xufVxuXG4jZm90bzIge1xuICBoZWlnaHQ6IDQwJTtcbiAgd2lkdGg6IDMwJTtcbiAgbWFyZ2luLXRvcDogNiU7XG4gIG1hcmdpbi1yaWdodDogMSU7XG59XG5cbiNmb3RvMyB7XG4gIG1hcmdpbi10b3A6IDMlO1xuICBoZWlnaHQ6IDQwJTtcbiAgd2lkdGg6IDMwJTtcbn0iXX0= */";
     /***/
   },
 
@@ -1567,7 +1602,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = ".logo {\n  width: 400px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3VjM20vRG9jdW1lbnRvcy9EU0kvVGhlLUF1Y3Rpb25lZXIvc3JjL2FwcC9pbnNpZGUvZW5jYWJlemFkby9lbmNhYmV6YWRvLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9pbnNpZGUvZW5jYWJlemFkby9lbmNhYmV6YWRvLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksWUFBQTtBQ0NKIiwiZmlsZSI6InNyYy9hcHAvaW5zaWRlL2VuY2FiZXphZG8vZW5jYWJlemFkby5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5sb2dve1xuICAgIHdpZHRoOiA0MDBweDtcbn0iLCIubG9nbyB7XG4gIHdpZHRoOiA0MDBweDtcbn0iXX0= */";
+    __webpack_exports__["default"] = ".logo {\n  width: 400px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3VjM20vRXNjcml0b3Jpby9BdWN0aW9uZWVyL3NyYy9hcHAvaW5zaWRlL2VuY2FiZXphZG8vZW5jYWJlemFkby5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvaW5zaWRlL2VuY2FiZXphZG8vZW5jYWJlemFkby5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLFlBQUE7QUNDSiIsImZpbGUiOiJzcmMvYXBwL2luc2lkZS9lbmNhYmV6YWRvL2VuY2FiZXphZG8uY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubG9nb3tcbiAgICB3aWR0aDogNDAwcHg7XG59IiwiLmxvZ28ge1xuICB3aWR0aDogNDAwcHg7XG59Il19 */";
     /***/
   },
 
@@ -1634,6 +1669,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "redirigirPerfil",
         value: function redirigirPerfil() {
           this.router.navigate(["/perfil/", firebase__WEBPACK_IMPORTED_MODULE_3__["auth"]().currentUser.uid]);
+        }
+      }, {
+        key: "redirigirMisPujas",
+        value: function redirigirMisPujas() {
+          this.router.navigate(["/mispujas/", firebase__WEBPACK_IMPORTED_MODULE_3__["auth"]().currentUser.uid]);
         }
       }]);
 
@@ -1771,6 +1811,175 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   },
 
   /***/
+  "./src/app/inside/mispujas/mispujas.component.scss":
+  /*!*********************************************************!*\
+    !*** ./src/app/inside/mispujas/mispujas.component.scss ***!
+    \*********************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppInsideMispujasMispujasComponentScss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2luc2lkZS9taXNwdWphcy9taXNwdWphcy5jb21wb25lbnQuc2NzcyJ9 */";
+    /***/
+  },
+
+  /***/
+  "./src/app/inside/mispujas/mispujas.component.ts":
+  /*!*******************************************************!*\
+    !*** ./src/app/inside/mispujas/mispujas.component.ts ***!
+    \*******************************************************/
+
+  /*! exports provided: MispujasComponent */
+
+  /***/
+  function srcAppInsideMispujasMispujasComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "MispujasComponent", function () {
+      return MispujasComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var src_app_services_firestore_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! src/app/services/firestore.service */
+    "./src/app/services/firestore.service.ts");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/fesm2015/router.js");
+    /* harmony import */
+
+
+    var firebase__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! firebase */
+    "./node_modules/firebase/dist/index.cjs.js");
+    /* harmony import */
+
+
+    var firebase__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(firebase__WEBPACK_IMPORTED_MODULE_4__);
+
+    var MispujasComponent = /*#__PURE__*/function () {
+      function MispujasComponent(firestoreService, ruta) {
+        var _this2 = this;
+
+        _classCallCheck(this, MispujasComponent);
+
+        this.firestoreService = firestoreService;
+        this.ruta = ruta;
+        this.productos = [];
+        this.usuarioActivoPujas = [];
+        this.ruta.params.subscribe(function (params) {
+          _this2.id = params['id'];
+        });
+        this.firestoreService.listaUsuario().subscribe(function (usuario) {
+          var _iterator2 = _createForOfIteratorHelper(usuario),
+              _step2;
+
+          try {
+            for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+              var u = _step2.value;
+
+              if (u.email == firebase__WEBPACK_IMPORTED_MODULE_4__["auth"]().currentUser.email) {
+                _this2.usuarioActivoPujas = u.pujas;
+              }
+            }
+          } catch (err) {
+            _iterator2.e(err);
+          } finally {
+            _iterator2.f();
+          }
+        });
+        this.firestoreService.listaProducto().subscribe(function (producto) {
+          _this2.productosPujados = [];
+          _this2.productos = producto;
+
+          var _iterator3 = _createForOfIteratorHelper(_this2.productos),
+              _step3;
+
+          try {
+            for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
+              var p = _step3.value;
+
+              var _iterator4 = _createForOfIteratorHelper(_this2.usuarioActivoPujas),
+                  _step4;
+
+              try {
+                for (_iterator4.s(); !(_step4 = _iterator4.n()).done;) {
+                  var p2 = _step4.value;
+
+                  if (p.id == p2) {
+                    _this2.productosPujados.push(p);
+                  }
+                }
+              } catch (err) {
+                _iterator4.e(err);
+              } finally {
+                _iterator4.f();
+              }
+            }
+          } catch (err) {
+            _iterator3.e(err);
+          } finally {
+            _iterator3.f();
+          }
+        });
+      }
+
+      _createClass(MispujasComponent, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {}
+      }]);
+
+      return MispujasComponent;
+    }();
+
+    MispujasComponent.ctorParameters = function () {
+      return [{
+        type: src_app_services_firestore_service__WEBPACK_IMPORTED_MODULE_2__["FirestoreService"]
+      }, {
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]
+      }];
+    };
+
+    MispujasComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-mispujas',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./mispujas.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/inside/mispujas/mispujas.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./mispujas.component.scss */
+      "./src/app/inside/mispujas/mispujas.component.scss"))["default"]]
+    })], MispujasComponent);
+    /***/
+  },
+
+  /***/
   "./src/app/inside/perfil/perfil.component.scss":
   /*!*****************************************************!*\
     !*** ./src/app/inside/perfil/perfil.component.scss ***!
@@ -1843,16 +2052,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! @angular/router */
     "./node_modules/@angular/router/fesm2015/router.js");
-    /* harmony import */
-
-
-    var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-    /*! rxjs */
-    "./node_modules/rxjs/_esm2015/index.js");
 
     var PerfilComponent = /*#__PURE__*/function () {
       function PerfilComponent(firestoreService, ruta, router) {
-        var _this2 = this;
+        var _this3 = this;
 
         _classCallCheck(this, PerfilComponent);
 
@@ -1861,8 +2064,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.router = router;
         this.productos = [];
         this.hora = 0;
-        this.timer_is_on = 0;
-        this.timed_Count = 0;
         this.modificarProducto = {
           id: "",
           nombre: "",
@@ -1870,29 +2071,27 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           pujaActual: "",
           precioCompraYa: ""
         };
-        this.myVar = setInterval(this.myTimer, 1000);
-        this.timeLeft = 60;
         this.ruta.params.subscribe(function (params) {
-          _this2.id = params['id'];
+          _this3.id = params['id'];
         });
         this.firestoreService.listaProducto().subscribe(function (producto) {
-          _this2.productos = [];
+          _this3.productos = [];
 
-          var _iterator2 = _createForOfIteratorHelper(producto),
-              _step2;
+          var _iterator5 = _createForOfIteratorHelper(producto),
+              _step5;
 
           try {
-            for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
-              var p = _step2.value;
+            for (_iterator5.s(); !(_step5 = _iterator5.n()).done;) {
+              var p = _step5.value;
 
               if (firebase__WEBPACK_IMPORTED_MODULE_3__["auth"]().currentUser.email == p.emailSubastador) {
-                _this2.productos.push(p);
+                _this3.productos.push(p);
               }
             }
           } catch (err) {
-            _iterator2.e(err);
+            _iterator5.e(err);
           } finally {
-            _iterator2.f();
+            _iterator5.f();
           }
         });
       }
@@ -1901,60 +2100,36 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "ngOnInit",
         value: function ngOnInit() {}
       }, {
-        key: "startTimer",
-        value: function startTimer() {
-          var _this3 = this;
-
-          this.interval = setInterval(function () {
-            if (_this3.timeLeft > 0) {
-              _this3.timeLeft--;
-            } else {
-              _this3.timeLeft = 60;
-            }
-          }, 1000);
-        }
-      }, {
-        key: "oberserableTimer",
-        value: function oberserableTimer() {
-          var _this4 = this;
-
-          var source = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["timer"])(1000, 2000);
-          var abc = source.subscribe(function (val) {
-            console.log(val, '-');
-            _this4.subscribeTimer = _this4.timeLeft - val;
-          });
-        }
-      }, {
         key: "myTimer",
-        value: function myTimer() {
-          var d = new Date();
-          var t = d.toLocaleTimeString();
-          this.hora = t;
-        }
-      }, {
-        key: "startTime",
-        value: function startTime() {
-          var today = new Date();
-          var h = today.getHours();
-          var m = today.getMinutes();
-          var s = today.getSeconds(); // add a zero in front of numbers<10
+        value: function myTimer(producto) {
+          this.hora = new Date().getTime();
+          producto.tiempoFin = this.hora - producto.tiempoInicio;
+          var segundos = 0;
+          var minutos = 0;
+          var horas = 0;
 
-          m = this.checkTime(m);
-          s = this.checkTime(s);
-          this.hora = h + ":" + m + ":" + s; //document.getElementById("txt").innerHTML = h + ":" + m + ":" + s;
+          if (producto.tiempoFin > 1000) {
+            segundos = Math.floor(producto.tiempoFin / 1000);
+            producto.tiempoFin = producto.tiempoFin % 1000;
 
-          var t = setTimeout(function () {
-            this.startTime();
-          }, 500);
-        }
-      }, {
-        key: "checkTime",
-        value: function checkTime(i) {
-          if (i < 10) {
-            i = "0" + i;
+            if (segundos >= 60) {
+              console.log(segundos);
+              minutos = Math.floor(segundos / 60);
+              console.log(minutos);
+              segundos = segundos % 60;
+
+              if (minutos >= 60) {
+                horas = Math.floor(minutos / 60);
+                minutos = minutos % 60;
+              }
+            }
           }
 
-          return i;
+          producto.tiempoFin = 23 - horas + ':' + (59 - minutos) + ':' + (59 - segundos);
+          console.log(producto.tiempoFin);
+          console.log(segundos);
+          console.log(minutos);
+          console.log(producto.tiempoFin);
         }
       }, {
         key: "EliminarProducto",
@@ -2083,7 +2258,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           pujaActual: "",
           precioCompraYa: "",
           subastador: "",
-          emailSubastador: ""
+          emailSubastador: "",
+          tiempoInicio: ""
         };
       }
 
@@ -2102,6 +2278,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           } else {// No user is signed in
           }
 
+          this.producto.tiempoInicio = new Date().getTime();
+          this.producto.tiempoFin = 0;
           this.servicio.addProducto(this.producto);
           this.producto.nombre = "";
           this.producto.precioSalida = "";
@@ -2194,44 +2372,108 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _services_firestore_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! ../../services/firestore.service */
     "./src/app/services/firestore.service.ts");
+    /* harmony import */
+
+
+    var firebase__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! firebase */
+    "./node_modules/firebase/dist/index.cjs.js");
+    /* harmony import */
+
+
+    var firebase__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(firebase__WEBPACK_IMPORTED_MODULE_4__);
 
     var VerProductoComponent = /*#__PURE__*/function () {
       function VerProductoComponent(ruta, servicio) {
-        var _this5 = this;
+        var _this4 = this;
 
         _classCallCheck(this, VerProductoComponent);
 
         this.ruta = ruta;
         this.servicio = servicio;
-        this.productoPagina = [];
+        this.productoPagina = "";
+        this.usuarioNuevo = {
+          email: '',
+          pujas: []
+        };
         this.ruta.params.subscribe(function (params) {
-          _this5.id = params['id'];
+          _this4.id = params['id'];
         });
         this.servicio.listaProducto().subscribe(function (producto) {
-          _this5.productos = producto;
+          _this4.productos = producto;
 
-          var _iterator3 = _createForOfIteratorHelper(_this5.productos),
-              _step3;
+          var _iterator6 = _createForOfIteratorHelper(_this4.productos),
+              _step6;
 
           try {
-            for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
-              var p = _step3.value;
+            for (_iterator6.s(); !(_step6 = _iterator6.n()).done;) {
+              var p = _step6.value;
 
-              if (p.id == _this5.id) {
-                _this5.productoPagina = p;
+              if (p.id == _this4.id) {
+                _this4.productoPagina = p;
               }
             }
           } catch (err) {
-            _iterator3.e(err);
+            _iterator6.e(err);
           } finally {
-            _iterator3.f();
+            _iterator6.f();
           }
+        });
+        this.servicio.listaUsuario().subscribe(function (usuario) {
+          _this4.usuarios = usuario;
         });
       }
 
       _createClass(VerProductoComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {}
+      }, {
+        key: "cambiarPuja",
+        value: function cambiarPuja(puja) {
+          var usuarioActivo = firebase__WEBPACK_IMPORTED_MODULE_4__["auth"]().currentUser;
+
+          if (usuarioActivo) {
+            if (puja > this.productoPagina.pujaActual) {
+              this.productoPagina.pujaActual = puja;
+              this.servicio.editProducto(this.productoPagina);
+
+              var _iterator7 = _createForOfIteratorHelper(this.usuarios),
+                  _step7;
+
+              try {
+                for (_iterator7.s(); !(_step7 = _iterator7.n()).done;) {
+                  var p = _step7.value;
+
+                  if (p.email == usuarioActivo.email) {
+                    console.log(p.pujas);
+
+                    if (!p.pujas.includes(this.id)) {
+                      p.pujas.push(this.id);
+                      this.servicio.editUsuario(p);
+                    }
+
+                    this.productoPagina.ultimoPujador = usuarioActivo.displayName;
+                    return;
+                  }
+                }
+              } catch (err) {
+                _iterator7.e(err);
+              } finally {
+                _iterator7.f();
+              }
+
+              this.usuarioNuevo.email = usuarioActivo.email;
+              this.usuarioNuevo.pujas.push(this.id);
+              this.servicio.addUsuario(this.usuarioNuevo);
+              console.log(firebase__WEBPACK_IMPORTED_MODULE_4__["auth"]().currentUser.email);
+              this.productoPagina.ultimoPujador = usuarioActivo.displayName;
+            } else {
+              alert("La puja debe ser superior");
+            }
+          } else {
+            console.log("Shit");
+          }
+        }
       }]);
 
       return VerProductoComponent;
@@ -2273,7 +2515,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = ".titulo {\n  font-size: 250%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3VjM20vRG9jdW1lbnRvcy9EU0kvVGhlLUF1Y3Rpb25lZXIvc3JjL2FwcC9wcmVzZW50YWNpb24vZW5jYWJlemFkby1wcmluY2lwYWwvZW5jYWJlemFkby1wcmluY2lwYWwuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL3ByZXNlbnRhY2lvbi9lbmNhYmV6YWRvLXByaW5jaXBhbC9lbmNhYmV6YWRvLXByaW5jaXBhbC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGVBQUE7QUNDSiIsImZpbGUiOiJzcmMvYXBwL3ByZXNlbnRhY2lvbi9lbmNhYmV6YWRvLXByaW5jaXBhbC9lbmNhYmV6YWRvLXByaW5jaXBhbC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi50aXR1bG8ge1xuICAgIGZvbnQtc2l6ZTogMjUwJTtcbn0iLCIudGl0dWxvIHtcbiAgZm9udC1zaXplOiAyNTAlO1xufSJdfQ== */";
+    __webpack_exports__["default"] = ".titulo {\n  font-size: 250%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3VjM20vRXNjcml0b3Jpby9BdWN0aW9uZWVyL3NyYy9hcHAvcHJlc2VudGFjaW9uL2VuY2FiZXphZG8tcHJpbmNpcGFsL2VuY2FiZXphZG8tcHJpbmNpcGFsLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9wcmVzZW50YWNpb24vZW5jYWJlemFkby1wcmluY2lwYWwvZW5jYWJlemFkby1wcmluY2lwYWwuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxlQUFBO0FDQ0oiLCJmaWxlIjoic3JjL2FwcC9wcmVzZW50YWNpb24vZW5jYWJlemFkby1wcmluY2lwYWwvZW5jYWJlemFkby1wcmluY2lwYWwuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIudGl0dWxvIHtcbiAgICBmb250LXNpemU6IDI1MCU7XG59IiwiLnRpdHVsbyB7XG4gIGZvbnQtc2l6ZTogMjUwJTtcbn0iXX0= */";
     /***/
   },
 
@@ -2477,7 +2719,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var InicioSesionComponent = /*#__PURE__*/function () {
       function InicioSesionComponent(registroServicio, router) {
-        var _this6 = this;
+        var _this5 = this;
 
         _classCallCheck(this, InicioSesionComponent);
 
@@ -2488,7 +2730,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           password: ''
         };
         this.registroServicio.listaUsuario().subscribe(function (usuario) {
-          _this6.usuarios = usuario;
+          _this5.usuarios = usuario;
         });
       }
 
@@ -2498,12 +2740,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "iniciarSesion",
         value: function iniciarSesion() {
-          var _iterator4 = _createForOfIteratorHelper(this.usuarios),
-              _step4;
+          var _iterator8 = _createForOfIteratorHelper(this.usuarios),
+              _step8;
 
           try {
-            for (_iterator4.s(); !(_step4 = _iterator4.n()).done;) {
-              var usuario = _step4.value;
+            for (_iterator8.s(); !(_step8 = _iterator8.n()).done;) {
+              var usuario = _step8.value;
 
               if (usuario.email == this.usuario.email) {
                 if (usuario.password == this.usuario.password) {
@@ -2516,9 +2758,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               }
             }
           } catch (err) {
-            _iterator4.e(err);
+            _iterator8.e(err);
           } finally {
-            _iterator4.f();
+            _iterator8.f();
           }
 
           alert("No hay ningún usuario con ese email");
@@ -2526,10 +2768,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "tryLogin",
         value: function tryLogin(email, password) {
-          var _this7 = this;
+          var _this6 = this;
 
           this.registroServicio.doLogin(email, password).then(function (res) {
-            _this7.router.navigate(["/home"]);
+            _this6.router.navigate(["/home"]);
           }, function (err) {
             alert("Los datos introducidos no son correctos");
           });
@@ -2575,7 +2817,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = ".cabecera {\n  text-align: center;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3VjM20vRG9jdW1lbnRvcy9EU0kvVGhlLUF1Y3Rpb25lZXIvc3JjL2FwcC9wcmVzZW50YWNpb24vcHJlc2VudGFjaW9uLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9wcmVzZW50YWNpb24vcHJlc2VudGFjaW9uLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksa0JBQUE7QUNDSiIsImZpbGUiOiJzcmMvYXBwL3ByZXNlbnRhY2lvbi9wcmVzZW50YWNpb24uY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY2FiZWNlcmF7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xufSIsIi5jYWJlY2VyYSB7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbn0iXX0= */";
+    __webpack_exports__["default"] = ".cabecera {\n  text-align: center;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3VjM20vRXNjcml0b3Jpby9BdWN0aW9uZWVyL3NyYy9hcHAvcHJlc2VudGFjaW9uL3ByZXNlbnRhY2lvbi5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvcHJlc2VudGFjaW9uL3ByZXNlbnRhY2lvbi5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGtCQUFBO0FDQ0oiLCJmaWxlIjoic3JjL2FwcC9wcmVzZW50YWNpb24vcHJlc2VudGFjaW9uLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNhYmVjZXJhe1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbn0iLCIuY2FiZWNlcmEge1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59Il19 */";
     /***/
   },
 
@@ -2712,7 +2954,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var RegistroComponent = /*#__PURE__*/function () {
       function RegistroComponent(registroServicio, router) {
-        var _this8 = this;
+        var _this7 = this;
 
         _classCallCheck(this, RegistroComponent);
 
@@ -2724,7 +2966,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           password: ''
         };
         this.registroServicio.listaUsuario().subscribe(function (usuario) {
-          _this8.usuarios = usuario;
+          _this7.usuarios = usuario;
         });
       }
 
@@ -2734,12 +2976,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "agregarUsuario",
         value: function agregarUsuario() {
-          var _iterator5 = _createForOfIteratorHelper(this.usuarios),
-              _step5;
+          var _iterator9 = _createForOfIteratorHelper(this.usuarios),
+              _step9;
 
           try {
-            for (_iterator5.s(); !(_step5 = _iterator5.n()).done;) {
-              var usuario = _step5.value;
+            for (_iterator9.s(); !(_step9 = _iterator9.n()).done;) {
+              var usuario = _step9.value;
 
               if (usuario.nombreUsuario == this.usuario.nombreUsuario) {
                 alert("Ya exite un usuario con ese nombre");
@@ -2752,9 +2994,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               }
             }
           } catch (err) {
-            _iterator5.e(err);
+            _iterator9.e(err);
           } finally {
-            _iterator5.f();
+            _iterator9.f();
           }
 
           this.registroServicio.addUsuario(this.usuario);
@@ -2766,19 +3008,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "tryRegister",
         value: function tryRegister(email, password, nombreusuario) {
-          var _this9 = this;
+          var _this8 = this;
 
           this.registroServicio.doRegister(email, password).then(function (res) {
             console.log(res);
             alert("Tu cuenta ha sido creada correctamente");
 
-            _this9.tryLogin(email, password);
+            _this8.tryLogin(email, password);
 
             firebase__WEBPACK_IMPORTED_MODULE_4__["auth"]().currentUser.updateProfile({
               displayName: nombreusuario
             });
 
-            _this9.router.navigateByUrl("/home");
+            _this8.router.navigateByUrl("/home");
           }, function (err) {
             console.log(err);
             alert("Ya existe un usuario con ese email");
@@ -2787,10 +3029,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "tryLogin",
         value: function tryLogin(email, password) {
-          var _this10 = this;
+          var _this9 = this;
 
           this.registroServicio.doLogin(email, password).then(function (res) {
-            _this10.router.navigate(["/home"]);
+            _this9.router.navigate(["/home"]);
           }, function (err) {
             alert("Los datos introducidos no son correctos");
           });
@@ -2885,8 +3127,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _classCallCheck(this, FirestoreService);
 
         this.afs = afs;
-        this.productosCollection = afs.collection('productos'); // this.productos = this.productosCollection.valueChanges();
-
+        this.productosCollection = afs.collection('productos');
+        this.usuariosCollection = afs.collection('usuarios');
         this.productos = this.productosCollection.snapshotChanges().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (actions) {
           return actions.map(function (a) {
             var data = a.payload.doc.data();
@@ -2896,8 +3138,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }, data);
           });
         }));
-        this.usuariosCollection = afs.collection('usuarios');
-        this.usuarios = this.usuariosCollection.valueChanges();
+        this.usuarios = this.usuariosCollection.snapshotChanges().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (actions) {
+          return actions.map(function (a) {
+            var data = a.payload.doc.data();
+            var id = a.payload.doc.id;
+            return Object.assign({
+              id: id
+            }, data);
+          });
+        }));
       }
 
       _createClass(FirestoreService, [{
@@ -2927,10 +3176,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.productoDoc["delete"]();
         }
       }, {
+        key: "removeUsuario",
+        value: function removeUsuario(usuario) {
+          this.usuarioDoc = this.afs.doc("usuarios/".concat(usuario.id));
+          this.usuarioDoc["delete"]();
+        }
+      }, {
         key: "editProducto",
         value: function editProducto(producto) {
           this.productoDoc = this.afs.doc("productos/".concat(producto.id));
           this.productoDoc.update(producto);
+        }
+      }, {
+        key: "editUsuario",
+        value: function editUsuario(usuario) {
+          this.usuarioDoc = this.afs.doc("usuarios/".concat(usuario.id));
+          this.usuarioDoc.update(usuario);
         }
       }, {
         key: "doRegister",
@@ -3102,7 +3363,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   /***/
   function _(module, exports, __webpack_require__) {
     module.exports = __webpack_require__(
-    /*! /home/uc3m/Documentos/DSI/The-Auctioneer/src/main.ts */
+    /*! /home/uc3m/Escritorio/Auctioneer/src/main.ts */
     "./src/main.ts");
     /***/
   }

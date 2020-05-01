@@ -71,7 +71,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"bg-white text-black\">\n  <img class= \"logo\" [src] = \"logotipo\"/>\n</div>\n<nav class=\"navbar navbar-expand-lg navbar navbar-dark bg-primary\">\n    <a class=\"navbar-brand\" [routerLink]=\"['/home']\">Home</a>\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n      <span class=\"navbar-toggler-icon\"></span>\n    </button>\n  \n    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n      <ul class=\"navbar-nav mr-auto\">\n        <li class=\"nav-item\" routerLinkActive=\"active\">\n          <a class=\"nav-link\" [routerLink]=\"['/ver']\">Pujador <span class=\"sr-only\">(current)</span></a>\n        </li>\n        <li class=\"nav-item\" routerLinkActive=\"active\">\n          <a class=\"nav-link\" [routerLink]=\"['/subida']\">Subir producto</a>\n        </li>\n        <li class=\"nav-item\"routerLinkActive=\"active\">\n          <a class=\"nav-link\" [routerLink]=\"['/conocenos']\">Conócenos</a>\n        </li>\n        <li class=\"nav-item\"routerLinkActive=\"active\">\n          <a class=\"nav-link\" (click)=\"redirigirPerfil()\">Perfil</a>\n        </li>\n      </ul>\n      <form class=\"form-inline my-2 my-lg-0\">\n        <input class=\"form-control mr-sm-2\" type=\"search\" name=\"filtroHome\" placeholder=\"Search\" aria-label=\"Search\" [(ngModel)]=\"filtroHome\">\n        <button class=\"btn btn-outline-dark my-2 my-sm-0 bg-success\" type=\"submit\">Search</button>\n      </form>\n    </div>\n  </nav>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"bg-white text-black\">\n  <img class= \"logo\" [src] = \"logotipo\"/>\n</div>\n<nav class=\"navbar navbar-expand-lg navbar navbar-dark bg-primary\">\n    <a class=\"navbar-brand\" [routerLink]=\"['/home']\">Home</a>\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n      <span class=\"navbar-toggler-icon\"></span>\n    </button>\n  \n    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n      <ul class=\"navbar-nav mr-auto\">\n        <li class=\"nav-item\" routerLinkActive=\"active\">\n          <a class=\"nav-link\" (click)=\"redirigirMisPujas()\">Pujador <span class=\"sr-only\">(current)</span></a>\n        </li>\n        <li class=\"nav-item\" routerLinkActive=\"active\">\n          <a class=\"nav-link\" [routerLink]=\"['/subida']\">Subir producto</a>\n        </li>\n        <li class=\"nav-item\"routerLinkActive=\"active\">\n          <a class=\"nav-link\" [routerLink]=\"['/conocenos']\">Conócenos</a>\n        </li>\n        <li class=\"nav-item\"routerLinkActive=\"active\">\n          <a class=\"nav-link\" (click)=\"redirigirPerfil()\">Perfil</a>\n        </li>\n      </ul>\n      <form class=\"form-inline my-2 my-lg-0\">\n        <input class=\"form-control mr-sm-2\" type=\"search\" name=\"filtroHome\" placeholder=\"Search\" aria-label=\"Search\" [(ngModel)]=\"filtroHome\">\n        <button class=\"btn btn-outline-dark my-2 my-sm-0 bg-success\" type=\"submit\">Search</button>\n      </form>\n    </div>\n  </nav>\n");
 
 /***/ }),
 
@@ -88,6 +88,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/inside/mispujas/mispujas.component.html":
+/*!***********************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/inside/mispujas/mispujas.component.html ***!
+  \***********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<app-encabezado></app-encabezado>\n<div class = \"container\">\n    <div class=\"row\">\n        <div class=\"alert alert-warning col-lg-4 col-md-4 col-sm-6 col-xs-12\" role=\"alert\" *ngFor=\"let producto of productosPujados\">\n            <div class=\"float-right\" (click)=\"EliminarProducto(producto)\">\n                <i class=\"far fa-trash-alt\"></i>\n            </div>\n            <div >Hola {{producto.tiempoFin}}</div>\n            <h6>Nombre: {{producto.nombre}}</h6>\n            <h6>Precio de salida: {{producto.precioSalida}} $</h6>\n            <h6>Puja actual: {{producto.pujaActual}} $</h6>\n            <h6>Precio de CompraYa: {{producto.precioCompraYa}} $</h6>\n        </div>\n    </div>\n</div>\n");
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/inside/perfil/perfil.component.html":
 /*!*******************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/inside/perfil/perfil.component.html ***!
@@ -97,7 +110,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<app-encabezado></app-encabezado>\n\n<div class = \"container\">\n    <div class=\"row\">\n        <div class=\"alert alert-warning col-lg-4 col-md-4 col-sm-6 col-xs-12\" role=\"alert\" *ngFor=\"let producto of productos\">\n            <div class=\"float-right\" (click)=\"EliminarProducto(producto)\">\n                <i class=\"far fa-trash-alt\"></i>\n            </div>\n            <div class=\"float-right mr-3\" (click)=\"ModificarProducto(producto)\" data-toggle=\"modal\" data-target=\"#exampleModal\">\n                <i class=\"fas fa-pencil-alt\"></i>\n            </div>\n            <h6>Nombre: {{producto.nombre}}</h6>\n            <h6>Precio de salida: {{producto.precioSalida}} $</h6>\n            <h6>Puja actual: {{producto.pujaActual}} $</h6>\n            <h6>Precio de CompraYa: {{producto.precioCompraYa}} $</h6>\n        </div>\n    </div>\n</div>\n\n<p (click)=\"oberserableTimer()\">Start Observable timer</p> {{subscribeTimer}}\n\n<div (click)=\"myTimer()\" >Hola {{hora}}</div>\n<div class=\"modal fade\" id=\"exampleModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\n    <div class=\"modal-dialog\" role=\"document\">\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <h5 class=\"modal-title\" id=\"exampleModalLabel\">Modificar: {{modificarProducto.nombre}}</h5>\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n            <span aria-hidden=\"true\">&times;</span>\n          </button>\n        </div>\n        <div class=\"modal-body\">\n            <div class = \"container\">\n\n                <form (ngSubmit) = \"AgregarProductoModificado()\">\n                    <input type=\"text\" placeholder=\"Ingresa el nombre del producto\" name=\"nombre\" class=\"form-control  mt-4\" [(ngModel)]=\"modificarProducto.nombre\">\n                    <input type=\"number\" placeholder=\"Ingresa el precio de salida del producto\" name=\"precioSalida\" class=\"form-control  mt-4\" [(ngModel)]=\"modificarProducto.precioSalida\">\n                    <input type=\"number\" placeholder=\"Ingresa el precio de CompraYa del producto\" name=\"precioCompraYa\" class=\"form-control  mt-4\" [(ngModel)]=\"modificarProducto.precioCompraYa\">\n                    <button class=\"btn btn-warning mt-4\" type=\"submit\">Guardar cambios</button>\n                </form>\n            \n            </div>\n        </div>\n        <div class=\"modal-footer\">\n          <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Close</button>\n        </div>\n      </div>\n    </div>\n  </div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<app-encabezado></app-encabezado>\n<div class = \"container\">\n    <div class=\"row\">\n        <div class=\"alert alert-warning col-lg-4 col-md-4 col-sm-6 col-xs-12\" role=\"alert\" *ngFor=\"let producto of productos\">\n            <div class=\"float-right\" (click)=\"EliminarProducto(producto)\">\n                <i class=\"far fa-trash-alt\"></i>\n            </div>\n            <div class=\"float-right mr-3\" (click)=\"ModificarProducto(producto)\" data-toggle=\"modal\" data-target=\"#exampleModal\">\n                <i class=\"fas fa-pencil-alt\"></i>\n            </div>\n            <div>Hola {{producto.tiempoFin}}</div>\n            <h6>Nombre: {{producto.nombre}}</h6>\n            <h6>Precio de salida: {{producto.precioSalida}} $</h6>\n            <h6>Puja actual: {{producto.pujaActual}} $</h6>\n            <h6>Precio de CompraYa: {{producto.precioCompraYa}} $</h6>\n        </div>\n    </div>\n</div>\n\n<div class=\"modal fade\" id=\"exampleModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\n    <div class=\"modal-dialog\" role=\"document\">\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <h5 class=\"modal-title\" id=\"exampleModalLabel\">Modificar: {{modificarProducto.nombre}}</h5>\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n            <span aria-hidden=\"true\">&times;</span>\n          </button>\n        </div>\n        <div class=\"modal-body\">\n            <div class = \"container\">\n\n                <form (ngSubmit) = \"AgregarProductoModificado()\">\n                    <input type=\"text\" placeholder=\"Ingresa el nombre del producto\" name=\"nombre\" class=\"form-control  mt-4\" [(ngModel)]=\"modificarProducto.nombre\">\n                    <input type=\"number\" placeholder=\"Ingresa el precio de salida del producto\" name=\"precioSalida\" class=\"form-control  mt-4\" [(ngModel)]=\"modificarProducto.precioSalida\">\n                    <input type=\"number\" placeholder=\"Ingresa el precio de CompraYa del producto\" name=\"precioCompraYa\" class=\"form-control  mt-4\" [(ngModel)]=\"modificarProducto.precioCompraYa\">\n                    <button class=\"btn btn-warning mt-4\" type=\"submit\">Guardar cambios</button>\n                </form>\n            \n            </div>\n        </div>\n        <div class=\"modal-footer\">\n          <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Close</button>\n        </div>\n      </div>\n    </div>\n  </div>\n");
 
 /***/ }),
 
@@ -123,7 +136,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<app-encabezado></app-encabezado>\n\n<div class = \"container\">\n    \n    <h1>Nombre: {{productoPagina.nombre}}</h1>\n    <h1>Precio de salida: {{productoPagina.precioSalida}} $</h1>\n    <h1>Puja actual: {{productoPagina.pujaActual}} $</h1>\n    <h1>Precio de CompraYa: {{productoPagina.precioCompraYa}} $</h1>\n\n    <!--<br>\n<br>\n<img [src] = \"imagen\"/>\n<br>\n<br>\n<img [src] = \"imagen\"/>\n<br>\n<br>\n<img [src] = \"imagen\"/>\n<br>\n<br>\n<br>\n<br>-->\n</div>\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<app-encabezado></app-encabezado>\n\n<div class = \"container\">\n    \n    <h1>Nombre: {{productoPagina.nombre}}</h1>\n    <h1>Precio de salida: {{productoPagina.precioSalida}} $</h1>\n    <h1>Puja actual: {{productoPagina.pujaActual}} $</h1>\n    <h1>Precio de CompraYa: {{productoPagina.precioCompraYa}} $</h1>\n    <input type=\"number\" placeholder=\"Ingresa el precio de CompraYa del producto\" name=\"precioCompraYa\" class=\"form-control  mt-4\" [(ngModel)]=\"nuevaPuja\">\n    <button class=\"btn btn-warning mt-4\" (click)=\"cambiarPuja(nuevaPuja)\"type=\"button\">Guardar cambios</button>\n\n    <!--<br>\n<br>\n<img [src] = \"imagen\"/>\n<br>\n<br>\n<img [src] = \"imagen\"/>\n<br>\n<br>\n<img [src] = \"imagen\"/>\n<br>\n<br>\n<br>\n<br>-->\n</div>\n\n");
 
 /***/ }),
 
@@ -461,6 +474,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _presentacion_inicio_sesion_inicio_sesion_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./presentacion/inicio-sesion/inicio-sesion.component */ "./src/app/presentacion/inicio-sesion/inicio-sesion.component.ts");
 /* harmony import */ var _inside_conocer_conocer_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./inside/conocer/conocer.component */ "./src/app/inside/conocer/conocer.component.ts");
 /* harmony import */ var _inside_perfil_perfil_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./inside/perfil/perfil.component */ "./src/app/inside/perfil/perfil.component.ts");
+/* harmony import */ var _inside_mispujas_mispujas_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./inside/mispujas/mispujas.component */ "./src/app/inside/mispujas/mispujas.component.ts");
+
 
 
 
@@ -476,6 +491,7 @@ const routes = [
     { path: 'subida', component: _inside_subir_producto_subir_producto_component__WEBPACK_IMPORTED_MODULE_3__["SubirProductoComponent"] },
     { path: 'ver/:id', component: _inside_ver_producto_ver_producto_component__WEBPACK_IMPORTED_MODULE_4__["VerProductoComponent"] },
     { path: 'home', component: _inside_home_home_component__WEBPACK_IMPORTED_MODULE_5__["HomeComponent"] },
+    { path: 'mispujas/:id', component: _inside_mispujas_mispujas_component__WEBPACK_IMPORTED_MODULE_11__["MispujasComponent"] },
     { path: 'presentacion', component: _presentacion_presentacion_component__WEBPACK_IMPORTED_MODULE_6__["PresentacionComponent"] },
     { path: 'registro', component: _presentacion_registro_registro_component__WEBPACK_IMPORTED_MODULE_7__["RegistroComponent"] },
     { path: 'inicio-sesion', component: _presentacion_inicio_sesion_inicio_sesion_component__WEBPACK_IMPORTED_MODULE_8__["InicioSesionComponent"] },
@@ -580,6 +596,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_firestore_service__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./services/firestore.service */ "./src/app/services/firestore.service.ts");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
 /* harmony import */ var _filtro_filtro_pipe__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./filtro/filtro.pipe */ "./src/app/filtro/filtro.pipe.ts");
+/* harmony import */ var _inside_mispujas_mispujas_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./inside/mispujas/mispujas.component */ "./src/app/inside/mispujas/mispujas.component.ts");
+
 
 
 
@@ -623,7 +641,8 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _presentacion_footer_principal_footer_principal_component__WEBPACK_IMPORTED_MODULE_14__["FooterPrincipalComponent"],
             _inside_conocer_conocer_component__WEBPACK_IMPORTED_MODULE_15__["ConocerComponent"],
             _inside_perfil_perfil_component__WEBPACK_IMPORTED_MODULE_16__["PerfilComponent"],
-            _filtro_filtro_pipe__WEBPACK_IMPORTED_MODULE_24__["FiltroPipe"]
+            _filtro_filtro_pipe__WEBPACK_IMPORTED_MODULE_24__["FiltroPipe"],
+            _inside_mispujas_mispujas_component__WEBPACK_IMPORTED_MODULE_25__["MispujasComponent"]
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -731,7 +750,7 @@ FooterComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("#prueba {\n  margin-right: 50%;\n  float: right;\n}\n\n#flechaDer {\n  width: 5%;\n  float: right;\n  margin-right: 40%;\n  margin-bottom: 5%;\n}\n\n#flechaIzq {\n  width: 5%;\n  float: left;\n  margin-left: 40%;\n  margin-bottom: 5%;\n  transform: rotate(180deg);\n}\n\n#foto1 {\n  height: 20%;\n  width: 25%;\n  margin-bottom: -10%;\n}\n\n#foto2 {\n  height: 40%;\n  width: 30%;\n  margin-top: 6%;\n  margin-right: 1%;\n}\n\n#foto3 {\n  margin-top: 3%;\n  height: 40%;\n  width: 30%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3VjM20vRG9jdW1lbnRvcy9EU0kvVGhlLUF1Y3Rpb25lZXIvc3JjL2FwcC9pbnNpZGUvY29ub2Nlci9jb25vY2VyLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9pbnNpZGUvY29ub2Nlci9jb25vY2VyLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksaUJBQUE7RUFDQSxZQUFBO0FDQ0o7O0FERUE7RUFDSSxTQUFBO0VBQ0EsWUFBQTtFQUNBLGlCQUFBO0VBQ0EsaUJBQUE7QUNDSjs7QURFQTtFQUNJLFNBQUE7RUFDQSxXQUFBO0VBQ0EsZ0JBQUE7RUFDQSxpQkFBQTtFQUNBLHlCQUFBO0FDQ0o7O0FERUE7RUFDSSxXQUFBO0VBQ0EsVUFBQTtFQUNBLG1CQUFBO0FDQ0o7O0FERUE7RUFDSSxXQUFBO0VBQ0EsVUFBQTtFQUNBLGNBQUE7RUFDQSxnQkFBQTtBQ0NKOztBREVBO0VBQ0ksY0FBQTtFQUNBLFdBQUE7RUFDQSxVQUFBO0FDQ0oiLCJmaWxlIjoic3JjL2FwcC9pbnNpZGUvY29ub2Nlci9jb25vY2VyLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiI3BydWViYXtcbiAgICBtYXJnaW4tcmlnaHQ6IDUwJTtcbiAgICBmbG9hdDogcmlnaHQ7XG59XG5cbiNmbGVjaGFEZXJ7XG4gICAgd2lkdGg6IDUlO1xuICAgIGZsb2F0OiByaWdodDtcbiAgICBtYXJnaW4tcmlnaHQ6IDQwJTtcbiAgICBtYXJnaW4tYm90dG9tOiA1JTtcbn1cblxuI2ZsZWNoYUl6cXtcbiAgICB3aWR0aDogNSU7XG4gICAgZmxvYXQ6IGxlZnQ7XG4gICAgbWFyZ2luLWxlZnQ6IDQwJTtcbiAgICBtYXJnaW4tYm90dG9tOiA1JTtcbiAgICB0cmFuc2Zvcm06IHJvdGF0ZSgxODBkZWcpO1xufVxuXG4jZm90bzF7XG4gICAgaGVpZ2h0OiAyMCU7XG4gICAgd2lkdGg6IDI1JTtcbiAgICBtYXJnaW4tYm90dG9tOiAtMTAlO1xufVxuXG4jZm90bzJ7XG4gICAgaGVpZ2h0OiA0MCU7XG4gICAgd2lkdGg6IDMwJTtcbiAgICBtYXJnaW4tdG9wOiA2JTtcbiAgICBtYXJnaW4tcmlnaHQ6IDElO1xufVxuXG4jZm90bzN7XG4gICAgbWFyZ2luLXRvcDogMyU7XG4gICAgaGVpZ2h0OiA0MCU7XG4gICAgd2lkdGg6IDMwJTtcbn0iLCIjcHJ1ZWJhIHtcbiAgbWFyZ2luLXJpZ2h0OiA1MCU7XG4gIGZsb2F0OiByaWdodDtcbn1cblxuI2ZsZWNoYURlciB7XG4gIHdpZHRoOiA1JTtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBtYXJnaW4tcmlnaHQ6IDQwJTtcbiAgbWFyZ2luLWJvdHRvbTogNSU7XG59XG5cbiNmbGVjaGFJenEge1xuICB3aWR0aDogNSU7XG4gIGZsb2F0OiBsZWZ0O1xuICBtYXJnaW4tbGVmdDogNDAlO1xuICBtYXJnaW4tYm90dG9tOiA1JTtcbiAgdHJhbnNmb3JtOiByb3RhdGUoMTgwZGVnKTtcbn1cblxuI2ZvdG8xIHtcbiAgaGVpZ2h0OiAyMCU7XG4gIHdpZHRoOiAyNSU7XG4gIG1hcmdpbi1ib3R0b206IC0xMCU7XG59XG5cbiNmb3RvMiB7XG4gIGhlaWdodDogNDAlO1xuICB3aWR0aDogMzAlO1xuICBtYXJnaW4tdG9wOiA2JTtcbiAgbWFyZ2luLXJpZ2h0OiAxJTtcbn1cblxuI2ZvdG8zIHtcbiAgbWFyZ2luLXRvcDogMyU7XG4gIGhlaWdodDogNDAlO1xuICB3aWR0aDogMzAlO1xufSJdfQ== */");
+/* harmony default export */ __webpack_exports__["default"] = ("#prueba {\n  margin-right: 50%;\n  float: right;\n}\n\n#flechaDer {\n  width: 5%;\n  float: right;\n  margin-right: 40%;\n  margin-bottom: 5%;\n}\n\n#flechaIzq {\n  width: 5%;\n  float: left;\n  margin-left: 40%;\n  margin-bottom: 5%;\n  transform: rotate(180deg);\n}\n\n#foto1 {\n  height: 20%;\n  width: 25%;\n  margin-bottom: -10%;\n}\n\n#foto2 {\n  height: 40%;\n  width: 30%;\n  margin-top: 6%;\n  margin-right: 1%;\n}\n\n#foto3 {\n  margin-top: 3%;\n  height: 40%;\n  width: 30%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3VjM20vRXNjcml0b3Jpby9BdWN0aW9uZWVyL3NyYy9hcHAvaW5zaWRlL2Nvbm9jZXIvY29ub2Nlci5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvaW5zaWRlL2Nvbm9jZXIvY29ub2Nlci5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGlCQUFBO0VBQ0EsWUFBQTtBQ0NKOztBREVBO0VBQ0ksU0FBQTtFQUNBLFlBQUE7RUFDQSxpQkFBQTtFQUNBLGlCQUFBO0FDQ0o7O0FERUE7RUFDSSxTQUFBO0VBQ0EsV0FBQTtFQUNBLGdCQUFBO0VBQ0EsaUJBQUE7RUFDQSx5QkFBQTtBQ0NKOztBREVBO0VBQ0ksV0FBQTtFQUNBLFVBQUE7RUFDQSxtQkFBQTtBQ0NKOztBREVBO0VBQ0ksV0FBQTtFQUNBLFVBQUE7RUFDQSxjQUFBO0VBQ0EsZ0JBQUE7QUNDSjs7QURFQTtFQUNJLGNBQUE7RUFDQSxXQUFBO0VBQ0EsVUFBQTtBQ0NKIiwiZmlsZSI6InNyYy9hcHAvaW5zaWRlL2Nvbm9jZXIvY29ub2Nlci5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIiNwcnVlYmF7XG4gICAgbWFyZ2luLXJpZ2h0OiA1MCU7XG4gICAgZmxvYXQ6IHJpZ2h0O1xufVxuXG4jZmxlY2hhRGVye1xuICAgIHdpZHRoOiA1JTtcbiAgICBmbG9hdDogcmlnaHQ7XG4gICAgbWFyZ2luLXJpZ2h0OiA0MCU7XG4gICAgbWFyZ2luLWJvdHRvbTogNSU7XG59XG5cbiNmbGVjaGFJenF7XG4gICAgd2lkdGg6IDUlO1xuICAgIGZsb2F0OiBsZWZ0O1xuICAgIG1hcmdpbi1sZWZ0OiA0MCU7XG4gICAgbWFyZ2luLWJvdHRvbTogNSU7XG4gICAgdHJhbnNmb3JtOiByb3RhdGUoMTgwZGVnKTtcbn1cblxuI2ZvdG8xe1xuICAgIGhlaWdodDogMjAlO1xuICAgIHdpZHRoOiAyNSU7XG4gICAgbWFyZ2luLWJvdHRvbTogLTEwJTtcbn1cblxuI2ZvdG8ye1xuICAgIGhlaWdodDogNDAlO1xuICAgIHdpZHRoOiAzMCU7XG4gICAgbWFyZ2luLXRvcDogNiU7XG4gICAgbWFyZ2luLXJpZ2h0OiAxJTtcbn1cblxuI2ZvdG8ze1xuICAgIG1hcmdpbi10b3A6IDMlO1xuICAgIGhlaWdodDogNDAlO1xuICAgIHdpZHRoOiAzMCU7XG59IiwiI3BydWViYSB7XG4gIG1hcmdpbi1yaWdodDogNTAlO1xuICBmbG9hdDogcmlnaHQ7XG59XG5cbiNmbGVjaGFEZXIge1xuICB3aWR0aDogNSU7XG4gIGZsb2F0OiByaWdodDtcbiAgbWFyZ2luLXJpZ2h0OiA0MCU7XG4gIG1hcmdpbi1ib3R0b206IDUlO1xufVxuXG4jZmxlY2hhSXpxIHtcbiAgd2lkdGg6IDUlO1xuICBmbG9hdDogbGVmdDtcbiAgbWFyZ2luLWxlZnQ6IDQwJTtcbiAgbWFyZ2luLWJvdHRvbTogNSU7XG4gIHRyYW5zZm9ybTogcm90YXRlKDE4MGRlZyk7XG59XG5cbiNmb3RvMSB7XG4gIGhlaWdodDogMjAlO1xuICB3aWR0aDogMjUlO1xuICBtYXJnaW4tYm90dG9tOiAtMTAlO1xufVxuXG4jZm90bzIge1xuICBoZWlnaHQ6IDQwJTtcbiAgd2lkdGg6IDMwJTtcbiAgbWFyZ2luLXRvcDogNiU7XG4gIG1hcmdpbi1yaWdodDogMSU7XG59XG5cbiNmb3RvMyB7XG4gIG1hcmdpbi10b3A6IDMlO1xuICBoZWlnaHQ6IDQwJTtcbiAgd2lkdGg6IDMwJTtcbn0iXX0= */");
 
 /***/ }),
 
@@ -797,7 +816,7 @@ ConocerComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".logo {\n  width: 400px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3VjM20vRG9jdW1lbnRvcy9EU0kvVGhlLUF1Y3Rpb25lZXIvc3JjL2FwcC9pbnNpZGUvZW5jYWJlemFkby9lbmNhYmV6YWRvLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9pbnNpZGUvZW5jYWJlemFkby9lbmNhYmV6YWRvLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksWUFBQTtBQ0NKIiwiZmlsZSI6InNyYy9hcHAvaW5zaWRlL2VuY2FiZXphZG8vZW5jYWJlemFkby5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5sb2dve1xuICAgIHdpZHRoOiA0MDBweDtcbn0iLCIubG9nbyB7XG4gIHdpZHRoOiA0MDBweDtcbn0iXX0= */");
+/* harmony default export */ __webpack_exports__["default"] = (".logo {\n  width: 400px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3VjM20vRXNjcml0b3Jpby9BdWN0aW9uZWVyL3NyYy9hcHAvaW5zaWRlL2VuY2FiZXphZG8vZW5jYWJlemFkby5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvaW5zaWRlL2VuY2FiZXphZG8vZW5jYWJlemFkby5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLFlBQUE7QUNDSiIsImZpbGUiOiJzcmMvYXBwL2luc2lkZS9lbmNhYmV6YWRvL2VuY2FiZXphZG8uY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubG9nb3tcbiAgICB3aWR0aDogNDAwcHg7XG59IiwiLmxvZ28ge1xuICB3aWR0aDogNDAwcHg7XG59Il19 */");
 
 /***/ }),
 
@@ -829,6 +848,9 @@ let EncabezadoComponent = class EncabezadoComponent {
     }
     redirigirPerfil() {
         this.router.navigate(["/perfil/", firebase__WEBPACK_IMPORTED_MODULE_3__["auth"]().currentUser.uid]);
+    }
+    redirigirMisPujas() {
+        this.router.navigate(["/mispujas/", firebase__WEBPACK_IMPORTED_MODULE_3__["auth"]().currentUser.uid]);
     }
 };
 EncabezadoComponent.ctorParameters = () => [
@@ -909,6 +931,87 @@ HomeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
+/***/ "./src/app/inside/mispujas/mispujas.component.scss":
+/*!*********************************************************!*\
+  !*** ./src/app/inside/mispujas/mispujas.component.scss ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2luc2lkZS9taXNwdWphcy9taXNwdWphcy5jb21wb25lbnQuc2NzcyJ9 */");
+
+/***/ }),
+
+/***/ "./src/app/inside/mispujas/mispujas.component.ts":
+/*!*******************************************************!*\
+  !*** ./src/app/inside/mispujas/mispujas.component.ts ***!
+  \*******************************************************/
+/*! exports provided: MispujasComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MispujasComponent", function() { return MispujasComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var src_app_services_firestore_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/firestore.service */ "./src/app/services/firestore.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var firebase__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! firebase */ "./node_modules/firebase/dist/index.cjs.js");
+/* harmony import */ var firebase__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(firebase__WEBPACK_IMPORTED_MODULE_4__);
+
+
+
+
+
+let MispujasComponent = class MispujasComponent {
+    constructor(firestoreService, ruta) {
+        this.firestoreService = firestoreService;
+        this.ruta = ruta;
+        this.productos = [];
+        this.usuarioActivoPujas = [];
+        this.ruta.params.subscribe(params => {
+            this.id = params['id'];
+        });
+        this.firestoreService.listaUsuario().subscribe(usuario => {
+            for (let u of usuario) {
+                if (u.email == firebase__WEBPACK_IMPORTED_MODULE_4__["auth"]().currentUser.email) {
+                    this.usuarioActivoPujas = u.pujas;
+                }
+            }
+        });
+        this.firestoreService.listaProducto().subscribe(producto => {
+            this.productosPujados = [];
+            this.productos = producto;
+            for (let p of this.productos) {
+                for (let p2 of this.usuarioActivoPujas) {
+                    if (p.id == p2) {
+                        this.productosPujados.push(p);
+                    }
+                }
+            }
+        });
+    }
+    ngOnInit() {
+    }
+};
+MispujasComponent.ctorParameters = () => [
+    { type: src_app_services_firestore_service__WEBPACK_IMPORTED_MODULE_2__["FirestoreService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] }
+];
+MispujasComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-mispujas',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./mispujas.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/inside/mispujas/mispujas.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./mispujas.component.scss */ "./src/app/inside/mispujas/mispujas.component.scss")).default]
+    })
+], MispujasComponent);
+
+
+
+/***/ }),
+
 /***/ "./src/app/inside/perfil/perfil.component.scss":
 /*!*****************************************************!*\
   !*** ./src/app/inside/perfil/perfil.component.scss ***!
@@ -938,8 +1041,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var firebase__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! firebase */ "./node_modules/firebase/dist/index.cjs.js");
 /* harmony import */ var firebase__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(firebase__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
-
 
 
 
@@ -952,8 +1053,6 @@ let PerfilComponent = class PerfilComponent {
         this.router = router;
         this.productos = [];
         this.hora = 0;
-        this.timer_is_on = 0;
-        this.timed_Count = 0;
         this.modificarProducto = {
             id: "",
             nombre: "",
@@ -961,8 +1060,6 @@ let PerfilComponent = class PerfilComponent {
             pujaActual: "",
             precioCompraYa: ""
         };
-        this.myVar = setInterval(this.myTimer, 1000);
-        this.timeLeft = 60;
         this.ruta.params.subscribe(params => {
             this.id = params['id'];
         });
@@ -977,45 +1074,31 @@ let PerfilComponent = class PerfilComponent {
     }
     ngOnInit() {
     }
-    startTimer() {
-        this.interval = setInterval(() => {
-            if (this.timeLeft > 0) {
-                this.timeLeft--;
+    myTimer(producto) {
+        this.hora = new Date().getTime();
+        producto.tiempoFin = this.hora - producto.tiempoInicio;
+        var segundos = 0;
+        var minutos = 0;
+        var horas = 0;
+        if (producto.tiempoFin > 1000) {
+            segundos = Math.floor(producto.tiempoFin / 1000);
+            producto.tiempoFin = producto.tiempoFin % 1000;
+            if (segundos >= 60) {
+                console.log(segundos);
+                minutos = Math.floor(segundos / 60);
+                console.log(minutos);
+                segundos = segundos % 60;
+                if (minutos >= 60) {
+                    horas = Math.floor(minutos / 60);
+                    minutos = minutos % 60;
+                }
             }
-            else {
-                this.timeLeft = 60;
-            }
-        }, 1000);
-    }
-    oberserableTimer() {
-        const source = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["timer"])(1000, 2000);
-        const abc = source.subscribe(val => {
-            console.log(val, '-');
-            this.subscribeTimer = this.timeLeft - val;
-        });
-    }
-    myTimer() {
-        var d = new Date();
-        var t = d.toLocaleTimeString();
-        this.hora = t;
-    }
-    startTime() {
-        var today = new Date();
-        var h = today.getHours();
-        var m = today.getMinutes();
-        var s = today.getSeconds();
-        // add a zero in front of numbers<10
-        m = this.checkTime(m);
-        s = this.checkTime(s);
-        this.hora = h + ":" + m + ":" + s;
-        //document.getElementById("txt").innerHTML = h + ":" + m + ":" + s;
-        var t = setTimeout(function () { this.startTime(); }, 500);
-    }
-    checkTime(i) {
-        if (i < 10) {
-            i = "0" + i;
         }
-        return i;
+        producto.tiempoFin = (23 - horas) + ':' + (59 - minutos) + ':' + (59 - segundos);
+        console.log(producto.tiempoFin);
+        console.log(segundos);
+        console.log(minutos);
+        console.log(producto.tiempoFin);
     }
     EliminarProducto(producto) {
         this.firestoreService.removeProducto(producto);
@@ -1091,7 +1174,8 @@ let SubirProductoComponent = class SubirProductoComponent {
             pujaActual: "",
             precioCompraYa: "",
             subastador: "",
-            emailSubastador: ""
+            emailSubastador: "",
+            tiempoInicio: ""
         };
     }
     ngOnInit() {
@@ -1106,6 +1190,8 @@ let SubirProductoComponent = class SubirProductoComponent {
         else {
             // No user is signed in
         }
+        this.producto.tiempoInicio = new Date().getTime();
+        this.producto.tiempoFin = 0;
         this.servicio.addProducto(this.producto);
         this.producto.nombre = "";
         this.producto.precioSalida = "";
@@ -1155,6 +1241,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _services_firestore_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../services/firestore.service */ "./src/app/services/firestore.service.ts");
+/* harmony import */ var firebase__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! firebase */ "./node_modules/firebase/dist/index.cjs.js");
+/* harmony import */ var firebase__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(firebase__WEBPACK_IMPORTED_MODULE_4__);
+
 
 
 
@@ -1163,7 +1252,11 @@ let VerProductoComponent = class VerProductoComponent {
     constructor(ruta, servicio) {
         this.ruta = ruta;
         this.servicio = servicio;
-        this.productoPagina = [];
+        this.productoPagina = "";
+        this.usuarioNuevo = {
+            email: '',
+            pujas: []
+        };
         this.ruta.params.subscribe(params => {
             this.id = params['id'];
         });
@@ -1175,8 +1268,42 @@ let VerProductoComponent = class VerProductoComponent {
                 }
             }
         });
+        this.servicio.listaUsuario().subscribe(usuario => {
+            this.usuarios = usuario;
+        });
     }
     ngOnInit() {
+    }
+    cambiarPuja(puja) {
+        let usuarioActivo = firebase__WEBPACK_IMPORTED_MODULE_4__["auth"]().currentUser;
+        if (usuarioActivo) {
+            if (puja > this.productoPagina.pujaActual) {
+                this.productoPagina.pujaActual = puja;
+                this.servicio.editProducto(this.productoPagina);
+                for (let p of this.usuarios) {
+                    if (p.email == usuarioActivo.email) {
+                        console.log(p.pujas);
+                        if (!p.pujas.includes(this.id)) {
+                            p.pujas.push(this.id);
+                            this.servicio.editUsuario(p);
+                        }
+                        this.productoPagina.ultimoPujador = usuarioActivo.displayName;
+                        return;
+                    }
+                }
+                this.usuarioNuevo.email = usuarioActivo.email;
+                this.usuarioNuevo.pujas.push(this.id);
+                this.servicio.addUsuario(this.usuarioNuevo);
+                console.log(firebase__WEBPACK_IMPORTED_MODULE_4__["auth"]().currentUser.email);
+                this.productoPagina.ultimoPujador = usuarioActivo.displayName;
+            }
+            else {
+                alert("La puja debe ser superior");
+            }
+        }
+        else {
+            console.log("Shit");
+        }
     }
 };
 VerProductoComponent.ctorParameters = () => [
@@ -1204,7 +1331,7 @@ VerProductoComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".titulo {\n  font-size: 250%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3VjM20vRG9jdW1lbnRvcy9EU0kvVGhlLUF1Y3Rpb25lZXIvc3JjL2FwcC9wcmVzZW50YWNpb24vZW5jYWJlemFkby1wcmluY2lwYWwvZW5jYWJlemFkby1wcmluY2lwYWwuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL3ByZXNlbnRhY2lvbi9lbmNhYmV6YWRvLXByaW5jaXBhbC9lbmNhYmV6YWRvLXByaW5jaXBhbC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGVBQUE7QUNDSiIsImZpbGUiOiJzcmMvYXBwL3ByZXNlbnRhY2lvbi9lbmNhYmV6YWRvLXByaW5jaXBhbC9lbmNhYmV6YWRvLXByaW5jaXBhbC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi50aXR1bG8ge1xuICAgIGZvbnQtc2l6ZTogMjUwJTtcbn0iLCIudGl0dWxvIHtcbiAgZm9udC1zaXplOiAyNTAlO1xufSJdfQ== */");
+/* harmony default export */ __webpack_exports__["default"] = (".titulo {\n  font-size: 250%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3VjM20vRXNjcml0b3Jpby9BdWN0aW9uZWVyL3NyYy9hcHAvcHJlc2VudGFjaW9uL2VuY2FiZXphZG8tcHJpbmNpcGFsL2VuY2FiZXphZG8tcHJpbmNpcGFsLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9wcmVzZW50YWNpb24vZW5jYWJlemFkby1wcmluY2lwYWwvZW5jYWJlemFkby1wcmluY2lwYWwuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxlQUFBO0FDQ0oiLCJmaWxlIjoic3JjL2FwcC9wcmVzZW50YWNpb24vZW5jYWJlemFkby1wcmluY2lwYWwvZW5jYWJlemFkby1wcmluY2lwYWwuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIudGl0dWxvIHtcbiAgICBmb250LXNpemU6IDI1MCU7XG59IiwiLnRpdHVsbyB7XG4gIGZvbnQtc2l6ZTogMjUwJTtcbn0iXX0= */");
 
 /***/ }),
 
@@ -1377,7 +1504,7 @@ InicioSesionComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".cabecera {\n  text-align: center;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3VjM20vRG9jdW1lbnRvcy9EU0kvVGhlLUF1Y3Rpb25lZXIvc3JjL2FwcC9wcmVzZW50YWNpb24vcHJlc2VudGFjaW9uLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9wcmVzZW50YWNpb24vcHJlc2VudGFjaW9uLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksa0JBQUE7QUNDSiIsImZpbGUiOiJzcmMvYXBwL3ByZXNlbnRhY2lvbi9wcmVzZW50YWNpb24uY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY2FiZWNlcmF7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xufSIsIi5jYWJlY2VyYSB7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbn0iXX0= */");
+/* harmony default export */ __webpack_exports__["default"] = (".cabecera {\n  text-align: center;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3VjM20vRXNjcml0b3Jpby9BdWN0aW9uZWVyL3NyYy9hcHAvcHJlc2VudGFjaW9uL3ByZXNlbnRhY2lvbi5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvcHJlc2VudGFjaW9uL3ByZXNlbnRhY2lvbi5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGtCQUFBO0FDQ0oiLCJmaWxlIjoic3JjL2FwcC9wcmVzZW50YWNpb24vcHJlc2VudGFjaW9uLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNhYmVjZXJhe1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbn0iLCIuY2FiZWNlcmEge1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59Il19 */");
 
 /***/ }),
 
@@ -1544,14 +1671,17 @@ let FirestoreService = class FirestoreService {
     constructor(afs) {
         this.afs = afs;
         this.productosCollection = afs.collection('productos');
-        // this.productos = this.productosCollection.valueChanges();
+        this.usuariosCollection = afs.collection('usuarios');
         this.productos = this.productosCollection.snapshotChanges().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(actions => actions.map(a => {
             const data = a.payload.doc.data();
             const id = a.payload.doc.id;
             return Object.assign({ id }, data);
         })));
-        this.usuariosCollection = afs.collection('usuarios');
-        this.usuarios = this.usuariosCollection.valueChanges();
+        this.usuarios = this.usuariosCollection.snapshotChanges().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(actions => actions.map(a => {
+            const data = a.payload.doc.data();
+            const id = a.payload.doc.id;
+            return Object.assign({ id }, data);
+        })));
     }
     listaProducto() {
         return this.productos;
@@ -1569,9 +1699,17 @@ let FirestoreService = class FirestoreService {
         this.productoDoc = this.afs.doc(`productos/${producto.id}`);
         this.productoDoc.delete();
     }
+    removeUsuario(usuario) {
+        this.usuarioDoc = this.afs.doc(`usuarios/${usuario.id}`);
+        this.usuarioDoc.delete();
+    }
     editProducto(producto) {
         this.productoDoc = this.afs.doc(`productos/${producto.id}`);
         this.productoDoc.update(producto);
+    }
+    editUsuario(usuario) {
+        this.usuarioDoc = this.afs.doc(`usuarios/${usuario.id}`);
+        this.usuarioDoc.update(usuario);
     }
     doRegister(email, password) {
         return new Promise((resolve, reject) => {
@@ -1689,7 +1827,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/uc3m/Documentos/DSI/The-Auctioneer/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /home/uc3m/Escritorio/Auctioneer/src/main.ts */"./src/main.ts");
 
 
 /***/ })

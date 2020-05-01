@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/Auctioneer",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
