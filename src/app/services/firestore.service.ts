@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 /*import { Observable } from 'rxjs/Observable';*/
 import { map } from 'rxjs/operators';
 import * as firebase from 'firebase';
+import { AngularFireAuth } from 'angularfire2/auth';
 
 export interface Producto { nombre: string; precioSalida: number; pujaActual: number; precioCompraYa: number; subastador: string; emailSubastador: string, ultimoPujador: string}
 export interface Usuario { email: string; pujas: []}
@@ -21,7 +22,7 @@ export class FirestoreService {
   usuarios: Observable<Usuario[]>;
   private usuarioDoc: AngularFirestoreDocument<Usuario>;
 
-  constructor(private afs: AngularFirestore) {
+  constructor(private afs: AngularFirestore, public afAuth:AngularFireAuth) {
     this.productosCollection = afs.collection<Producto>('productos');
     this.usuariosCollection = afs.collection<Usuario>('usuarios');
 
@@ -92,6 +93,18 @@ export class FirestoreService {
       .then(res => {
         resolve(res);
       }, err => reject(err))
+    })
+  }
+
+  doLogout(){
+    return new Promise<any>((resolve, reject) => {
+      if (firebase.auth().currentUser){
+        this.afAuth.auth.signOut();
+        resolve();
+      }
+      else {
+        reject();
+      }
     })
   }
 

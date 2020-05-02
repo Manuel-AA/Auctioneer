@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import * as firebase from 'firebase';
+import { FirestoreService } from 'src/app/services/firestore.service';
 
 @Component({
   selector: 'app-encabezado',
@@ -9,7 +10,7 @@ import * as firebase from 'firebase';
 })
 export class EncabezadoComponent implements OnInit {
 
-  constructor(private router:Router) { }
+  constructor(private router:Router, private servicio:FirestoreService) { }
 
   ngOnInit() {
   }
@@ -21,5 +22,15 @@ export class EncabezadoComponent implements OnInit {
 
   redirigirMisPujas(){
     this.router.navigate(["/mispujas/", firebase.auth().currentUser.uid])
+  }
+
+  logout(){
+    this.servicio.doLogout()
+    .then((res) => {
+      console.log(firebase.auth().currentUser)
+      this.router.navigate([""])
+    }, (error) => {
+      console.log("Error de logout", error)
+    })
   }
 }
