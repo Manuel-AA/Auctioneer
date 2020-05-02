@@ -16,6 +16,7 @@ export class PerfilComponent implements OnInit {
   name:any;
   id:any;
   hora:any = 0;
+  valor:any;
 
   modificarProducto: any = {
     id: "",
@@ -38,6 +39,7 @@ export class PerfilComponent implements OnInit {
         }
       }
     })
+    setInterval(()=> { this.myTimer() }, 1000);
    }
 
   ngOnInit() {
@@ -46,19 +48,24 @@ export class PerfilComponent implements OnInit {
 
 
 
-  myTimer(producto) {
+  myTimer() {
+    for (let product of this.productos){
     this.hora = new Date().getTime();
-    producto.tiempoFin = this.hora - producto.tiempoInicio;
+    console.log(this.hora)
+    console.log("hola")
+    console.log(this.hora - product.tiempoInicio)
+    console.log("Fin")
+    console.log(product.tiempoInicio)
+    this.valor = this.hora - product.tiempoInicio;
+    var comprobar = this.valor;
     var segundos = 0;
     var minutos = 0;
     var horas = 0;
-    if(producto.tiempoFin > 1000){
-        segundos = Math.floor(producto.tiempoFin/1000)
-        producto.tiempoFin = producto.tiempoFin % 1000
+    if(this.valor >= 1000){
+        segundos = Math.floor(this.valor/1000)
+        this.valor = this.valor % 1000
       if(segundos >= 60){
-        console.log(segundos)
         minutos = Math.floor(segundos/60)
-        console.log(minutos)
         segundos = segundos % 60
         if(minutos >= 60){
           horas = Math.floor(minutos/60)
@@ -66,12 +73,13 @@ export class PerfilComponent implements OnInit {
         } 
       }
     }
-    producto.tiempoFin = (23 - horas) + ':' + (59 - minutos) + ':' + (59 -segundos)
-    console.log( producto.tiempoFin)
-    console.log(segundos)
-    console.log(minutos)
-    console.log(producto.tiempoFin)
+    product.tiempoFin = (23 - horas) + ':' + (59 - minutos) + ':' + (59 -segundos);
+     if (comprobar >= 86400000){
+      this.EliminarProducto(product)
+    }
   }
+}
+
 
 
   EliminarProducto(producto){

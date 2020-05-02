@@ -13,6 +13,8 @@ export class VerProductoComponent implements OnInit {
   id:any;
   productoPagina:any = "";
   nuevaPuja:any;
+  hora:any = 0;
+  valor:any;
 
   usuarioNuevo:any = {
     email: '',
@@ -43,14 +45,49 @@ export class VerProductoComponent implements OnInit {
         }
       }
     })
+    setInterval(()=> { this.myTimer() }, 1000);
     this.servicio.listaUsuario().subscribe(usuario=>{
       this.usuarios = usuario;
       this.usuarioActivoEmail = firebase.auth().currentUser.email
     })
+    
    }
 
   ngOnInit() {
   }
+
+
+  myTimer() {
+    
+    this.hora = new Date().getTime();
+    console.log(this.hora)
+    console.log("hola")
+    console.log(this.hora - this.productoPagina.tiempoInicio)
+    console.log("Fin")
+    console.log(this.productoPagina.tiempoInicio)
+    this.valor = this.hora - this.productoPagina.tiempoInicio;
+    var comprobar = this.valor;
+    var segundos = 0;
+    var minutos = 0;
+    var horas = 0;
+    if(this.valor >= 1000){
+        segundos = Math.floor(this.valor/1000)
+        this.valor = this.valor % 1000
+      if(segundos >= 60){
+        minutos = Math.floor(segundos/60)
+        segundos = segundos % 60
+        if(minutos >= 60){
+          horas = Math.floor(minutos/60)
+          minutos = minutos % 60
+        } 
+      }
+    }
+    this.productoPagina.tiempoFin = (23 - horas) + ':' + (59 - minutos) + ':' + (59 -segundos);
+     if (comprobar >= 86400000){
+      this.EliminarProducto(this.productoPagina)
+    }
+  }
+
 
   cambiarPuja(puja){
     let usuarioActivo = firebase.auth().currentUser
