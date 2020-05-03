@@ -12,4 +12,8 @@ export class FooterComponent implements OnInit {
   ngOnInit() {
   }
 
+  instagram = "assets/img/instagram.png"
+  facebook = "assets/img/facebook.png"
+  twitter = "assets/img/twitter.png"
+
 }

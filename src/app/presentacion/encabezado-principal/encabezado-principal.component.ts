@@ -12,4 +12,6 @@ export class EncabezadoPrincipalComponent implements OnInit {
   ngOnInit() {
   }
 
+  logotipo = "/assets/img/logotipo.png"
+
 }
