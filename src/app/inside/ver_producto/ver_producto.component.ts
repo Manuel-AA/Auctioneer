@@ -24,6 +24,7 @@ export class VerProductoComponent implements OnInit {
   modificarProducto: any = {
     id: "",
     nombre: "",
+    categoria: "",
     precioSalida: "",
     pujaActual: "",
     precioCompraYa: ""
@@ -116,14 +117,12 @@ export class VerProductoComponent implements OnInit {
         alert("La puja debe ser superior")
       }
     }
-    else{
-      console.log("Shit")
-    }
   }
 
   ModificarProducto(producto) {
     this.modificarProducto.id = producto.id;
     this.modificarProducto.nombre = producto.nombre;
+    this.modificarProducto.categoria = producto.categoria;
     this.modificarProducto.precioSalida = producto.precioSalida;
     this.modificarProducto.pujaActual = producto.pujaActual;
     this.modificarProducto.precioCompraYa = producto.precioCompraYa;

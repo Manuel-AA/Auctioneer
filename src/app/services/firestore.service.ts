@@ -6,7 +6,7 @@ import { map } from 'rxjs/operators';
 import * as firebase from 'firebase';
 import { AngularFireAuth } from 'angularfire2/auth';
 
-export interface Producto { nombre: string; precioSalida: number; pujaActual: number; precioCompraYa: number; subastador: string; emailSubastador: string, ultimoPujador: string}
+export interface Producto { nombre: string; categoria: string; precioSalida: number; pujaActual: number; precioCompraYa: number; subastador: string; emailSubastador: string, ultimoPujador: string}
 export interface Usuario { email: string; pujas: []}
 
 @Injectable({

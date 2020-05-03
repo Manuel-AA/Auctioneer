@@ -1,6 +1,6 @@
 <app-encabezado-principal></app-encabezado-principal>
 
-<div class="mt-5 mb-5 container">
+<div class="container cajaFormulario">
   <h2 class="text-center">Registro</h2>
   <br>
   <form (ngSubmit)="tryRegister(usuario.email, usuario.password, usuario.nombreUsuario)" #f="ngForm">
@@ -15,6 +15,6 @@
     <input type="password" placeholder="Ingresa una contraseña" name="password" class="form-control" minlength=8 [(ngModel)]="usuario.password" #password="ngModel" required>
     <span *ngIf="password.value != '' && password.invalid"><h4 style="color: red">Contraseña no válida. Debe tener 8 caracteres mínimo</h4></span>
     <span *ngIf="password.value == '' "><h4 style="color: red">Campo obligatorio</h4></span>
-    <button class="btn btn-warning mt-3" type="submit" [disabled]="f.invalid" >Agregar</button>
+    <button id="botonInicio" class="btn btn-success mt-3" type="submit" [disabled]="f.invalid"><strong>Registrarse</strong></button>
   </form>
 </div>

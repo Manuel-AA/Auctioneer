@@ -1,13 +1,14 @@
 <app-encabezado></app-encabezado>
 
-<div class = "container">
-    <div>{{productoPagina.tiempoFin}}</div>
+<div class = "container mb-5">
     <h1>Nombre: {{productoPagina.nombre}}</h1>
+    <h1>Categoría: {{productoPagina.categoria}}</h1>
     <h1>Precio de salida: {{productoPagina.precioSalida}} $</h1>
     <h1>Puja actual: {{productoPagina.pujaActual}} $</h1>
     <h1>Precio de CompraYa: {{productoPagina.precioCompraYa}} $</h1>
-    <input type="number" placeholder="Ingresa el precio de CompraYa del producto" name="precioCompraYa" class="form-control  mt-4" *ngIf="productoPagina.emailSubastador != usuarioActivoEmail" [(ngModel)]="nuevaPuja">
-    <button class="btn btn-warning mt-4" (click)="cambiarPuja(nuevaPuja)"type="button" *ngIf="productoPagina.emailSubastador != usuarioActivoEmail">Guardar cambios</button>
+    <h1>Tiempo restante: {{productoPagina.tiempoFin}}</h1>
+    <input type="number" placeholder="Ingresa la puja" name="precioCompraYa" class="form-control  mt-4" *ngIf="productoPagina.emailSubastador != usuarioActivoEmail" [(ngModel)]="nuevaPuja">
+    <button class="btn btn-success mt-4" (click)="cambiarPuja(nuevaPuja)"type="button" *ngIf="productoPagina.emailSubastador != usuarioActivoEmail">Guardar cambios</button>
     
     <div class="float-right mr-3" (click)="ModificarProducto(productoPagina)" data-toggle="modal" data-target="#exampleModal" *ngIf="(productoPagina.emailSubastador == usuarioActivoEmail) && (productoPagina.pujaActual == productoPagina.precioSalida)">
         <i class="fas fa-pencil-alt"></i>
@@ -29,9 +30,10 @@
                 <div class = "container">
     
                     <form (ngSubmit) = "AgregarProductoModificado()">
-                        <input type="text" placeholder="Ingresa el nombre del producto" name="nombre" class="form-control  mt-4" [(ngModel)]="modificarProducto.nombre">
-                        <input type="number" placeholder="Ingresa el precio de salida del producto" name="precioSalida" class="form-control  mt-4" [(ngModel)]="modificarProducto.precioSalida">
-                        <input type="number" placeholder="Ingresa el precio de CompraYa del producto" name="precioCompraYa" class="form-control  mt-4" [(ngModel)]="modificarProducto.precioCompraYa">
+                        <input type="text" placeholder="Ingresa el nuevo nombre del producto" name="nombre" class="form-control  mt-4" [(ngModel)]="modificarProducto.nombre">
+                        <input type="text" placeholder="Ingresa la nueva categoria del producto" name="categoria" class="form-control  mt-4" [(ngModel)]="modificarProducto.categoria">
+                        <input type="number" placeholder="Ingresa el nuevo precio de salida del producto" name="precioSalida" class="form-control  mt-4" [(ngModel)]="modificarProducto.precioSalida">
+                        <input type="number" placeholder="Ingresa el nuevo precio de CompraYa del producto" name="precioCompraYa" class="form-control  mt-4" [(ngModel)]="modificarProducto.precioCompraYa">
                         <button class="btn btn-warning mt-4" type="submit">Guardar cambios</button>
                     </form>
                 

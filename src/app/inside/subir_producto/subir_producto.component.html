@@ -1,12 +1,32 @@
 <app-encabezado></app-encabezado>
 
-<div class = "container">
-
+<div class = "container cajaFormulario">
+  <h1 class="text-center"><strong>Subastar un producto</strong></h1>
+  <br>
   <form (ngSubmit) = "AgregarProducto()">
-    <input type="text" placeholder="Ingresa el nombre del producto" name="nombre" class="form-control  mt-4" [(ngModel)]="producto.nombre">
-    <input type="number" placeholder="Ingresa el precio de salida del producto" name="precioSalida" class="form-control  mt-4" [(ngModel)]="producto.precioSalida">
-    <input type="number" placeholder="Ingresa el precio de CompraYa del producto" name="precioCompraYa" class="form-control  mt-4" [(ngModel)]="producto.precioCompraYa">
-    <button class="btn btn-warning mt-4" type="submit">Agregar</button>
+    <br>
+    <div class="datos1 float-left">
+      <h4>Nombre:</h4>
+      <input type="text" placeholder="Ingresa el nombre del producto" name="nombre" class="form-control" [(ngModel)]="producto.nombre">
+    </div>
+    <div class="datos1 float-right">
+      <h4>Categoria:</h4>
+      <!--<input type="text" placeholder="Ingresa la categoria del producto" name="categoria" class="form-control" [(ngModel)]="producto.categoria">-->
+      <select id="cars" placeholder="Ingresa la categoria del producto" name="categoria" class="form-control" [(ngModel)]="producto.categoria">
+        <option value="Vehiculos">Vehiculos</option>
+        <option value="Edificios">Edificios</option>
+        <option value="Deporte">Deporte</option>
+        <option value="Juegos">Juegos</option>
+      </select> 
+    </div>
+    <br><br><br><br><br>
+    <h4>Precio de salida:</h4>
+    <input type="number" placeholder="Ingresa el precio de salida del producto" name="precioSalida" class="form-control" [(ngModel)]="producto.precioSalida">
+    <br><br>
+    <h4>Precio de CompraYa:</h4>
+    <input type="number" placeholder="Ingresa el precio de CompraYa del producto" name="precioCompraYa" class="form-control" [(ngModel)]="producto.precioCompraYa">
+    <br>
+    <button id="botonInicio" class="btn btn-success mt-4" type="submit"><strong>Agregar</strong></button>
   </form>
 
 </div>
