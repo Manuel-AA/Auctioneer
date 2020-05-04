@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FirestoreService } from '../../services/firestore.service';
 import * as firebase from 'firebase';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-subir_producto',
@@ -20,7 +21,7 @@ export class SubirProductoComponent implements OnInit {
     tiempoInicio: ""
   }
 
-  constructor( private servicio: FirestoreService) { }
+  constructor( private servicio: FirestoreService, private router:Router) { }
 
   ngOnInit() {
   }
@@ -42,6 +43,7 @@ export class SubirProductoComponent implements OnInit {
     this.producto.precioSalida = "";
     this.producto.pujaActual = "";
     this.producto.precioCompraYa = "";
+    this.router.navigate(["/home"])
   }
 
 }

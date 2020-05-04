@@ -139,4 +139,15 @@ export class VerProductoComponent implements OnInit {
     alert("El producto se ha borrado correctamente")
     this.router.navigate(["/home"])
   }
+
+  comprarYa(producto){
+    var opcion = confirm("Seguro que quieres comprar este producto")
+    if (opcion == true){
+      alert("La compra se ha realizado correctamente")
+      this.servicio.removeProducto(producto);
+      var i = this.productos.indexOf(producto)
+      this.productos.splice(i, 1)
+      this.router.navigate(["/home"])
+    }
+  }
 }
