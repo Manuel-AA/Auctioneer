@@ -12,7 +12,6 @@ import { PresentacionComponent } from './presentacion/presentacion.component';
 import { RegistroComponent } from './presentacion/registro/registro.component';
 import { InicioSesionComponent } from './presentacion/inicio-sesion/inicio-sesion.component';
 import { EncabezadoPrincipalComponent } from './presentacion/encabezado-principal/encabezado-principal.component';
-import { FooterPrincipalComponent } from './presentacion/footer-principal/footer-principal.component';
 import { ConocerComponent } from './inside/conocer/conocer.component';
 import { PerfilComponent } from './inside/perfil/perfil.component';
 
@@ -38,7 +37,6 @@ import { MispujasComponent } from './inside/mispujas/mispujas.component';
     RegistroComponent,
     InicioSesionComponent,
     EncabezadoPrincipalComponent,
-    FooterPrincipalComponent,
     ConocerComponent,
     PerfilComponent,
     FiltroPipe,

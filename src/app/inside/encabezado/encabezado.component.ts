@@ -14,7 +14,7 @@ export class EncabezadoComponent implements OnInit {
 
   ngOnInit() {
   }
-  logotipo = "/assets/img/logotipo.png"
+  logotipo = "./assets/img/logotipo.png"
 
   redirigirPerfil(){
     this.router.navigate(["/perfil/", firebase.auth().currentUser.uid])

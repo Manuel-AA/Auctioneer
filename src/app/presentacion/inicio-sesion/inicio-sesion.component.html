@@ -1,7 +1,7 @@
 <app-encabezado-principal></app-encabezado-principal>
 
 <div class="container cajaFormulario">
-  <h1 class="text-center">Inicio de sesión</h1>
+  <h1 class="text-center"><strong>Inicio de sesión</strong></h1>
   <br>
   <form (ngSubmit)="tryLogin(usuario.email, usuario.password)" #f="ngForm">
     <h4>Email:</h4>
@@ -14,6 +14,6 @@
     <span *ngIf="password.value != '' && password.invalid"><h4 style="color: red">Contraseña no válida. Debe tener 8 caracteres mínimo</h4></span>
     <span *ngIf="password.value == '' "><h4 style="color: red">Campo obligatorio</h4></span>
     <br>
-    <button id="botonInicio" class="btn btn-success mt-3" type="submit" [disabled]="f.invalid"><strong></strong></button>
+    <button id="botonInicio" class="btn btn-success mt-3" type="submit" [disabled]="f.invalid"><strong>Iniciar Sesion</strong></button>
   </form>
 </div>

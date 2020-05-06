@@ -95,6 +95,7 @@ export class VerProductoComponent implements OnInit {
     if (usuarioActivo){
       if (puja>this.productoPagina.pujaActual){
         this.productoPagina.pujaActual = puja;
+        this.productoPagina.ultimoPujador = usuarioActivo.displayName;
         this.servicio.editProducto(this.productoPagina)
         for (let p of this.usuarios){
           if(p.email == usuarioActivo.email){
@@ -103,7 +104,6 @@ export class VerProductoComponent implements OnInit {
               p.pujas.push(this.id)
               this.servicio.editUsuario(p)
             }
-            this.productoPagina.ultimoPujador = usuarioActivo.displayName
             return
           }
         }

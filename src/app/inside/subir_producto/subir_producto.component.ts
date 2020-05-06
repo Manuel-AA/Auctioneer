@@ -15,6 +15,7 @@ export class SubirProductoComponent implements OnInit {
     categoria: "",
     precioSalida: "",
     pujaActual: "",
+    ultimoPujador: "",
     precioCompraYa: "",
     subastador: "",
     emailSubastador: "",

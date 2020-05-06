@@ -21,6 +21,7 @@ export class PerfilComponent implements OnInit {
   modificarProducto: any = {
     id: "",
     nombre: "",
+    categoria: "",
     precioSalida: "",
     pujaActual: "",
     precioCompraYa: ""

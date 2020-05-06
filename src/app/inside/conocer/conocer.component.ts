@@ -8,10 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class ConocerComponent implements OnInit {
 
 
-  imagen1 = "/assets/img/subasta.jpeg"
-  imagen2 = "/assets/img/seguridad.jpeg"
-  imagen3 = "/assets/img/pilares.PNG"
-  imagenFlechaDer = "/assets/img/flecha_derecha.png"
+  imagen1 = "./assets/img/subasta.jpeg"
+  imagen2 = "./assets/img/seguridad.jpeg"
+  imagen3 = "./assets/img/pilares.PNG"
+  imagenFlechaDer = "./assets/img/flecha_derecha.png"
   imagenActual = 1;
   constructor() { }
 
