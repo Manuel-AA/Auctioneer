@@ -114,7 +114,7 @@ export class VerProductoComponent implements OnInit {
         this.productoPagina.ultimoPujador = usuarioActivo.displayName
       }
       else {
-        alert("La puja debe ser superior")
+        alert("La puja debe ser superior a la Puja actual")
       }
     }
   }

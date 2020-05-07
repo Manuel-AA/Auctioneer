@@ -81,24 +81,10 @@ export class PerfilComponent implements OnInit {
   }
 }
 
-
-
   EliminarProducto(producto){
     this.firestoreService.removeProducto(producto);
     var i = this.productos.indexOf(producto)
     this.productos.splice(i, 1)
-  }
-
-  ModificarProducto(producto) {
-    this.modificarProducto.id = producto.id;
-    this.modificarProducto.nombre = producto.nombre;
-    this.modificarProducto.precioSalida = producto.precioSalida;
-    this.modificarProducto.pujaActual = producto.pujaActual;
-    this.modificarProducto.precioCompraYa = producto.precioCompraYa;
-  }
-
-  AgregarProductoModificado(){
-    this.firestoreService.editProducto(this.modificarProducto)
   }
 
   redirigirProducto(producto:any){

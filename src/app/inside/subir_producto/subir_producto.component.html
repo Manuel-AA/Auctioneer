@@ -3,30 +3,34 @@
 <div class = "container cajaFormulario">
   <h1 class="text-center"><strong>Subastar un producto</strong></h1>
   <br>
-  <form (ngSubmit) = "AgregarProducto()">
+  <form (ngSubmit) = "AgregarProducto()" #f="ngForm">
     <br>
     <div class="datos1 float-left">
       <h4>Nombre:</h4>
-      <input type="text" placeholder="Ingresa el nombre del producto" name="nombre" class="form-control" [(ngModel)]="producto.nombre">
+      <input type="text" #nombre = "ngModel" placeholder="Ingresa el nombre del producto" name="nombre" class="form-control" maxlength="30" [(ngModel)]="producto.nombre" required>
+      <span *ngIf="nombre.value == '' "><h5 style="color: red"><strong>Campo obligatorio</strong></h5></span>
     </div>
     <div class="datos1 float-right">
       <h4>Categoria:</h4>
       <!--<input type="text" placeholder="Ingresa la categoria del producto" name="categoria" class="form-control" [(ngModel)]="producto.categoria">-->
-      <select id="cars" placeholder="Ingresa la categoria del producto" name="categoria" class="form-control" [(ngModel)]="producto.categoria">
+      <select id="categoria" #categoria = "ngModel" placeholder="Ingresa la categoria del producto" name="categoria" class="form-control" [(ngModel)]="producto.categoria" required>
         <option value="Vehiculos">Vehiculos</option>
         <option value="Edificios">Edificios</option>
         <option value="Deporte">Deporte</option>
         <option value="Juegos">Juegos</option>
-      </select> 
+        <option value="Juegos">Lectura</option>
+      </select>
+      <span *ngIf="categoria.value == '' "><h5 style="color: red"><strong>Campo obligatorio</strong></h5></span>
     </div>
-    <br><br><br><br><br>
+    <br><br><br><br><br><br>
     <h4>Precio de salida:</h4>
-    <input type="number" placeholder="Ingresa el precio de salida del producto" name="precioSalida" class="form-control" [(ngModel)]="producto.precioSalida">
+    <input type="number" #precioSalida = "ngModel" placeholder="Ingresa el precio de salida del producto" name="precioSalida" class="form-control" [(ngModel)]="producto.precioSalida" required>
+    <span *ngIf="precioSalida.value == '' "><h5 style="color: red"><strong>Campo obligatorio</strong></h5></span>
     <br><br>
-    <h4>Precio de CompraYa:</h4>
+    <h4>Precio de CompraYa (Opcional):</h4>
     <input type="number" placeholder="Ingresa el precio de CompraYa del producto" name="precioCompraYa" class="form-control" [(ngModel)]="producto.precioCompraYa">
-    <br>
-    <button id="botonInicio" class="btn btn-success mt-4" type="submit"><strong>Agregar</strong></button>
+    <br><br>
+    <button id="botonInicio" class="btn btn-success mt-4" type="submit" [disabled]="f.invalid"><strong>Agregar</strong></button>
   </form>
 
 </div>
