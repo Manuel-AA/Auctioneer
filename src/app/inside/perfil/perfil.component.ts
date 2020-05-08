@@ -52,11 +52,6 @@ export class PerfilComponent implements OnInit {
   myTimer() {
     for (let product of this.productos){
     this.hora = new Date().getTime();
-    console.log(this.hora)
-    console.log("hola")
-    console.log(this.hora - product.tiempoInicio)
-    console.log("Fin")
-    console.log(product.tiempoInicio)
     this.valor = this.hora - product.tiempoInicio;
     var comprobar = this.valor;
     var segundos = 0;

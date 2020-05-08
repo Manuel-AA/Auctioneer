@@ -61,11 +61,6 @@ export class VerProductoComponent implements OnInit {
   myTimer() {
     
     this.hora = new Date().getTime();
-    console.log(this.hora)
-    console.log("hola")
-    console.log(this.hora - this.productoPagina.tiempoInicio)
-    console.log("Fin")
-    console.log(this.productoPagina.tiempoInicio)
     this.valor = this.hora - this.productoPagina.tiempoInicio;
     var comprobar = this.valor;
     var segundos = 0;

@@ -13,6 +13,8 @@ export class HomeComponent implements OnInit {
   productos:any;
   hora:any = 0;
   valor:any;
+  identificador = 0;
+  color  = "red";
 
   constructor(private firestoreService:FirestoreService, private router:Router) {
     this.firestoreService.listaProducto().subscribe(producto=>{
@@ -34,11 +36,6 @@ export class HomeComponent implements OnInit {
   myTimer() {
     for (let product of this.productos){
     this.hora = new Date().getTime();
-    console.log(this.hora)
-    console.log("hola")
-    console.log(this.hora - product.tiempoInicio)
-    console.log("Fin")
-    console.log(product.tiempoInicio)
     this.valor = this.hora - product.tiempoInicio;
     var comprobar = this.valor;
     var segundos = 0;
@@ -57,10 +54,36 @@ export class HomeComponent implements OnInit {
       }
     }
     product.tiempoFin = (23 - horas) + ':' + (59 - minutos) + ':' + (59 -segundos);
+    if (comprobar > 86400000 - 300000){
+      this.cambiarColor(product);
+    }
+    if (product.pujaActual > 100000){
+      if (comprobar > 86400000 - 300000){
+          this.cambiarColorDestacado(product)}
+        else{
+          this.marcarDestacado(product);
+        }
+      
+    }
      if (comprobar >= 86400000){
       this.EliminarProducto(product)
     }
   }
+}
+
+cambiarColor(producto){
+  var color = document.getElementById(producto.id);
+  color.style.backgroundColor = "#FF9999";
+}
+
+marcarDestacado(producto){
+  var color = document.getElementById(producto.id);
+  color.style.backgroundColor = "#99CCFF";
+}
+
+cambiarColorDestacado(producto){
+  var color = document.getElementById(producto.id);
+  color.style.backgroundColor = "#CC99FF";
 }
 
 EliminarProducto(producto){

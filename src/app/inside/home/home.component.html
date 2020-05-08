@@ -5,7 +5,7 @@
             <input class="form-control" type="search" name="filtroHome" placeholder="Search" aria-label="Search" [(ngModel)]="filtroHome">
         </form>
         <div class="row p-2">
-            <div (click)="redirigirProducto(producto)" class="alert producto col-lg-4 col-md-4 col-sm-6 col-xs-12" role="alert" *ngFor="let producto of productos | filtro: filtroHome">
+            <div id = {{producto.id}} (click)="redirigirProducto(producto)" class="alert producto col-lg-4 col-md-4 col-sm-6 col-xs-12" role="alert" *ngFor="let producto of productos | filtro: filtroHome">
                 <h2 class="mt-1 mb-3">{{producto.nombre}}</h2>
                 <h6 class="my-2">Categoría: {{producto.categoria}}</h6>
                 <h6 class="my-2">Precio de salida: {{producto.precioSalida}} €</h6>
