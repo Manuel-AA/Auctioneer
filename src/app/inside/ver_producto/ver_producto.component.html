@@ -20,6 +20,8 @@
       <br>
       <h4>Puja actual: {{productoPagina.pujaActual}} $</h4>
       <br>
+      <h4>Siguiente puja mínima: {{pujaMinima}} $</h4>
+      <br>
       <h4>Último pujador: {{productoPagina.ultimoPujador}}</h4>
       <br>
       <h4 *ngIf = "productoPagina.precioCompraYa != ''">Precio para Comprar ya: {{productoPagina.precioCompraYa}} $</h4>
@@ -29,7 +31,7 @@
     </div>
     <input type="number" placeholder="Ingresa tu puja" name="precioNuevaPuja" class="Pujar float-left" *ngIf="productoPagina.emailSubastador != usuarioActivoEmail" [(ngModel)]="nuevaPuja">
     <button id="botonPujar" class="btn btn-success ml-2" (click)="cambiarPuja(nuevaPuja)"type="button" *ngIf="productoPagina.emailSubastador != usuarioActivoEmail">Pujar</button>
-    <button id="botonComprarYa" class="btn btn-success" (click)="comprarYa(productoPagina)"type="button" *ngIf="(productoPagina.emailSubastador != usuarioActivoEmail) && (productoPagina.precioCompraYa != '')">Comprar ya</button>
+    <button id="botonComprarYa" class="btn btn-success" (click)="comprarYa(productoPagina)"type="button" *ngIf="(productoPagina.emailSubastador != usuarioActivoEmail) && (productoPagina.precioCompraYa != '') && (productoPagina.precioCompraYa > productoPagina.pujaActual)">Comprar ya</button>
 
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">

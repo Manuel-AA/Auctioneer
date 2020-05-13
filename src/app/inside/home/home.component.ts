@@ -74,17 +74,23 @@ export class HomeComponent implements OnInit {
 
 cambiarColor(producto){
   var color = document.getElementById(producto.id);
-  color.style.backgroundColor = "#FF9999";
+  if (color != null){
+    color.style.backgroundColor = "#FF9999";
+  }
 }
 
 marcarDestacado(producto){
   var color = document.getElementById(producto.id);
-  color.style.backgroundColor = "#99CCFF";
+  if (color != null){
+    color.style.backgroundColor = "#99CCFF";
+  }
 }
 
 cambiarColorDestacado(producto){
   var color = document.getElementById(producto.id);
-  color.style.backgroundColor = "#CC99FF";
+  if (color != null){
+    color.style.backgroundColor = "#CC99FF";
+  }
 }
 
 EliminarProducto(producto){

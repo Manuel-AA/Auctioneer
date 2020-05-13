@@ -22,6 +22,8 @@ export class SubirProductoComponent implements OnInit {
     tiempoInicio: ""
   }
 
+  
+
   constructor( private servicio: FirestoreService, private router:Router) { }
 
   ngOnInit() {

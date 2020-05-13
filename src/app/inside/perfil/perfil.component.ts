@@ -19,7 +19,8 @@ export class PerfilComponent implements OnInit {
   valor:any;
   numProductos: any = 0;
   usuarioActivoPujas:any[] = [];
-
+  
+  
   modificarProducto: any = {
     id: "",
     nombre: "",

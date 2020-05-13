@@ -13,6 +13,7 @@ export class ConocerComponent implements OnInit {
   imagen3 = "./assets/img/pilares.PNG"
   imagenFlechaDer = "./assets/img/flecha_derecha.png"
   imagenActual = 1;
+
   constructor() { }
 
   ngOnInit() {

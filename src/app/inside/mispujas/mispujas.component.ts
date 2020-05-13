@@ -17,6 +17,7 @@ export class MispujasComponent implements OnInit {
   hora: any = 0;
   valor: any;
   
+  
   constructor(private firestoreService:FirestoreService, private ruta:ActivatedRoute, private router:Router) {
     this.ruta.params.subscribe(params=>{
       this.id = params['id'];

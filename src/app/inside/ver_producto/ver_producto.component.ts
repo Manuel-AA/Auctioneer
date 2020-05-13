@@ -15,6 +15,8 @@ export class VerProductoComponent implements OnInit {
   nuevaPuja:any;
   hora:any = 0;
   valor:any;
+  pujaMinima:any;
+  
 
   usuarioNuevo:any = {
     email: '',
@@ -42,7 +44,7 @@ export class VerProductoComponent implements OnInit {
       for (let p of this.productos){
         if (p.id == this.id){
           this.productoPagina = p;
-          console.log(this.productoPagina)
+          this.pujaMinima = this.productoPagina.pujaActual + this.productoPagina.pujaActual*0.05;
         }
       }
     })
@@ -88,28 +90,28 @@ export class VerProductoComponent implements OnInit {
   cambiarPuja(puja){
     let usuarioActivo = firebase.auth().currentUser
     if (usuarioActivo){
-      if (puja>this.productoPagina.pujaActual){
-        this.productoPagina.pujaActual = puja;
-        this.productoPagina.ultimoPujador = usuarioActivo.displayName;
-        this.servicio.editProducto(this.productoPagina)
-        for (let p of this.usuarios){
-          if(p.email == usuarioActivo.email){
-            console.log(p.pujas)
-            if(!p.pujas.includes(this.id)){
-              p.pujas.push(this.id)
-              this.servicio.editUsuario(p)
+      if (puja>=this.pujaMinima){
+        var opcion = confirm("Seguro que quieres pujar por este producto");
+        if (opcion == true){
+          this.productoPagina.pujaActual = puja;
+          this.productoPagina.ultimoPujador = usuarioActivo.displayName;
+          this.servicio.editProducto(this.productoPagina)
+          for (let p of this.usuarios){
+            if(p.email == usuarioActivo.email){
+              if(!p.pujas.includes(this.id)){
+                p.pujas.push(this.id)
+                this.servicio.editUsuario(p)
+              }
+              return;
             }
-            return
           }
+          this.usuarioNuevo.email = usuarioActivo.email
+          this.usuarioNuevo.pujas.push(this.id)
+          this.servicio.addUsuario(this.usuarioNuevo)
         }
-        this.usuarioNuevo.email = usuarioActivo.email
-        this.usuarioNuevo.pujas.push(this.id)
-        this.servicio.addUsuario(this.usuarioNuevo)
-        console.log(firebase.auth().currentUser.email)
-        this.productoPagina.ultimoPujador = usuarioActivo.displayName
       }
       else {
-        alert("La puja debe ser superior a la Puja actual")
+        alert("La puja debe ser superior o igual a la puja mínima")
       }
     }
   }
