@@ -17,6 +17,8 @@ export class PerfilComponent implements OnInit {
   id:any;
   hora:any = 0;
   valor:any;
+  numProductos: any = 0;
+  usuarioActivoPujas:any[] = [];
 
   modificarProducto: any = {
     id: "",
@@ -32,14 +34,19 @@ export class PerfilComponent implements OnInit {
     this.ruta.params.subscribe(params=>{
       this.id = params['id'];
     })
+    
     this.firestoreService.listaProducto().subscribe(producto=>{
       this.productos = []
       for (let p of producto){
         if (firebase.auth().currentUser.email == p.emailSubastador ){
           this.productos.push(p);
+          this.numProductos++;
         }
       }
+      this.email = firebase.auth().currentUser.email;
+      this.name = firebase.auth().currentUser.displayName;
     })
+
     setInterval(()=> { this.myTimer() }, 1000);
    }
 

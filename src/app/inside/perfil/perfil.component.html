@@ -1,5 +1,13 @@
 <app-encabezado></app-encabezado>
-<div class = "cuerpo pt-5">
+<div class = "cuerpo pt-4">
+    <div class="container bg-light rounded mb-4">
+        <div class="text-center userName">{{name}}</div>
+        <br>
+        <div class="row">
+            <h4 class="text-lg-center col-lg-6 col-md-12 col-sm-12 col-xs-12">Email: {{email}}</h4>
+            <h4 class="text-lg-center col-lg-6 col-md-12 col-sm-12 col-xs-12">Productos subastados: {{numProductos}}</h4>
+        </div>
+    </div>
     <div class="cajaProductos">
         <div class="row p-2">
             <div (click)="redirigirProducto(producto)" class="alert producto col-lg-4 col-md-4 col-sm-6 col-xs-12" role="alert" *ngFor="let producto of productos | filtro: filtroHome">

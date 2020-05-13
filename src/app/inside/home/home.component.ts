@@ -15,6 +15,7 @@ export class HomeComponent implements OnInit {
   valor:any;
   identificador = 0;
   color  = "red";
+  categoria: string = '';
 
   constructor(private firestoreService:FirestoreService, private router:Router) {
     this.firestoreService.listaProducto().subscribe(producto=>{

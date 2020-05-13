@@ -18,7 +18,8 @@
         <option value="Edificios">Edificios</option>
         <option value="Deporte">Deporte</option>
         <option value="Juegos">Juegos</option>
-        <option value="Juegos">Lectura</option>
+        <option value="Lectura">Lectura</option>
+        <option value="Otro">Otro</option>
       </select>
       <span *ngIf="categoria.value == '' "><h5 style="color: red"><strong>Campo obligatorio</strong></h5></span>
     </div>
@@ -32,7 +33,6 @@
     <br><br>
     <button id="botonInicio" class="btn btn-success mt-4" type="submit" [disabled]="f.invalid"><strong>Agregar</strong></button>
   </form>
-
 </div>
 
 

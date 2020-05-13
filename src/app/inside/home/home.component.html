@@ -1,20 +1,38 @@
 <app-encabezado></app-encabezado>
 <div class="cuerpo pt-4">
     <div class="cajaProductos">
-        <form class="mt-5 mb-5 buscador">
-            <input class="form-control" type="search" name="filtroHome" placeholder="Search" aria-label="Search" [(ngModel)]="filtroHome">
-        </form>
-        <div class="row p-2">
-            <div id = {{producto.id}} (click)="redirigirProducto(producto)" class="alert producto col-lg-4 col-md-4 col-sm-6 col-xs-12" role="alert" *ngFor="let producto of productos | filtro: filtroHome">
-                <h2 class="mt-1 mb-3">{{producto.nombre}}</h2>
-                <h6 class="my-2">Categoría: {{producto.categoria}}</h6>
-                <h6 class="my-2">Precio de salida: {{producto.precioSalida}} €</h6>
-                <h6 class="my-2">Puja actual: {{producto.pujaActual}} €</h6>
-                <h6 class="my-2">Último pujador: {{producto.ultimoPujador}}</h6>
-                <h6 class="float-left" *ngIf = "producto.precioCompraYa != ''">Precio para Comprar ya: {{producto.precioCompraYa}} €</h6>
-                <br>
-                <h4 class="my-2">{{producto.tiempoFin}}</h4>
+        <div class="filtros mt-5 mb-4">
+            <div class="dropdown float-right">
+                <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categoria</button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" (click)="categoria = 'Vehiculos'">Vehículos</a>
+                  <a class="dropdown-item" (click)="categoria = 'Edificios'">Edificios</a>
+                  <a class="dropdown-item" (click)="categoria = 'Deporte'">Deporte</a>
+                  <a class="dropdown-item" (click)="categoria = 'Juegos'">Juegos</a>
+                  <a class="dropdown-item" (click)="categoria = 'Lectura'">Lectura</a>
+                  <a class="dropdown-item" (click)="categoria = 'Otro'">Otro</a>
+                  <hr>
+                  <a class="dropdown-item" (click)="categoria = ''">Eliminar filtro</a>
+                </div>
             </div>
+            <form class="buscador">
+                <input class="form-control" type="search" name="filtroHome" placeholder="Search" aria-label="Search" [(ngModel)]="filtroHome">
+            </form>
+        </div>
+        <h1 id="categoriaFiltro" *ngIf="categoria != ''">Filtrar por categoria: {{categoria}}</h1>
+        <div class="row p-2">
+            <ng-container *ngFor="let producto of productos | filtro: filtroHome">
+                <div id = {{producto.id}} (click)="redirigirProducto(producto)" class="alert producto col-lg-4 col-md-4 col-sm-6 col-xs-12" role="alert" *ngIf="categoria == producto.categoria || categoria == ''">
+                    <h2 class="mt-1 mb-3">{{producto.nombre}}</h2>
+                    <h6 class="my-2">Categoría: {{producto.categoria}}</h6>
+                    <h6 class="my-2">Precio de salida: {{producto.precioSalida}} €</h6>
+                    <h6 class="my-2">Puja actual: {{producto.pujaActual}} €</h6>
+                    <h6 class="my-2">Último pujador: {{producto.ultimoPujador}}</h6>
+                    <h6 class="float-left" *ngIf = "producto.precioCompraYa != ''">Precio para Comprar ya: {{producto.precioCompraYa}} €</h6>
+                    <br>
+                    <h4 class="my-2">{{producto.tiempoFin}}</h4>
+                </div>
+            </ng-container>
         </div>
     </div>
 </div>
