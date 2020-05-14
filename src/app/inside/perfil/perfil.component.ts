@@ -60,6 +60,16 @@ export class PerfilComponent implements OnInit {
   myTimer() {
     for (let product of this.productos){
     this.hora = new Date().getTime();
+    var auxiliar = 0;
+    if(product.tiempoSubasta == "1"){
+      auxiliar = 1;
+    }
+    if(product.tiempoSubasta == "2"){
+      auxiliar = 2;
+    }
+    if(product.tiempoSubasta == "3"){
+      auxiliar = 3; 
+    }
     this.valor = this.hora - product.tiempoInicio;
     var comprobar = this.valor;
     var segundos = 0;
@@ -77,12 +87,53 @@ export class PerfilComponent implements OnInit {
         } 
       }
     }
+    if(auxiliar == 1){
     product.tiempoFin = (23 - horas) + ':' + (59 - minutos) + ':' + (59 -segundos);
-     if (comprobar >= 86400000){
+    }
+    if(auxiliar == 2){
+      product.tiempoFin = (47 - horas) + ':' + (59 - minutos) + ':' + (59 -segundos);
+    }
+    if(auxiliar == 3){
+        product.tiempoFin = (71 - horas) + ':' + (59 - minutos) + ':' + (59 -segundos);
+    }
+    if (comprobar > auxiliar * 86400000 - 300000){
+      this.cambiarColor(product);
+    }
+    if (product.pujaActual > 100000){
+      if (comprobar > auxiliar * 86400000 - 300000){
+          this.cambiarColorDestacado(product)}
+        else{
+          this.marcarDestacado(product);
+        }
+      
+    }
+     if (comprobar >= auxiliar * 86400000){
       this.EliminarProducto(product)
     }
   }
 }
+
+cambiarColor(producto){
+  var color = document.getElementById(producto.id);
+  if (color != null){
+    color.style.backgroundColor = "#FF9999";
+  }
+}
+
+marcarDestacado(producto){
+  var color = document.getElementById(producto.id);
+  if (color != null){
+    color.style.backgroundColor = "#99CCFF";
+  }
+}
+
+cambiarColorDestacado(producto){
+  var color = document.getElementById(producto.id);
+  if (color != null){
+    color.style.backgroundColor = "#CC99FF";
+  }
+}
+
 
   EliminarProducto(producto){
     this.firestoreService.removeProducto(producto);

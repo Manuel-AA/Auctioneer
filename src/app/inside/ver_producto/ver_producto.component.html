@@ -12,21 +12,21 @@
       IMAGEN
     </div>
     <div class="infoProducto">
-      <h4>Categoría: {{productoPagina.categoria}}</h4>
+      <h4 class="campo">Categoría: {{productoPagina.categoria}}</h4>
       <br>
-      <h4>Subastador: {{productoPagina.subastador}}</h4>
+      <h4 class="campo">Subastador: {{productoPagina.subastador}}</h4>
       <br>
-      <h4>Precio de salida: {{productoPagina.precioSalida}} $</h4>
+      <h4 class="campo">Precio de salida: {{productoPagina.precioSalida}} $</h4>
       <br>
-      <h4>Puja actual: {{productoPagina.pujaActual}} $</h4>
+      <h4 class="campo">Puja actual: {{productoPagina.pujaActual}} $</h4>
       <br>
-      <h4>Siguiente puja mínima: {{pujaMinima}} $</h4>
+      <h4 class="campo">Siguiente puja mínima: {{pujaMinima}} $</h4>
       <br>
-      <h4>Último pujador: {{productoPagina.ultimoPujador}}</h4>
+      <h4 class="campo">Último pujador: {{productoPagina.ultimoPujador}}</h4>
       <br>
-      <h4 *ngIf = "productoPagina.precioCompraYa != ''">Precio para Comprar ya: {{productoPagina.precioCompraYa}} $</h4>
+      <h4 class="campo" *ngIf = "productoPagina.precioCompraYa != ''">Precio para Comprar ya: {{productoPagina.precioCompraYa}} $</h4>
       <br>
-      <h1>{{productoPagina.tiempoFin}}</h1>
+      <h1 class="campo">{{productoPagina.tiempoFin}}</h1>
       <br>
     </div>
     <input type="number" placeholder="Ingresa tu puja" name="precioNuevaPuja" class="Pujar float-left" *ngIf="productoPagina.emailSubastador != usuarioActivoEmail" [(ngModel)]="nuevaPuja">

@@ -45,3 +45,39 @@
     background-color: red;
     float: right;
 }
+
+
+
+
+@media screen and (max-width:760px)
+{
+    .campo{
+        font-size: smaller;
+    }
+
+    .imagenProducto{  
+        width: 100%;
+        margin-bottom: 2em;
+        float: none;
+    }
+}
+
+@media screen and (max-width:360px)
+{
+
+    #botonPujar{
+        font-size: smaller;
+        float: none;
+        margin-right: 1em;
+    }
+
+    #botonComprarYa {
+        font-size: smaller;
+        float: none;
+    }
+
+    .Pujar {
+        margin-right: 5em;
+        margin-bottom: 1em;
+    }
+}

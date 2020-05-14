@@ -61,9 +61,19 @@ export class VerProductoComponent implements OnInit {
 
 
   myTimer() {
-    
+    for (let product of this.productos){
     this.hora = new Date().getTime();
-    this.valor = this.hora - this.productoPagina.tiempoInicio;
+    var auxiliar = 0;
+    if(product.tiempoSubasta == "1"){
+      auxiliar = 1;
+    }
+    if(product.tiempoSubasta == "2"){
+      auxiliar = 2;
+    }
+    if(product.tiempoSubasta == "3"){
+      auxiliar = 3; 
+    }
+    this.valor = this.hora - product.tiempoInicio;
     var comprobar = this.valor;
     var segundos = 0;
     var minutos = 0;
@@ -80,11 +90,53 @@ export class VerProductoComponent implements OnInit {
         } 
       }
     }
-    this.productoPagina.tiempoFin = (23 - horas) + ':' + (59 - minutos) + ':' + (59 -segundos);
-     if (comprobar >= 86400000){
-      this.EliminarProducto(this.productoPagina)
+    if(auxiliar == 1){
+    product.tiempoFin = (23 - horas) + ':' + (59 - minutos) + ':' + (59 -segundos);
+    }
+    if(auxiliar == 2){
+      product.tiempoFin = (47 - horas) + ':' + (59 - minutos) + ':' + (59 -segundos);
+    }
+    if(auxiliar == 3){
+        product.tiempoFin = (71 - horas) + ':' + (59 - minutos) + ':' + (59 -segundos);
+    }
+    if (comprobar > auxiliar * 86400000 - 300000){
+      this.cambiarColor(product);
+    }
+    if (product.pujaActual > 100000){
+      if (comprobar > auxiliar * 86400000 - 300000){
+          this.cambiarColorDestacado(product)}
+        else{
+          this.marcarDestacado(product);
+        }
+      
+    }
+     if (comprobar >= auxiliar * 86400000){
+      this.EliminarProducto(product)
     }
   }
+}
+
+cambiarColor(producto){
+  var color = document.getElementById(producto.id);
+  if (color != null){
+    color.style.backgroundColor = "#FF9999";
+  }
+}
+
+marcarDestacado(producto){
+  var color = document.getElementById(producto.id);
+  if (color != null){
+    color.style.backgroundColor = "#99CCFF";
+  }
+}
+
+cambiarColorDestacado(producto){
+  var color = document.getElementById(producto.id);
+  if (color != null){
+    color.style.backgroundColor = "#CC99FF";
+  }
+}
+
 
 
   cambiarPuja(puja){

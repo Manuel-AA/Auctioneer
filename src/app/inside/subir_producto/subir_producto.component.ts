@@ -19,7 +19,8 @@ export class SubirProductoComponent implements OnInit {
     precioCompraYa: "",
     subastador: "",
     emailSubastador: "",
-    tiempoInicio: ""
+    tiempoInicio: "",
+    tiempoSubasta: ""
   }
 
   
@@ -46,6 +47,10 @@ export class SubirProductoComponent implements OnInit {
     this.producto.precioSalida = "";
     this.producto.pujaActual = "";
     this.producto.precioCompraYa = "";
+    this.producto.subastador = "";
+    this.producto.emailSubastador = "";
+    this.producto.tiempoInicio = "";
+    this.producto.tiempoSubasta = "";
     this.router.navigate(["/home"])
   }
 
