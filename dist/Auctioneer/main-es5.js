@@ -197,7 +197,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<app-encabezado></app-encabezado>\n\n<div class = \"container cajaFormulario\">\n  <h1 class=\"text-center\"><strong>Subastar un producto</strong></h1>\n  <br>\n  <form (ngSubmit) = \"AgregarProducto()\" #f=\"ngForm\">\n    <br>\n    <div class=\"datos1 float-left\">\n      <h4>Nombre:</h4>\n      <input type=\"text\" #nombre = \"ngModel\" placeholder=\"Ingresa el nombre del producto\" name=\"nombre\" class=\"form-control\" maxlength=\"30\" [(ngModel)]=\"producto.nombre\" required>\n      <span *ngIf=\"nombre.value == '' \"><h5 style=\"color: red\"><strong>Campo obligatorio</strong></h5></span>\n    </div>\n    <div class=\"datos1 float-right\">\n      <h4>Categoria:</h4>\n      <!--<input type=\"text\" placeholder=\"Ingresa la categoria del producto\" name=\"categoria\" class=\"form-control\" [(ngModel)]=\"producto.categoria\">-->\n      <select id=\"categoria\" #categoria = \"ngModel\" placeholder=\"Ingresa la categoria del producto\" name=\"categoria\" class=\"form-control\" [(ngModel)]=\"producto.categoria\" required>\n        <option value=\"Vehiculos\">Vehiculos</option>\n        <option value=\"Edificios\">Edificios</option>\n        <option value=\"Deporte\">Deporte</option>\n        <option value=\"Juegos\">Juegos</option>\n        <option value=\"Lectura\">Lectura</option>\n        <option value=\"Otro\">Otro</option>\n      </select>\n      <span *ngIf=\"categoria.value == '' \"><h5 style=\"color: red\"><strong>Campo obligatorio</strong></h5></span>\n    </div>\n    <br><br><br><br><br><br>\n    <h4>Precio de salida:</h4>\n    <input type=\"number\" #precioSalida = \"ngModel\" placeholder=\"Ingresa el precio de salida del producto\" name=\"precioSalida\" class=\"form-control\" [(ngModel)]=\"producto.precioSalida\" required>\n    <span *ngIf=\"precioSalida.value == '' \"><h5 style=\"color: red\"><strong>Campo obligatorio</strong></h5></span>\n    <br><br>\n    <h4>Precio de CompraYa (Opcional):</h4>\n    <input type=\"number\" placeholder=\"Ingresa el precio de CompraYa del producto\" name=\"precioCompraYa\" class=\"form-control\" [(ngModel)]=\"producto.precioCompraYa\">\n    <br><br>\n    <button id=\"botonInicio\" class=\"btn btn-success mt-4\" type=\"submit\" [disabled]=\"f.invalid\"><strong>Agregar</strong></button>\n  </form>\n</div>\n\n\n";
+    __webpack_exports__["default"] = "<app-encabezado></app-encabezado>\n\n<div class = \"container cajaFormulario\">\n  <h1 class=\"text-center\"><strong>Subastar un producto</strong></h1>\n  <br>\n  <form (ngSubmit) = \"AgregarProducto()\" #f=\"ngForm\">\n    <br>\n    <div class=\"datos1 float-left\">\n      <h4>Nombre:</h4>\n      <input type=\"text\" #nombre = \"ngModel\" placeholder=\"Ingresa el nombre del producto\" name=\"nombre\" class=\"form-control\" maxlength=\"30\" [(ngModel)]=\"producto.nombre\" required>\n      <span *ngIf=\"nombre.value == '' \"><h5 style=\"color: red\"><strong>Campo obligatorio</strong></h5></span>\n    </div>\n    <div class=\"datos1 float-right\">\n      <h4>Categoria:</h4>\n      <!--<input type=\"text\" placeholder=\"Ingresa la categoria del producto\" name=\"categoria\" class=\"form-control\" [(ngModel)]=\"producto.categoria\">-->\n      <select id=\"categoria\" #categoria = \"ngModel\" placeholder=\"Ingresa la categoria del producto\" name=\"categoria\" class=\"form-control\" [(ngModel)]=\"producto.categoria\" required>\n        <option value=\"Vehiculos\">Vehiculos</option>\n        <option value=\"Edificios\">Edificios</option>\n        <option value=\"Deporte\">Deporte</option>\n        <option value=\"Juegos\">Juegos</option>\n        <option value=\"Lectura\">Lectura</option>\n        <option value=\"Otro\">Otro</option>\n      </select>\n      <span *ngIf=\"categoria.value == '' \"><h5 style=\"color: red\"><strong>Campo obligatorio</strong></h5></span>\n    </div>\n    <br><br><br><br><br><br>\n    <h4>Precio de salida:</h4>\n    <input type=\"number\" #precioSalida = \"ngModel\" placeholder=\"Ingresa el precio de salida del producto\" name=\"precioSalida\" class=\"form-control\" [(ngModel)]=\"producto.precioSalida\" required>\n    <span *ngIf=\"precioSalida.value == '' \"><h5 style=\"color: red\"><strong>Campo obligatorio</strong></h5></span>\n    <br><br>\n    <h4>Precio de CompraYa (Opcional):</h4>\n    <input type=\"number\" placeholder=\"Ingresa el precio de CompraYa del producto\" name=\"precioCompraYa\" class=\"form-control\" [(ngModel)]=\"producto.precioCompraYa\">\n    <br><br>\n    <div class=\"datos1\">\n      <h4>Tiempo subasta:</h4>\n      <select id=\"tiempo\" #tiempo = \"ngModel\" placeholder=\"Ingresa el tiempo de la subasta del producto\" name=\"tiempo\" class=\"form-control\" [(ngModel)]=\"producto.tiempoSubasta\" required>\n        <option value = \"1\" >1 día</option>\n        <option value = \"2\" >2 días</option>\n        <option value = \"3\" >3 días</option>\n      </select>\n      <span *ngIf=\"tiempo.value == '' \"><h5 style=\"color: red\"><strong>Campo obligatorio</strong></h5></span>\n    </div>\n    <button id=\"botonInicio\" class=\"btn btn-success mt-4\" type=\"submit\" [disabled]=\"f.invalid\"><strong>Agregar</strong></button>\n  </form>\n</div>\n\n\n";
     /***/
   },
 
@@ -217,7 +217,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<app-encabezado></app-encabezado>\n\n<div class = \"fondo p-4\">\n  <div class=\"container cajaProducto bg-light p-4\">\n    \n    <div class=\"float-right mr-3\" (click)=\"ModificarProducto(productoPagina)\" data-toggle=\"modal\" data-target=\"#exampleModal\" *ngIf=\"(productoPagina.emailSubastador == usuarioActivoEmail) && (productoPagina.pujaActual == productoPagina.precioSalida)\">\n        <i class=\"fas fa-pencil-alt\"></i>\n    </div>\n    <div id=\"titulo\">{{productoPagina.nombre}}</div>\n    <br>\n    <div class=\"imagenProducto\">\n      IMAGEN\n    </div>\n    <div class=\"infoProducto\">\n      <h4>Categoría: {{productoPagina.categoria}}</h4>\n      <br>\n      <h4>Subastador: {{productoPagina.subastador}}</h4>\n      <br>\n      <h4>Precio de salida: {{productoPagina.precioSalida}} $</h4>\n      <br>\n      <h4>Puja actual: {{productoPagina.pujaActual}} $</h4>\n      <br>\n      <h4>Siguiente puja mínima: {{pujaMinima}} $</h4>\n      <br>\n      <h4>Último pujador: {{productoPagina.ultimoPujador}}</h4>\n      <br>\n      <h4 *ngIf = \"productoPagina.precioCompraYa != ''\">Precio para Comprar ya: {{productoPagina.precioCompraYa}} $</h4>\n      <br>\n      <h1>{{productoPagina.tiempoFin}}</h1>\n      <br>\n    </div>\n    <input type=\"number\" placeholder=\"Ingresa tu puja\" name=\"precioNuevaPuja\" class=\"Pujar float-left\" *ngIf=\"productoPagina.emailSubastador != usuarioActivoEmail\" [(ngModel)]=\"nuevaPuja\">\n    <button id=\"botonPujar\" class=\"btn btn-success ml-2\" (click)=\"cambiarPuja(nuevaPuja)\"type=\"button\" *ngIf=\"productoPagina.emailSubastador != usuarioActivoEmail\">Pujar</button>\n    <button id=\"botonComprarYa\" class=\"btn btn-success\" (click)=\"comprarYa(productoPagina)\"type=\"button\" *ngIf=\"(productoPagina.emailSubastador != usuarioActivoEmail) && (productoPagina.precioCompraYa != '') && (productoPagina.precioCompraYa > productoPagina.pujaActual)\">Comprar ya</button>\n\n    <div class=\"modal fade\" id=\"exampleModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\n      <div class=\"modal-dialog\" role=\"document\">\n        <div class=\"modal-content\">\n          <div class=\"modal-header\">\n            <h5 class=\"modal-title\" id=\"exampleModalLabel\">Modificar: {{modificarProducto.nombre}}</h5>\n            <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n              <span aria-hidden=\"true\">&times;</span>\n            </button>\n          </div>\n          <div class=\"modal-body\">\n            <div class = \"container\">\n\n              <form (ngSubmit) = \"AgregarProductoModificado()\">\n                  <input type=\"text\" placeholder=\"Ingresa el nuevo nombre del producto\" name=\"nombre\" class=\"form-control  mt-4\" [(ngModel)]=\"modificarProducto.nombre\">\n                  <select id=\"categoria\" placeholder=\"Ingresa la nueva categoria del producto\" name=\"categoria\" class=\"form-control mt-4\" [(ngModel)]=\"modificarProducto.categoria\">\n                    <option value=\"Vehiculos\">Vehiculos</option>\n                    <option value=\"Edificios\">Edificios</option>\n                    <option value=\"Deporte\">Deporte</option>\n                    <option value=\"Juegos\">Juegos</option>\n                    <option value=\"Lectura\">Lectura</option>\n                    <option value=\"Otro\">Otro</option>\n                  </select>\n                  <input type=\"number\" placeholder=\"Ingresa el nuevo precio de salida del producto\" name=\"precioSalida\" class=\"form-control  mt-4\" [(ngModel)]=\"modificarProducto.precioSalida\">\n                  <input type=\"number\" placeholder=\"Ingresa el nuevo precio de CompraYa del producto\" name=\"precioCompraYa\" class=\"form-control  mt-4\" [(ngModel)]=\"modificarProducto.precioCompraYa\">\n                  <button class=\"btn btn-warning mt-4\" type=\"submit\">Guardar cambios</button>\n              </form>\n            \n            </div>\n          </div>\n          <div class=\"modal-footer\">\n            <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Close</button>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n";
+    __webpack_exports__["default"] = "<app-encabezado></app-encabezado>\n\n<div class = \"fondo p-4\">\n  <div class=\"container cajaProducto bg-light p-4\">\n    \n    <div class=\"float-right mr-3\" (click)=\"ModificarProducto(productoPagina)\" data-toggle=\"modal\" data-target=\"#exampleModal\" *ngIf=\"(productoPagina.emailSubastador == usuarioActivoEmail) && (productoPagina.pujaActual == productoPagina.precioSalida)\">\n        <i class=\"fas fa-pencil-alt\"></i>\n    </div>\n    <div id=\"titulo\">{{productoPagina.nombre}}</div>\n    <br>\n    <div class=\"imagenProducto\">\n      IMAGEN\n    </div>\n    <div class=\"infoProducto\">\n      <h4 class=\"campo\">Categoría: {{productoPagina.categoria}}</h4>\n      <br>\n      <h4 class=\"campo\">Subastador: {{productoPagina.subastador}}</h4>\n      <br>\n      <h4 class=\"campo\">Precio de salida: {{productoPagina.precioSalida}} $</h4>\n      <br>\n      <h4 class=\"campo\">Puja actual: {{productoPagina.pujaActual}} $</h4>\n      <br>\n      <h4 class=\"campo\">Siguiente puja mínima: {{pujaMinima}} $</h4>\n      <br>\n      <h4 class=\"campo\">Último pujador: {{productoPagina.ultimoPujador}}</h4>\n      <br>\n      <h4 class=\"campo\" *ngIf = \"productoPagina.precioCompraYa != ''\">Precio para Comprar ya: {{productoPagina.precioCompraYa}} $</h4>\n      <br>\n      <h1 class=\"campo\">{{productoPagina.tiempoFin}}</h1>\n      <br>\n    </div>\n    <input type=\"number\" placeholder=\"Ingresa tu puja\" name=\"precioNuevaPuja\" class=\"Pujar float-left\" *ngIf=\"productoPagina.emailSubastador != usuarioActivoEmail\" [(ngModel)]=\"nuevaPuja\">\n    <button id=\"botonPujar\" class=\"btn btn-success ml-2\" (click)=\"cambiarPuja(nuevaPuja)\"type=\"button\" *ngIf=\"productoPagina.emailSubastador != usuarioActivoEmail\">Pujar</button>\n    <button id=\"botonComprarYa\" class=\"btn btn-success\" (click)=\"comprarYa(productoPagina)\"type=\"button\" *ngIf=\"(productoPagina.emailSubastador != usuarioActivoEmail) && (productoPagina.precioCompraYa != '') && (productoPagina.precioCompraYa > productoPagina.pujaActual)\">Comprar ya</button>\n\n    <div class=\"modal fade\" id=\"exampleModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\n      <div class=\"modal-dialog\" role=\"document\">\n        <div class=\"modal-content\">\n          <div class=\"modal-header\">\n            <h5 class=\"modal-title\" id=\"exampleModalLabel\">Modificar: {{modificarProducto.nombre}}</h5>\n            <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n              <span aria-hidden=\"true\">&times;</span>\n            </button>\n          </div>\n          <div class=\"modal-body\">\n            <div class = \"container\">\n\n              <form (ngSubmit) = \"AgregarProductoModificado()\">\n                  <input type=\"text\" placeholder=\"Ingresa el nuevo nombre del producto\" name=\"nombre\" class=\"form-control  mt-4\" [(ngModel)]=\"modificarProducto.nombre\">\n                  <select id=\"categoria\" placeholder=\"Ingresa la nueva categoria del producto\" name=\"categoria\" class=\"form-control mt-4\" [(ngModel)]=\"modificarProducto.categoria\">\n                    <option value=\"Vehiculos\">Vehiculos</option>\n                    <option value=\"Edificios\">Edificios</option>\n                    <option value=\"Deporte\">Deporte</option>\n                    <option value=\"Juegos\">Juegos</option>\n                    <option value=\"Lectura\">Lectura</option>\n                    <option value=\"Otro\">Otro</option>\n                  </select>\n                  <input type=\"number\" placeholder=\"Ingresa el nuevo precio de salida del producto\" name=\"precioSalida\" class=\"form-control  mt-4\" [(ngModel)]=\"modificarProducto.precioSalida\">\n                  <input type=\"number\" placeholder=\"Ingresa el nuevo precio de CompraYa del producto\" name=\"precioCompraYa\" class=\"form-control  mt-4\" [(ngModel)]=\"modificarProducto.precioCompraYa\">\n                  <button class=\"btn btn-warning mt-4\" type=\"submit\">Guardar cambios</button>\n              </form>\n            \n            </div>\n          </div>\n          <div class=\"modal-footer\">\n            <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Close</button>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n";
     /***/
   },
 
@@ -1021,9 +1021,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       path: '**',
       redirectTo: '/',
       pathMatch: 'full'
-    }
-    /*redirigir a una pagina error 404 (crear otro componente)*/
-    ];
+    }];
 
     var AppRoutingModule = function AppRoutingModule() {
       _classCallCheck(this, AppRoutingModule);
@@ -1714,7 +1712,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = ".cuerpo {\n  min-height: 500px;\n  padding-left: 2%;\n  padding-right: 2%;\n  padding-bottom: 5%;\n  background-color: rgba(0, 0, 0, 0.8);\n}\n\n#categoriaFiltro {\n  color: white;\n}\n\n.cajaProductos {\n  min-height: 400px;\n  padding-left: 2%;\n  padding-right: 2%;\n  padding-top: 1%;\n  background-color: #c80000;\n}\n\n.filtros {\n  width: 30%;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.buscador {\n  width: 70%;\n  min-width: 200px;\n}\n\n.producto {\n  background-color: white;\n  border: 2px solid red;\n  cursor: pointer;\n}\n\n.dropdown-item {\n  cursor: pointer;\n}\n\n@media screen and (max-width: 1280px) {\n  #dropdownMenuButton {\n    margin-top: 0em;\n    margin-bottom: 1em;\n    margin-right: 0em;\n    margin-left: -3em;\n  }\n\n  .form-control {\n    margin-left: 1em;\n  }\n}\n\n@media screen and (max-width: 760px) {\n  #dropdownMenuButton {\n    margin-top: 0em;\n    margin-bottom: 1em;\n    margin-right: 2em;\n    margin-left: 0em;\n  }\n}\n\n@media screen and (max-width: 500px) {\n  #dropdownMenuButton {\n    margin-top: 0em;\n    margin-bottom: 1em;\n    margin-right: 0em;\n    margin-left: 7em;\n  }\n\n  .form-control {\n    margin-left: -2em;\n  }\n}\n\n@media screen and (max-width: 360px) {\n  #dropdownMenuButton {\n    margin-top: 0em;\n    margin-bottom: 1em;\n    margin-right: 0em;\n    margin-left: 5em;\n  }\n\n  .form-control {\n    margin-left: -3em;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3VjM20vRXNjcml0b3Jpby9BdWN0aW9uZWVyL3NyYy9hcHAvaW5zaWRlL2hvbWUvaG9tZS5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvaW5zaWRlL2hvbWUvaG9tZS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGlCQUFBO0VBQ0EsZ0JBQUE7RUFDQSxpQkFBQTtFQUNBLGtCQUFBO0VBQ0Esb0NBQUE7QUNDSjs7QURFQTtFQUNJLFlBQUE7QUNDSjs7QURFQTtFQUNJLGlCQUFBO0VBQ0EsZ0JBQUE7RUFDQSxpQkFBQTtFQUNBLGVBQUE7RUFDQSx5QkFBQTtBQ0NKOztBREVBO0VBQ0ksVUFBQTtFQUNBLGlCQUFBO0VBQ0Esa0JBQUE7QUNDSjs7QURFQTtFQUNJLFVBQUE7RUFDQSxnQkFBQTtBQ0NKOztBREVBO0VBQ0ksdUJBQUE7RUFDQSxxQkFBQTtFQUNBLGVBQUE7QUNDSjs7QURFQTtFQUNJLGVBQUE7QUNDSjs7QURFQTtFQUVJO0lBQ0ksZUFBQTtJQUNBLGtCQUFBO0lBQ0EsaUJBQUE7SUFDQSxpQkFBQTtFQ0FOOztFREVFO0lBQ0ksZ0JBQUE7RUNDTjtBQUNGOztBREVBO0VBRUk7SUFDSSxlQUFBO0lBQ0Esa0JBQUE7SUFDQSxpQkFBQTtJQUNBLGdCQUFBO0VDRE47QUFDRjs7QURJQTtFQUVJO0lBQ0ksZUFBQTtJQUNBLGtCQUFBO0lBQ0EsaUJBQUE7SUFDQSxnQkFBQTtFQ0hOOztFREtFO0lBQ0ksaUJBQUE7RUNGTjtBQUNGOztBREtBO0VBRUk7SUFDSSxlQUFBO0lBQ0Esa0JBQUE7SUFDQSxpQkFBQTtJQUNBLGdCQUFBO0VDSk47O0VETUU7SUFDSSxpQkFBQTtFQ0hOO0FBQ0YiLCJmaWxlIjoic3JjL2FwcC9pbnNpZGUvaG9tZS9ob21lLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmN1ZXJwbyB7XG4gICAgbWluLWhlaWdodDogNTAwcHg7XG4gICAgcGFkZGluZy1sZWZ0OiAyJTtcbiAgICBwYWRkaW5nLXJpZ2h0OiAyJTtcbiAgICBwYWRkaW5nLWJvdHRvbTogNSU7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgwLCAwLCAwLCAwLjgwMCk7XG59XG5cbiNjYXRlZ29yaWFGaWx0cm8ge1xuICAgIGNvbG9yOiB3aGl0ZTtcbn1cblxuLmNhamFQcm9kdWN0b3Mge1xuICAgIG1pbi1oZWlnaHQ6IDQwMHB4O1xuICAgIHBhZGRpbmctbGVmdDogMiU7XG4gICAgcGFkZGluZy1yaWdodDogMiU7XG4gICAgcGFkZGluZy10b3A6IDElO1xuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYigyMDAsIDAsIDApO1xufVxuXG4uZmlsdHJvcyB7XG4gICAgd2lkdGg6IDMwJTtcbiAgICBtYXJnaW4tbGVmdDogYXV0bztcbiAgICBtYXJnaW4tcmlnaHQ6IGF1dG87XG59XG5cbi5idXNjYWRvciB7XG4gICAgd2lkdGg6IDcwJTtcbiAgICBtaW4td2lkdGg6IDIwMHB4O1xufVxuXG4ucHJvZHVjdG8ge1xuICAgIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xuICAgIGJvcmRlcjogMnB4IHNvbGlkIHJlZDtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG59XG5cbi5kcm9wZG93bi1pdGVte1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbn1cblxuQG1lZGlhIHNjcmVlbiBhbmQgKG1heC13aWR0aDoxMjgwcHgpXG57XG4gICAgI2Ryb3Bkb3duTWVudUJ1dHRvbntcbiAgICAgICAgbWFyZ2luLXRvcDogMGVtO1xuICAgICAgICBtYXJnaW4tYm90dG9tOiAxZW07XG4gICAgICAgIG1hcmdpbi1yaWdodDogMGVtO1xuICAgICAgICBtYXJnaW4tbGVmdDogLTNlbTtcbiAgICB9XG4gICAgLmZvcm0tY29udHJvbHtcbiAgICAgICAgbWFyZ2luLWxlZnQ6IDFlbTsgXG4gICAgfVxufVxuXG5AbWVkaWEgc2NyZWVuIGFuZCAobWF4LXdpZHRoOjc2MHB4KVxue1xuICAgICNkcm9wZG93bk1lbnVCdXR0b257XG4gICAgICAgIG1hcmdpbi10b3A6IDBlbTtcbiAgICAgICAgbWFyZ2luLWJvdHRvbTogMWVtO1xuICAgICAgICBtYXJnaW4tcmlnaHQ6IDJlbTtcbiAgICAgICAgbWFyZ2luLWxlZnQ6IDBlbTtcbiAgICB9XG59XG5cbkBtZWRpYSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6NTAwcHgpXG57XG4gICAgI2Ryb3Bkb3duTWVudUJ1dHRvbntcbiAgICAgICAgbWFyZ2luLXRvcDogMGVtO1xuICAgICAgICBtYXJnaW4tYm90dG9tOiAxZW07XG4gICAgICAgIG1hcmdpbi1yaWdodDogMGVtO1xuICAgICAgICBtYXJnaW4tbGVmdDogN2VtO1xuICAgIH1cbiAgICAuZm9ybS1jb250cm9se1xuICAgICAgICBtYXJnaW4tbGVmdDogLTJlbTsgXG4gICAgfVxufVxuXG5AbWVkaWEgc2NyZWVuIGFuZCAobWF4LXdpZHRoOjM2MHB4KVxue1xuICAgICNkcm9wZG93bk1lbnVCdXR0b257XG4gICAgICAgIG1hcmdpbi10b3A6IDBlbTtcbiAgICAgICAgbWFyZ2luLWJvdHRvbTogMWVtO1xuICAgICAgICBtYXJnaW4tcmlnaHQ6IDBlbTtcbiAgICAgICAgbWFyZ2luLWxlZnQ6IDVlbTtcbiAgICB9XG4gICAgLmZvcm0tY29udHJvbHtcbiAgICAgICAgbWFyZ2luLWxlZnQ6IC0zZW07IFxuICAgIH1cbn1cbiIsIi5jdWVycG8ge1xuICBtaW4taGVpZ2h0OiA1MDBweDtcbiAgcGFkZGluZy1sZWZ0OiAyJTtcbiAgcGFkZGluZy1yaWdodDogMiU7XG4gIHBhZGRpbmctYm90dG9tOiA1JTtcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgwLCAwLCAwLCAwLjgpO1xufVxuXG4jY2F0ZWdvcmlhRmlsdHJvIHtcbiAgY29sb3I6IHdoaXRlO1xufVxuXG4uY2FqYVByb2R1Y3RvcyB7XG4gIG1pbi1oZWlnaHQ6IDQwMHB4O1xuICBwYWRkaW5nLWxlZnQ6IDIlO1xuICBwYWRkaW5nLXJpZ2h0OiAyJTtcbiAgcGFkZGluZy10b3A6IDElO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjYzgwMDAwO1xufVxuXG4uZmlsdHJvcyB7XG4gIHdpZHRoOiAzMCU7XG4gIG1hcmdpbi1sZWZ0OiBhdXRvO1xuICBtYXJnaW4tcmlnaHQ6IGF1dG87XG59XG5cbi5idXNjYWRvciB7XG4gIHdpZHRoOiA3MCU7XG4gIG1pbi13aWR0aDogMjAwcHg7XG59XG5cbi5wcm9kdWN0byB7XG4gIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xuICBib3JkZXI6IDJweCBzb2xpZCByZWQ7XG4gIGN1cnNvcjogcG9pbnRlcjtcbn1cblxuLmRyb3Bkb3duLWl0ZW0ge1xuICBjdXJzb3I6IHBvaW50ZXI7XG59XG5cbkBtZWRpYSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDEyODBweCkge1xuICAjZHJvcGRvd25NZW51QnV0dG9uIHtcbiAgICBtYXJnaW4tdG9wOiAwZW07XG4gICAgbWFyZ2luLWJvdHRvbTogMWVtO1xuICAgIG1hcmdpbi1yaWdodDogMGVtO1xuICAgIG1hcmdpbi1sZWZ0OiAtM2VtO1xuICB9XG5cbiAgLmZvcm0tY29udHJvbCB7XG4gICAgbWFyZ2luLWxlZnQ6IDFlbTtcbiAgfVxufVxuQG1lZGlhIHNjcmVlbiBhbmQgKG1heC13aWR0aDogNzYwcHgpIHtcbiAgI2Ryb3Bkb3duTWVudUJ1dHRvbiB7XG4gICAgbWFyZ2luLXRvcDogMGVtO1xuICAgIG1hcmdpbi1ib3R0b206IDFlbTtcbiAgICBtYXJnaW4tcmlnaHQ6IDJlbTtcbiAgICBtYXJnaW4tbGVmdDogMGVtO1xuICB9XG59XG5AbWVkaWEgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA1MDBweCkge1xuICAjZHJvcGRvd25NZW51QnV0dG9uIHtcbiAgICBtYXJnaW4tdG9wOiAwZW07XG4gICAgbWFyZ2luLWJvdHRvbTogMWVtO1xuICAgIG1hcmdpbi1yaWdodDogMGVtO1xuICAgIG1hcmdpbi1sZWZ0OiA3ZW07XG4gIH1cblxuICAuZm9ybS1jb250cm9sIHtcbiAgICBtYXJnaW4tbGVmdDogLTJlbTtcbiAgfVxufVxuQG1lZGlhIHNjcmVlbiBhbmQgKG1heC13aWR0aDogMzYwcHgpIHtcbiAgI2Ryb3Bkb3duTWVudUJ1dHRvbiB7XG4gICAgbWFyZ2luLXRvcDogMGVtO1xuICAgIG1hcmdpbi1ib3R0b206IDFlbTtcbiAgICBtYXJnaW4tcmlnaHQ6IDBlbTtcbiAgICBtYXJnaW4tbGVmdDogNWVtO1xuICB9XG5cbiAgLmZvcm0tY29udHJvbCB7XG4gICAgbWFyZ2luLWxlZnQ6IC0zZW07XG4gIH1cbn0iXX0= */";
+    __webpack_exports__["default"] = ".cuerpo {\n  min-height: 500px;\n  padding-left: 2%;\n  padding-right: 2%;\n  padding-bottom: 5%;\n  background-color: rgba(0, 0, 0, 0.8);\n}\n\n#categoriaFiltro {\n  color: white;\n}\n\n.cajaProductos {\n  min-height: 400px;\n  padding-left: 2%;\n  padding-right: 2%;\n  padding-top: 1%;\n}\n\n.filtros {\n  width: 30%;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.buscador {\n  width: 70%;\n  min-width: 200px;\n}\n\n.producto {\n  background-color: white;\n  border: 2px solid red;\n  cursor: pointer;\n}\n\n.dropdown-item {\n  cursor: pointer;\n}\n\n@media screen and (max-width: 1280px) {\n  #dropdownMenuButton {\n    margin-top: 0em;\n    margin-bottom: 1em;\n    margin-right: 0em;\n    margin-left: -3em;\n  }\n\n  .form-control {\n    margin-left: 1em;\n  }\n}\n\n@media screen and (max-width: 760px) {\n  #dropdownMenuButton {\n    margin-top: 0em;\n    margin-bottom: 1em;\n    margin-right: 2em;\n    margin-left: 0em;\n  }\n}\n\n@media screen and (max-width: 500px) {\n  #dropdownMenuButton {\n    margin-top: 0em;\n    margin-bottom: 1em;\n    margin-right: 0em;\n    margin-left: 7em;\n  }\n\n  .form-control {\n    margin-left: -2em;\n  }\n}\n\n@media screen and (max-width: 360px) {\n  #dropdownMenuButton {\n    margin-top: 0em;\n    margin-bottom: 1em;\n    margin-right: 0em;\n    margin-left: 5em;\n  }\n\n  .form-control {\n    margin-left: -3em;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3VjM20vRXNjcml0b3Jpby9BdWN0aW9uZWVyL3NyYy9hcHAvaW5zaWRlL2hvbWUvaG9tZS5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvaW5zaWRlL2hvbWUvaG9tZS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGlCQUFBO0VBQ0EsZ0JBQUE7RUFDQSxpQkFBQTtFQUNBLGtCQUFBO0VBQ0Esb0NBQUE7QUNDSjs7QURFQTtFQUNJLFlBQUE7QUNDSjs7QURFQTtFQUNJLGlCQUFBO0VBQ0EsZ0JBQUE7RUFDQSxpQkFBQTtFQUNBLGVBQUE7QUNDSjs7QURFQTtFQUNJLFVBQUE7RUFDQSxpQkFBQTtFQUNBLGtCQUFBO0FDQ0o7O0FERUE7RUFDSSxVQUFBO0VBQ0EsZ0JBQUE7QUNDSjs7QURFQTtFQUNJLHVCQUFBO0VBQ0EscUJBQUE7RUFDQSxlQUFBO0FDQ0o7O0FERUE7RUFDSSxlQUFBO0FDQ0o7O0FERUE7RUFFSTtJQUNJLGVBQUE7SUFDQSxrQkFBQTtJQUNBLGlCQUFBO0lBQ0EsaUJBQUE7RUNBTjs7RURFRTtJQUNJLGdCQUFBO0VDQ047QUFDRjs7QURFQTtFQUVJO0lBQ0ksZUFBQTtJQUNBLGtCQUFBO0lBQ0EsaUJBQUE7SUFDQSxnQkFBQTtFQ0ROO0FBQ0Y7O0FESUE7RUFFSTtJQUNJLGVBQUE7SUFDQSxrQkFBQTtJQUNBLGlCQUFBO0lBQ0EsZ0JBQUE7RUNITjs7RURLRTtJQUNJLGlCQUFBO0VDRk47QUFDRjs7QURLQTtFQUVJO0lBQ0ksZUFBQTtJQUNBLGtCQUFBO0lBQ0EsaUJBQUE7SUFDQSxnQkFBQTtFQ0pOOztFRE1FO0lBQ0ksaUJBQUE7RUNITjtBQUNGIiwiZmlsZSI6InNyYy9hcHAvaW5zaWRlL2hvbWUvaG9tZS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jdWVycG8ge1xuICAgIG1pbi1oZWlnaHQ6IDUwMHB4O1xuICAgIHBhZGRpbmctbGVmdDogMiU7XG4gICAgcGFkZGluZy1yaWdodDogMiU7XG4gICAgcGFkZGluZy1ib3R0b206IDUlO1xuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMCwgMCwgMCwgMC44MDApO1xufVxuXG4jY2F0ZWdvcmlhRmlsdHJvIHtcbiAgICBjb2xvcjogd2hpdGU7XG59XG5cbi5jYWphUHJvZHVjdG9zIHtcbiAgICBtaW4taGVpZ2h0OiA0MDBweDtcbiAgICBwYWRkaW5nLWxlZnQ6IDIlO1xuICAgIHBhZGRpbmctcmlnaHQ6IDIlO1xuICAgIHBhZGRpbmctdG9wOiAxJTtcbn1cblxuLmZpbHRyb3Mge1xuICAgIHdpZHRoOiAzMCU7XG4gICAgbWFyZ2luLWxlZnQ6IGF1dG87XG4gICAgbWFyZ2luLXJpZ2h0OiBhdXRvO1xufVxuXG4uYnVzY2Fkb3Ige1xuICAgIHdpZHRoOiA3MCU7XG4gICAgbWluLXdpZHRoOiAyMDBweDtcbn1cblxuLnByb2R1Y3RvIHtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcbiAgICBib3JkZXI6IDJweCBzb2xpZCByZWQ7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xufVxuXG4uZHJvcGRvd24taXRlbXtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG59XG5cbkBtZWRpYSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6MTI4MHB4KVxue1xuICAgICNkcm9wZG93bk1lbnVCdXR0b257XG4gICAgICAgIG1hcmdpbi10b3A6IDBlbTtcbiAgICAgICAgbWFyZ2luLWJvdHRvbTogMWVtO1xuICAgICAgICBtYXJnaW4tcmlnaHQ6IDBlbTtcbiAgICAgICAgbWFyZ2luLWxlZnQ6IC0zZW07XG4gICAgfVxuICAgIC5mb3JtLWNvbnRyb2x7XG4gICAgICAgIG1hcmdpbi1sZWZ0OiAxZW07IFxuICAgIH1cbn1cblxuQG1lZGlhIHNjcmVlbiBhbmQgKG1heC13aWR0aDo3NjBweClcbntcbiAgICAjZHJvcGRvd25NZW51QnV0dG9ue1xuICAgICAgICBtYXJnaW4tdG9wOiAwZW07XG4gICAgICAgIG1hcmdpbi1ib3R0b206IDFlbTtcbiAgICAgICAgbWFyZ2luLXJpZ2h0OiAyZW07XG4gICAgICAgIG1hcmdpbi1sZWZ0OiAwZW07XG4gICAgfVxufVxuXG5AbWVkaWEgc2NyZWVuIGFuZCAobWF4LXdpZHRoOjUwMHB4KVxue1xuICAgICNkcm9wZG93bk1lbnVCdXR0b257XG4gICAgICAgIG1hcmdpbi10b3A6IDBlbTtcbiAgICAgICAgbWFyZ2luLWJvdHRvbTogMWVtO1xuICAgICAgICBtYXJnaW4tcmlnaHQ6IDBlbTtcbiAgICAgICAgbWFyZ2luLWxlZnQ6IDdlbTtcbiAgICB9XG4gICAgLmZvcm0tY29udHJvbHtcbiAgICAgICAgbWFyZ2luLWxlZnQ6IC0yZW07IFxuICAgIH1cbn1cblxuQG1lZGlhIHNjcmVlbiBhbmQgKG1heC13aWR0aDozNjBweClcbntcbiAgICAjZHJvcGRvd25NZW51QnV0dG9ue1xuICAgICAgICBtYXJnaW4tdG9wOiAwZW07XG4gICAgICAgIG1hcmdpbi1ib3R0b206IDFlbTtcbiAgICAgICAgbWFyZ2luLXJpZ2h0OiAwZW07XG4gICAgICAgIG1hcmdpbi1sZWZ0OiA1ZW07XG4gICAgfVxuICAgIC5mb3JtLWNvbnRyb2x7XG4gICAgICAgIG1hcmdpbi1sZWZ0OiAtM2VtOyBcbiAgICB9XG59XG4iLCIuY3VlcnBvIHtcbiAgbWluLWhlaWdodDogNTAwcHg7XG4gIHBhZGRpbmctbGVmdDogMiU7XG4gIHBhZGRpbmctcmlnaHQ6IDIlO1xuICBwYWRkaW5nLWJvdHRvbTogNSU7XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMCwgMCwgMCwgMC44KTtcbn1cblxuI2NhdGVnb3JpYUZpbHRybyB7XG4gIGNvbG9yOiB3aGl0ZTtcbn1cblxuLmNhamFQcm9kdWN0b3Mge1xuICBtaW4taGVpZ2h0OiA0MDBweDtcbiAgcGFkZGluZy1sZWZ0OiAyJTtcbiAgcGFkZGluZy1yaWdodDogMiU7XG4gIHBhZGRpbmctdG9wOiAxJTtcbn1cblxuLmZpbHRyb3Mge1xuICB3aWR0aDogMzAlO1xuICBtYXJnaW4tbGVmdDogYXV0bztcbiAgbWFyZ2luLXJpZ2h0OiBhdXRvO1xufVxuXG4uYnVzY2Fkb3Ige1xuICB3aWR0aDogNzAlO1xuICBtaW4td2lkdGg6IDIwMHB4O1xufVxuXG4ucHJvZHVjdG8ge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcbiAgYm9yZGVyOiAycHggc29saWQgcmVkO1xuICBjdXJzb3I6IHBvaW50ZXI7XG59XG5cbi5kcm9wZG93bi1pdGVtIHtcbiAgY3Vyc29yOiBwb2ludGVyO1xufVxuXG5AbWVkaWEgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiAxMjgwcHgpIHtcbiAgI2Ryb3Bkb3duTWVudUJ1dHRvbiB7XG4gICAgbWFyZ2luLXRvcDogMGVtO1xuICAgIG1hcmdpbi1ib3R0b206IDFlbTtcbiAgICBtYXJnaW4tcmlnaHQ6IDBlbTtcbiAgICBtYXJnaW4tbGVmdDogLTNlbTtcbiAgfVxuXG4gIC5mb3JtLWNvbnRyb2wge1xuICAgIG1hcmdpbi1sZWZ0OiAxZW07XG4gIH1cbn1cbkBtZWRpYSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDc2MHB4KSB7XG4gICNkcm9wZG93bk1lbnVCdXR0b24ge1xuICAgIG1hcmdpbi10b3A6IDBlbTtcbiAgICBtYXJnaW4tYm90dG9tOiAxZW07XG4gICAgbWFyZ2luLXJpZ2h0OiAyZW07XG4gICAgbWFyZ2luLWxlZnQ6IDBlbTtcbiAgfVxufVxuQG1lZGlhIHNjcmVlbiBhbmQgKG1heC13aWR0aDogNTAwcHgpIHtcbiAgI2Ryb3Bkb3duTWVudUJ1dHRvbiB7XG4gICAgbWFyZ2luLXRvcDogMGVtO1xuICAgIG1hcmdpbi1ib3R0b206IDFlbTtcbiAgICBtYXJnaW4tcmlnaHQ6IDBlbTtcbiAgICBtYXJnaW4tbGVmdDogN2VtO1xuICB9XG5cbiAgLmZvcm0tY29udHJvbCB7XG4gICAgbWFyZ2luLWxlZnQ6IC0yZW07XG4gIH1cbn1cbkBtZWRpYSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDM2MHB4KSB7XG4gICNkcm9wZG93bk1lbnVCdXR0b24ge1xuICAgIG1hcmdpbi10b3A6IDBlbTtcbiAgICBtYXJnaW4tYm90dG9tOiAxZW07XG4gICAgbWFyZ2luLXJpZ2h0OiAwZW07XG4gICAgbWFyZ2luLWxlZnQ6IDVlbTtcbiAgfVxuXG4gIC5mb3JtLWNvbnRyb2wge1xuICAgIG1hcmdpbi1sZWZ0OiAtM2VtO1xuICB9XG59Il19 */";
     /***/
   },
 
@@ -1802,6 +1800,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
               var product = _step2.value;
               this.hora = new Date().getTime();
+              var auxiliar = 0;
+
+              if (product.tiempoSubasta == "1") {
+                auxiliar = 1;
+              }
+
+              if (product.tiempoSubasta == "2") {
+                auxiliar = 2;
+              }
+
+              if (product.tiempoSubasta == "3") {
+                auxiliar = 3;
+              }
+
               this.valor = this.hora - product.tiempoInicio;
               var comprobar = this.valor;
               var segundos = 0;
@@ -1823,21 +1835,31 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 }
               }
 
-              product.tiempoFin = 23 - horas + ':' + (59 - minutos) + ':' + (59 - segundos);
+              if (auxiliar == 1) {
+                product.tiempoFin = 23 - horas + ':' + (59 - minutos) + ':' + (59 - segundos);
+              }
 
-              if (comprobar > 86400000 - 300000) {
+              if (auxiliar == 2) {
+                product.tiempoFin = 47 - horas + ':' + (59 - minutos) + ':' + (59 - segundos);
+              }
+
+              if (auxiliar == 3) {
+                product.tiempoFin = 71 - horas + ':' + (59 - minutos) + ':' + (59 - segundos);
+              }
+
+              if (comprobar > auxiliar * 86400000 - 300000) {
                 this.cambiarColor(product);
               }
 
               if (product.pujaActual > 100000) {
-                if (comprobar > 86400000 - 300000) {
+                if (comprobar > auxiliar * 86400000 - 300000) {
                   this.cambiarColorDestacado(product);
                 } else {
                   this.marcarDestacado(product);
                 }
               }
 
-              if (comprobar >= 86400000) {
+              if (comprobar >= auxiliar * 86400000) {
                 this.EliminarProducto(product);
               }
             }
@@ -1922,7 +1944,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = ".cuerpo {\n  min-height: 500px;\n  padding-left: 2%;\n  padding-right: 2%;\n  padding-bottom: 5%;\n  background-color: rgba(0, 0, 0, 0.8);\n}\n\n.cajaProductos {\n  min-height: 350px;\n  padding-left: 2%;\n  padding-right: 2%;\n  padding-top: 1%;\n  background-color: #c80000;\n}\n\n.producto {\n  background-color: white;\n  border: 2px solid red;\n  cursor: pointer;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3VjM20vRXNjcml0b3Jpby9BdWN0aW9uZWVyL3NyYy9hcHAvaW5zaWRlL21pc3B1amFzL21pc3B1amFzLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9pbnNpZGUvbWlzcHVqYXMvbWlzcHVqYXMuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxpQkFBQTtFQUNBLGdCQUFBO0VBQ0EsaUJBQUE7RUFDQSxrQkFBQTtFQUNBLG9DQUFBO0FDQ0o7O0FERUE7RUFDSSxpQkFBQTtFQUNBLGdCQUFBO0VBQ0EsaUJBQUE7RUFDQSxlQUFBO0VBQ0EseUJBQUE7QUNDSjs7QURFQTtFQUNJLHVCQUFBO0VBQ0EscUJBQUE7RUFDQSxlQUFBO0FDQ0oiLCJmaWxlIjoic3JjL2FwcC9pbnNpZGUvbWlzcHVqYXMvbWlzcHVqYXMuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY3VlcnBvIHtcbiAgICBtaW4taGVpZ2h0OiA1MDBweDtcbiAgICBwYWRkaW5nLWxlZnQ6IDIlO1xuICAgIHBhZGRpbmctcmlnaHQ6IDIlO1xuICAgIHBhZGRpbmctYm90dG9tOiA1JTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDAsIDAsIDAsIDAuODAwKTtcbn1cblxuLmNhamFQcm9kdWN0b3Mge1xuICAgIG1pbi1oZWlnaHQ6IDM1MHB4O1xuICAgIHBhZGRpbmctbGVmdDogMiU7XG4gICAgcGFkZGluZy1yaWdodDogMiU7XG4gICAgcGFkZGluZy10b3A6IDElO1xuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYigyMDAsIDAsIDApO1xufVxuXG4ucHJvZHVjdG8ge1xuICAgIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xuICAgIGJvcmRlcjogMnB4IHNvbGlkIHJlZDtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG59IiwiLmN1ZXJwbyB7XG4gIG1pbi1oZWlnaHQ6IDUwMHB4O1xuICBwYWRkaW5nLWxlZnQ6IDIlO1xuICBwYWRkaW5nLXJpZ2h0OiAyJTtcbiAgcGFkZGluZy1ib3R0b206IDUlO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDAsIDAsIDAsIDAuOCk7XG59XG5cbi5jYWphUHJvZHVjdG9zIHtcbiAgbWluLWhlaWdodDogMzUwcHg7XG4gIHBhZGRpbmctbGVmdDogMiU7XG4gIHBhZGRpbmctcmlnaHQ6IDIlO1xuICBwYWRkaW5nLXRvcDogMSU7XG4gIGJhY2tncm91bmQtY29sb3I6ICNjODAwMDA7XG59XG5cbi5wcm9kdWN0byB7XG4gIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xuICBib3JkZXI6IDJweCBzb2xpZCByZWQ7XG4gIGN1cnNvcjogcG9pbnRlcjtcbn0iXX0= */";
+    __webpack_exports__["default"] = ".cuerpo {\n  min-height: 500px;\n  padding-left: 2%;\n  padding-right: 2%;\n  padding-bottom: 5%;\n  background-color: rgba(0, 0, 0, 0.8);\n}\n\n.cajaProductos {\n  min-height: 350px;\n  padding-left: 2%;\n  padding-right: 2%;\n  padding-top: 1%;\n}\n\n.producto {\n  background-color: white;\n  border: 2px solid red;\n  cursor: pointer;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3VjM20vRXNjcml0b3Jpby9BdWN0aW9uZWVyL3NyYy9hcHAvaW5zaWRlL21pc3B1amFzL21pc3B1amFzLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9pbnNpZGUvbWlzcHVqYXMvbWlzcHVqYXMuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxpQkFBQTtFQUNBLGdCQUFBO0VBQ0EsaUJBQUE7RUFDQSxrQkFBQTtFQUNBLG9DQUFBO0FDQ0o7O0FERUE7RUFDSSxpQkFBQTtFQUNBLGdCQUFBO0VBQ0EsaUJBQUE7RUFDQSxlQUFBO0FDQ0o7O0FERUE7RUFDSSx1QkFBQTtFQUNBLHFCQUFBO0VBQ0EsZUFBQTtBQ0NKIiwiZmlsZSI6InNyYy9hcHAvaW5zaWRlL21pc3B1amFzL21pc3B1amFzLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmN1ZXJwbyB7XG4gICAgbWluLWhlaWdodDogNTAwcHg7XG4gICAgcGFkZGluZy1sZWZ0OiAyJTtcbiAgICBwYWRkaW5nLXJpZ2h0OiAyJTtcbiAgICBwYWRkaW5nLWJvdHRvbTogNSU7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgwLCAwLCAwLCAwLjgwMCk7XG59XG5cbi5jYWphUHJvZHVjdG9zIHtcbiAgICBtaW4taGVpZ2h0OiAzNTBweDtcbiAgICBwYWRkaW5nLWxlZnQ6IDIlO1xuICAgIHBhZGRpbmctcmlnaHQ6IDIlO1xuICAgIHBhZGRpbmctdG9wOiAxJTtcbn1cblxuLnByb2R1Y3RvIHtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcbiAgICBib3JkZXI6IDJweCBzb2xpZCByZWQ7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xufSIsIi5jdWVycG8ge1xuICBtaW4taGVpZ2h0OiA1MDBweDtcbiAgcGFkZGluZy1sZWZ0OiAyJTtcbiAgcGFkZGluZy1yaWdodDogMiU7XG4gIHBhZGRpbmctYm90dG9tOiA1JTtcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgwLCAwLCAwLCAwLjgpO1xufVxuXG4uY2FqYVByb2R1Y3RvcyB7XG4gIG1pbi1oZWlnaHQ6IDM1MHB4O1xuICBwYWRkaW5nLWxlZnQ6IDIlO1xuICBwYWRkaW5nLXJpZ2h0OiAyJTtcbiAgcGFkZGluZy10b3A6IDElO1xufVxuXG4ucHJvZHVjdG8ge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcbiAgYm9yZGVyOiAycHggc29saWQgcmVkO1xuICBjdXJzb3I6IHBvaW50ZXI7XG59Il19 */";
     /***/
   },
 
@@ -2070,6 +2092,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             for (_iterator6.s(); !(_step6 = _iterator6.n()).done;) {
               var product = _step6.value;
               this.hora = new Date().getTime();
+              var auxiliar = 0;
+
+              if (product.tiempoSubasta == "1") {
+                auxiliar = 1;
+              }
+
+              if (product.tiempoSubasta == "2") {
+                auxiliar = 2;
+              }
+
+              if (product.tiempoSubasta == "3") {
+                auxiliar = 3;
+              }
+
               this.valor = this.hora - product.tiempoInicio;
               var comprobar = this.valor;
               var segundos = 0;
@@ -2091,9 +2127,31 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 }
               }
 
-              product.tiempoFin = 23 - horas + ':' + (59 - minutos) + ':' + (59 - segundos);
+              if (auxiliar == 1) {
+                product.tiempoFin = 23 - horas + ':' + (59 - minutos) + ':' + (59 - segundos);
+              }
 
-              if (comprobar >= 86400000) {
+              if (auxiliar == 2) {
+                product.tiempoFin = 47 - horas + ':' + (59 - minutos) + ':' + (59 - segundos);
+              }
+
+              if (auxiliar == 3) {
+                product.tiempoFin = 71 - horas + ':' + (59 - minutos) + ':' + (59 - segundos);
+              }
+
+              if (comprobar > auxiliar * 86400000 - 300000) {
+                this.cambiarColor(product);
+              }
+
+              if (product.pujaActual > 100000) {
+                if (comprobar > auxiliar * 86400000 - 300000) {
+                  this.cambiarColorDestacado(product);
+                } else {
+                  this.marcarDestacado(product);
+                }
+              }
+
+              if (comprobar >= auxiliar * 86400000) {
                 this.EliminarProducto(product);
               }
             }
@@ -2101,6 +2159,33 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             _iterator6.e(err);
           } finally {
             _iterator6.f();
+          }
+        }
+      }, {
+        key: "cambiarColor",
+        value: function cambiarColor(producto) {
+          var color = document.getElementById(producto.id);
+
+          if (color != null) {
+            color.style.backgroundColor = "#FF9999";
+          }
+        }
+      }, {
+        key: "marcarDestacado",
+        value: function marcarDestacado(producto) {
+          var color = document.getElementById(producto.id);
+
+          if (color != null) {
+            color.style.backgroundColor = "#99CCFF";
+          }
+        }
+      }, {
+        key: "cambiarColorDestacado",
+        value: function cambiarColorDestacado(producto) {
+          var color = document.getElementById(producto.id);
+
+          if (color != null) {
+            color.style.backgroundColor = "#CC99FF";
           }
         }
       }, {
@@ -2155,7 +2240,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = ".userName {\n  font-size: 40px;\n}\n\n.cuerpo {\n  min-height: 500px;\n  padding-left: 2%;\n  padding-right: 2%;\n  padding-bottom: 5%;\n  background-color: rgba(0, 0, 0, 0.8);\n}\n\n.cajaProductos {\n  min-height: 400px;\n  padding-left: 2%;\n  padding-right: 2%;\n  padding-top: 1%;\n  background-color: #c80000;\n}\n\n.producto {\n  background-color: white;\n  border: 2px solid red;\n  cursor: pointer;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3VjM20vRXNjcml0b3Jpby9BdWN0aW9uZWVyL3NyYy9hcHAvaW5zaWRlL3BlcmZpbC9wZXJmaWwuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL2luc2lkZS9wZXJmaWwvcGVyZmlsLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksZUFBQTtBQ0NKOztBREVBO0VBQ0ksaUJBQUE7RUFDQSxnQkFBQTtFQUNBLGlCQUFBO0VBQ0Esa0JBQUE7RUFDQSxvQ0FBQTtBQ0NKOztBREVBO0VBQ0ksaUJBQUE7RUFDQSxnQkFBQTtFQUNBLGlCQUFBO0VBQ0EsZUFBQTtFQUNBLHlCQUFBO0FDQ0o7O0FERUE7RUFDSSx1QkFBQTtFQUNBLHFCQUFBO0VBQ0EsZUFBQTtBQ0NKIiwiZmlsZSI6InNyYy9hcHAvaW5zaWRlL3BlcmZpbC9wZXJmaWwuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIudXNlck5hbWUge1xuICAgIGZvbnQtc2l6ZTogNDBweDtcbn1cblxuLmN1ZXJwbyB7XG4gICAgbWluLWhlaWdodDogNTAwcHg7XG4gICAgcGFkZGluZy1sZWZ0OiAyJTtcbiAgICBwYWRkaW5nLXJpZ2h0OiAyJTtcbiAgICBwYWRkaW5nLWJvdHRvbTogNSU7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgwLCAwLCAwLCAwLjgwMCk7XG59XG5cbi5jYWphUHJvZHVjdG9zIHtcbiAgICBtaW4taGVpZ2h0OiA0MDBweDtcbiAgICBwYWRkaW5nLWxlZnQ6IDIlO1xuICAgIHBhZGRpbmctcmlnaHQ6IDIlO1xuICAgIHBhZGRpbmctdG9wOiAxJTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMjAwLCAwLCAwKTtcbn1cblxuLnByb2R1Y3RvIHtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcbiAgICBib3JkZXI6IDJweCBzb2xpZCByZWQ7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xufSIsIi51c2VyTmFtZSB7XG4gIGZvbnQtc2l6ZTogNDBweDtcbn1cblxuLmN1ZXJwbyB7XG4gIG1pbi1oZWlnaHQ6IDUwMHB4O1xuICBwYWRkaW5nLWxlZnQ6IDIlO1xuICBwYWRkaW5nLXJpZ2h0OiAyJTtcbiAgcGFkZGluZy1ib3R0b206IDUlO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDAsIDAsIDAsIDAuOCk7XG59XG5cbi5jYWphUHJvZHVjdG9zIHtcbiAgbWluLWhlaWdodDogNDAwcHg7XG4gIHBhZGRpbmctbGVmdDogMiU7XG4gIHBhZGRpbmctcmlnaHQ6IDIlO1xuICBwYWRkaW5nLXRvcDogMSU7XG4gIGJhY2tncm91bmQtY29sb3I6ICNjODAwMDA7XG59XG5cbi5wcm9kdWN0byB7XG4gIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xuICBib3JkZXI6IDJweCBzb2xpZCByZWQ7XG4gIGN1cnNvcjogcG9pbnRlcjtcbn0iXX0= */";
+    __webpack_exports__["default"] = ".userName {\n  font-size: 40px;\n}\n\n.cuerpo {\n  min-height: 500px;\n  padding-left: 2%;\n  padding-right: 2%;\n  padding-bottom: 5%;\n  background-color: rgba(0, 0, 0, 0.8);\n}\n\n.cajaProductos {\n  min-height: 400px;\n  padding-left: 2%;\n  padding-right: 2%;\n  padding-top: 1%;\n}\n\n.producto {\n  background-color: white;\n  border: 2px solid red;\n  cursor: pointer;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3VjM20vRXNjcml0b3Jpby9BdWN0aW9uZWVyL3NyYy9hcHAvaW5zaWRlL3BlcmZpbC9wZXJmaWwuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL2luc2lkZS9wZXJmaWwvcGVyZmlsLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksZUFBQTtBQ0NKOztBREVBO0VBQ0ksaUJBQUE7RUFDQSxnQkFBQTtFQUNBLGlCQUFBO0VBQ0Esa0JBQUE7RUFDQSxvQ0FBQTtBQ0NKOztBREVBO0VBQ0ksaUJBQUE7RUFDQSxnQkFBQTtFQUNBLGlCQUFBO0VBQ0EsZUFBQTtBQ0NKOztBREVBO0VBQ0ksdUJBQUE7RUFDQSxxQkFBQTtFQUNBLGVBQUE7QUNDSiIsImZpbGUiOiJzcmMvYXBwL2luc2lkZS9wZXJmaWwvcGVyZmlsLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnVzZXJOYW1lIHtcbiAgICBmb250LXNpemU6IDQwcHg7XG59XG5cbi5jdWVycG8ge1xuICAgIG1pbi1oZWlnaHQ6IDUwMHB4O1xuICAgIHBhZGRpbmctbGVmdDogMiU7XG4gICAgcGFkZGluZy1yaWdodDogMiU7XG4gICAgcGFkZGluZy1ib3R0b206IDUlO1xuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMCwgMCwgMCwgMC44MDApO1xufVxuXG4uY2FqYVByb2R1Y3RvcyB7XG4gICAgbWluLWhlaWdodDogNDAwcHg7XG4gICAgcGFkZGluZy1sZWZ0OiAyJTtcbiAgICBwYWRkaW5nLXJpZ2h0OiAyJTtcbiAgICBwYWRkaW5nLXRvcDogMSU7XG59XG5cbi5wcm9kdWN0byB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XG4gICAgYm9yZGVyOiAycHggc29saWQgcmVkO1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbn0iLCIudXNlck5hbWUge1xuICBmb250LXNpemU6IDQwcHg7XG59XG5cbi5jdWVycG8ge1xuICBtaW4taGVpZ2h0OiA1MDBweDtcbiAgcGFkZGluZy1sZWZ0OiAyJTtcbiAgcGFkZGluZy1yaWdodDogMiU7XG4gIHBhZGRpbmctYm90dG9tOiA1JTtcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgwLCAwLCAwLCAwLjgpO1xufVxuXG4uY2FqYVByb2R1Y3RvcyB7XG4gIG1pbi1oZWlnaHQ6IDQwMHB4O1xuICBwYWRkaW5nLWxlZnQ6IDIlO1xuICBwYWRkaW5nLXJpZ2h0OiAyJTtcbiAgcGFkZGluZy10b3A6IDElO1xufVxuXG4ucHJvZHVjdG8ge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcbiAgYm9yZGVyOiAycHggc29saWQgcmVkO1xuICBjdXJzb3I6IHBvaW50ZXI7XG59Il19 */";
     /***/
   },
 
@@ -2280,6 +2365,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             for (_iterator8.s(); !(_step8 = _iterator8.n()).done;) {
               var product = _step8.value;
               this.hora = new Date().getTime();
+              var auxiliar = 0;
+
+              if (product.tiempoSubasta == "1") {
+                auxiliar = 1;
+              }
+
+              if (product.tiempoSubasta == "2") {
+                auxiliar = 2;
+              }
+
+              if (product.tiempoSubasta == "3") {
+                auxiliar = 3;
+              }
+
               this.valor = this.hora - product.tiempoInicio;
               var comprobar = this.valor;
               var segundos = 0;
@@ -2301,9 +2400,31 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 }
               }
 
-              product.tiempoFin = 23 - horas + ':' + (59 - minutos) + ':' + (59 - segundos);
+              if (auxiliar == 1) {
+                product.tiempoFin = 23 - horas + ':' + (59 - minutos) + ':' + (59 - segundos);
+              }
 
-              if (comprobar >= 86400000) {
+              if (auxiliar == 2) {
+                product.tiempoFin = 47 - horas + ':' + (59 - minutos) + ':' + (59 - segundos);
+              }
+
+              if (auxiliar == 3) {
+                product.tiempoFin = 71 - horas + ':' + (59 - minutos) + ':' + (59 - segundos);
+              }
+
+              if (comprobar > auxiliar * 86400000 - 300000) {
+                this.cambiarColor(product);
+              }
+
+              if (product.pujaActual > 100000) {
+                if (comprobar > auxiliar * 86400000 - 300000) {
+                  this.cambiarColorDestacado(product);
+                } else {
+                  this.marcarDestacado(product);
+                }
+              }
+
+              if (comprobar >= auxiliar * 86400000) {
                 this.EliminarProducto(product);
               }
             }
@@ -2311,6 +2432,33 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             _iterator8.e(err);
           } finally {
             _iterator8.f();
+          }
+        }
+      }, {
+        key: "cambiarColor",
+        value: function cambiarColor(producto) {
+          var color = document.getElementById(producto.id);
+
+          if (color != null) {
+            color.style.backgroundColor = "#FF9999";
+          }
+        }
+      }, {
+        key: "marcarDestacado",
+        value: function marcarDestacado(producto) {
+          var color = document.getElementById(producto.id);
+
+          if (color != null) {
+            color.style.backgroundColor = "#99CCFF";
+          }
+        }
+      }, {
+        key: "cambiarColorDestacado",
+        value: function cambiarColorDestacado(producto) {
+          var color = document.getElementById(producto.id);
+
+          if (color != null) {
+            color.style.backgroundColor = "#CC99FF";
           }
         }
       }, {
@@ -2368,7 +2516,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = ".cajaFormulario {\n  width: 60%;\n  margin-top: 1.5%;\n  margin-bottom: 5%;\n  padding-top: 4%;\n  padding-bottom: 4%;\n  padding-left: 4%;\n  padding-right: 4%;\n  background-color: rgba(0, 0, 0, 0.8);\n  color: white;\n  border-radius: 10px;\n}\n\n#botonInicio {\n  width: 50%;\n  margin-left: 25%;\n}\n\n.datos1 {\n  width: 45%;\n}\n\n@media screen and (max-width: 500px) {\n  .cajaFormulario {\n    width: 90%;\n    margin-left: 1em;\n    margin-top: 1em;\n  }\n\n  #botonInicio {\n    margin-bottom: 2em;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3VjM20vRXNjcml0b3Jpby9BdWN0aW9uZWVyL3NyYy9hcHAvaW5zaWRlL3N1YmlyX3Byb2R1Y3RvL3N1YmlyX3Byb2R1Y3RvLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9pbnNpZGUvc3ViaXJfcHJvZHVjdG8vc3ViaXJfcHJvZHVjdG8uY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxVQUFBO0VBQ0EsZ0JBQUE7RUFDQSxpQkFBQTtFQUNBLGVBQUE7RUFDQSxrQkFBQTtFQUNBLGdCQUFBO0VBQ0EsaUJBQUE7RUFDQSxvQ0FBQTtFQUNBLFlBQUE7RUFDQSxtQkFBQTtBQ0NKOztBREVBO0VBQ0ksVUFBQTtFQUNBLGdCQUFBO0FDQ0o7O0FER0E7RUFDSSxVQUFBO0FDQUo7O0FER0E7RUFFSTtJQUNJLFVBQUE7SUFDQSxnQkFBQTtJQUNBLGVBQUE7RUNETjs7RURJRTtJQUNJLGtCQUFBO0VDRE47QUFDRiIsImZpbGUiOiJzcmMvYXBwL2luc2lkZS9zdWJpcl9wcm9kdWN0by9zdWJpcl9wcm9kdWN0by5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jYWphRm9ybXVsYXJpbyB7XG4gICAgd2lkdGg6IDYwJTtcbiAgICBtYXJnaW4tdG9wOiAxLjUlO1xuICAgIG1hcmdpbi1ib3R0b206IDUlO1xuICAgIHBhZGRpbmctdG9wOiA0JTtcbiAgICBwYWRkaW5nLWJvdHRvbTogNCU7XG4gICAgcGFkZGluZy1sZWZ0OiA0JTtcbiAgICBwYWRkaW5nLXJpZ2h0OiA0JTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDAsIDAsIDAsIDAuODAwKTtcbiAgICBjb2xvcjogd2hpdGU7XG4gICAgYm9yZGVyLXJhZGl1czogMTBweDtcbn1cblxuI2JvdG9uSW5pY2lvIHtcbiAgICB3aWR0aDogNTAlO1xuICAgIG1hcmdpbi1sZWZ0OiAyNSU7XG59XG5cblxuLmRhdG9zMSB7XG4gICAgd2lkdGg6IDQ1JTtcbn1cblxuQG1lZGlhIHNjcmVlbiBhbmQgKG1heC13aWR0aDo1MDBweClcbntcbiAgICAuY2FqYUZvcm11bGFyaW97XG4gICAgICAgIHdpZHRoOiA5MCU7XG4gICAgICAgIG1hcmdpbi1sZWZ0OiAxZW07XG4gICAgICAgIG1hcmdpbi10b3A6IDFlbTtcbiAgICB9XG5cbiAgICAjYm90b25JbmljaW97XG4gICAgICAgIG1hcmdpbi1ib3R0b206IDJlbTtcbiAgICB9XG59XG4iLCIuY2FqYUZvcm11bGFyaW8ge1xuICB3aWR0aDogNjAlO1xuICBtYXJnaW4tdG9wOiAxLjUlO1xuICBtYXJnaW4tYm90dG9tOiA1JTtcbiAgcGFkZGluZy10b3A6IDQlO1xuICBwYWRkaW5nLWJvdHRvbTogNCU7XG4gIHBhZGRpbmctbGVmdDogNCU7XG4gIHBhZGRpbmctcmlnaHQ6IDQlO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDAsIDAsIDAsIDAuOCk7XG4gIGNvbG9yOiB3aGl0ZTtcbiAgYm9yZGVyLXJhZGl1czogMTBweDtcbn1cblxuI2JvdG9uSW5pY2lvIHtcbiAgd2lkdGg6IDUwJTtcbiAgbWFyZ2luLWxlZnQ6IDI1JTtcbn1cblxuLmRhdG9zMSB7XG4gIHdpZHRoOiA0NSU7XG59XG5cbkBtZWRpYSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDUwMHB4KSB7XG4gIC5jYWphRm9ybXVsYXJpbyB7XG4gICAgd2lkdGg6IDkwJTtcbiAgICBtYXJnaW4tbGVmdDogMWVtO1xuICAgIG1hcmdpbi10b3A6IDFlbTtcbiAgfVxuXG4gICNib3RvbkluaWNpbyB7XG4gICAgbWFyZ2luLWJvdHRvbTogMmVtO1xuICB9XG59Il19 */";
+    __webpack_exports__["default"] = ".cajaFormulario {\n  width: 60%;\n  margin-top: 1.5%;\n  margin-bottom: 5%;\n  padding-top: 4%;\n  padding-bottom: 4%;\n  padding-left: 4%;\n  padding-right: 4%;\n  background-color: rgba(0, 0, 0, 0.8);\n  color: white;\n  border-radius: 10px;\n}\n\n#botonInicio {\n  width: 50%;\n  margin-left: 25%;\n}\n\n.datos1 {\n  width: 45%;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n@media screen and (max-width: 500px) {\n  .cajaFormulario {\n    width: 90%;\n    margin-left: 1em;\n    margin-top: 1em;\n  }\n\n  #botonInicio {\n    margin-bottom: 2em;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3VjM20vRXNjcml0b3Jpby9BdWN0aW9uZWVyL3NyYy9hcHAvaW5zaWRlL3N1YmlyX3Byb2R1Y3RvL3N1YmlyX3Byb2R1Y3RvLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9pbnNpZGUvc3ViaXJfcHJvZHVjdG8vc3ViaXJfcHJvZHVjdG8uY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxVQUFBO0VBQ0EsZ0JBQUE7RUFDQSxpQkFBQTtFQUNBLGVBQUE7RUFDQSxrQkFBQTtFQUNBLGdCQUFBO0VBQ0EsaUJBQUE7RUFDQSxvQ0FBQTtFQUNBLFlBQUE7RUFDQSxtQkFBQTtBQ0NKOztBREVBO0VBQ0ksVUFBQTtFQUNBLGdCQUFBO0FDQ0o7O0FER0E7RUFDSSxVQUFBO0VBQ0EsaUJBQUE7RUFDQSxrQkFBQTtBQ0FKOztBREdBO0VBRUk7SUFDSSxVQUFBO0lBQ0EsZ0JBQUE7SUFDQSxlQUFBO0VDRE47O0VESUU7SUFDSSxrQkFBQTtFQ0ROO0FBQ0YiLCJmaWxlIjoic3JjL2FwcC9pbnNpZGUvc3ViaXJfcHJvZHVjdG8vc3ViaXJfcHJvZHVjdG8uY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY2FqYUZvcm11bGFyaW8ge1xuICAgIHdpZHRoOiA2MCU7XG4gICAgbWFyZ2luLXRvcDogMS41JTtcbiAgICBtYXJnaW4tYm90dG9tOiA1JTtcbiAgICBwYWRkaW5nLXRvcDogNCU7XG4gICAgcGFkZGluZy1ib3R0b206IDQlO1xuICAgIHBhZGRpbmctbGVmdDogNCU7XG4gICAgcGFkZGluZy1yaWdodDogNCU7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgwLCAwLCAwLCAwLjgwMCk7XG4gICAgY29sb3I6IHdoaXRlO1xuICAgIGJvcmRlci1yYWRpdXM6IDEwcHg7XG59XG5cbiNib3RvbkluaWNpbyB7XG4gICAgd2lkdGg6IDUwJTtcbiAgICBtYXJnaW4tbGVmdDogMjUlO1xufVxuXG5cbi5kYXRvczEge1xuICAgIHdpZHRoOiA0NSU7XG4gICAgbWFyZ2luLWxlZnQ6IGF1dG87XG4gICAgbWFyZ2luLXJpZ2h0OiBhdXRvO1xufVxuXG5AbWVkaWEgc2NyZWVuIGFuZCAobWF4LXdpZHRoOjUwMHB4KVxue1xuICAgIC5jYWphRm9ybXVsYXJpb3tcbiAgICAgICAgd2lkdGg6IDkwJTtcbiAgICAgICAgbWFyZ2luLWxlZnQ6IDFlbTtcbiAgICAgICAgbWFyZ2luLXRvcDogMWVtO1xuICAgIH1cblxuICAgICNib3RvbkluaWNpb3tcbiAgICAgICAgbWFyZ2luLWJvdHRvbTogMmVtO1xuICAgIH1cbn1cbiIsIi5jYWphRm9ybXVsYXJpbyB7XG4gIHdpZHRoOiA2MCU7XG4gIG1hcmdpbi10b3A6IDEuNSU7XG4gIG1hcmdpbi1ib3R0b206IDUlO1xuICBwYWRkaW5nLXRvcDogNCU7XG4gIHBhZGRpbmctYm90dG9tOiA0JTtcbiAgcGFkZGluZy1sZWZ0OiA0JTtcbiAgcGFkZGluZy1yaWdodDogNCU7XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMCwgMCwgMCwgMC44KTtcbiAgY29sb3I6IHdoaXRlO1xuICBib3JkZXItcmFkaXVzOiAxMHB4O1xufVxuXG4jYm90b25JbmljaW8ge1xuICB3aWR0aDogNTAlO1xuICBtYXJnaW4tbGVmdDogMjUlO1xufVxuXG4uZGF0b3MxIHtcbiAgd2lkdGg6IDQ1JTtcbiAgbWFyZ2luLWxlZnQ6IGF1dG87XG4gIG1hcmdpbi1yaWdodDogYXV0bztcbn1cblxuQG1lZGlhIHNjcmVlbiBhbmQgKG1heC13aWR0aDogNTAwcHgpIHtcbiAgLmNhamFGb3JtdWxhcmlvIHtcbiAgICB3aWR0aDogOTAlO1xuICAgIG1hcmdpbi1sZWZ0OiAxZW07XG4gICAgbWFyZ2luLXRvcDogMWVtO1xuICB9XG5cbiAgI2JvdG9uSW5pY2lvIHtcbiAgICBtYXJnaW4tYm90dG9tOiAyZW07XG4gIH1cbn0iXX0= */";
     /***/
   },
 
@@ -2441,7 +2589,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           precioCompraYa: "",
           subastador: "",
           emailSubastador: "",
-          tiempoInicio: ""
+          tiempoInicio: "",
+          tiempoSubasta: ""
         };
       }
 
@@ -2468,6 +2617,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.producto.precioSalida = "";
           this.producto.pujaActual = "";
           this.producto.precioCompraYa = "";
+          this.producto.subastador = "";
+          this.producto.emailSubastador = "";
+          this.producto.tiempoInicio = "";
+          this.producto.tiempoSubasta = "";
           this.router.navigate(["/home"]);
         }
       }]);
@@ -2511,7 +2664,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = ".fondo {\n  background-color: rgba(0, 0, 0, 0.8);\n}\n\n.cajaProducto {\n  margin-bottom: 5%;\n  background-color: white;\n  border-radius: 20px;\n}\n\n#titulo {\n  margin-top: -2%;\n  font-size: 50px;\n}\n\n.Pujar {\n  width: 40%;\n  padding-top: 0.65%;\n  padding-bottom: 0.65%;\n  font-size: 20px;\n}\n\n#botonPujar {\n  width: 20%;\n  border: 2px solid black;\n  font-size: 20px;\n}\n\n#botonComprarYa {\n  width: 37%;\n  border: 2px solid black;\n  font-size: 20px;\n  float: right;\n}\n\n.infoProducto {\n  width: 40%;\n}\n\n.imagenProducto {\n  width: 50%;\n  min-height: 300px;\n  margin-right: 5%;\n  padding-bottom: 1%;\n  background-color: red;\n  float: right;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3VjM20vRXNjcml0b3Jpby9BdWN0aW9uZWVyL3NyYy9hcHAvaW5zaWRlL3Zlcl9wcm9kdWN0by92ZXJfcHJvZHVjdG8uY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL2luc2lkZS92ZXJfcHJvZHVjdG8vdmVyX3Byb2R1Y3RvLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksb0NBQUE7QUNDSjs7QURFQTtFQUNJLGlCQUFBO0VBQ0EsdUJBQUE7RUFDQSxtQkFBQTtBQ0NKOztBREVBO0VBQ0ksZUFBQTtFQUNBLGVBQUE7QUNDSjs7QURFQTtFQUNJLFVBQUE7RUFDQSxrQkFBQTtFQUNBLHFCQUFBO0VBQ0EsZUFBQTtBQ0NKOztBREVBO0VBQ0ksVUFBQTtFQUNBLHVCQUFBO0VBQ0EsZUFBQTtBQ0NKOztBREVBO0VBQ0ksVUFBQTtFQUNBLHVCQUFBO0VBQ0EsZUFBQTtFQUNBLFlBQUE7QUNDSjs7QURFQTtFQUNJLFVBQUE7QUNDSjs7QURFQTtFQUNJLFVBQUE7RUFDQSxpQkFBQTtFQUNBLGdCQUFBO0VBQ0Esa0JBQUE7RUFDQSxxQkFBQTtFQUNBLFlBQUE7QUNDSiIsImZpbGUiOiJzcmMvYXBwL2luc2lkZS92ZXJfcHJvZHVjdG8vdmVyX3Byb2R1Y3RvLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmZvbmRvIHtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDAsIDAsIDAsIDAuODAwKTtcbn1cblxuLmNhamFQcm9kdWN0byB7XG4gICAgbWFyZ2luLWJvdHRvbTogNSU7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XG4gICAgYm9yZGVyLXJhZGl1czogMjBweDtcbn1cblxuI3RpdHVsbyB7XG4gICAgbWFyZ2luLXRvcDogLTIlO1xuICAgIGZvbnQtc2l6ZTogNTBweDtcbn1cblxuLlB1amFyIHtcbiAgICB3aWR0aDogNDAlO1xuICAgIHBhZGRpbmctdG9wOiAwLjY1JTtcbiAgICBwYWRkaW5nLWJvdHRvbTogMC42NSU7XG4gICAgZm9udC1zaXplOiAyMHB4O1xufVxuXG4jYm90b25QdWphciB7XG4gICAgd2lkdGg6IDIwJTtcbiAgICBib3JkZXI6IDJweCBzb2xpZCBibGFjaztcbiAgICBmb250LXNpemU6IDIwcHg7XG59XG5cbiNib3RvbkNvbXByYXJZYSB7XG4gICAgd2lkdGg6IDM3JTtcbiAgICBib3JkZXI6IDJweCBzb2xpZCBibGFjaztcbiAgICBmb250LXNpemU6IDIwcHg7XG4gICAgZmxvYXQ6IHJpZ2h0O1xufVxuXG4uaW5mb1Byb2R1Y3RvIHtcbiAgICB3aWR0aDogNDAlO1xufVxuXG4uaW1hZ2VuUHJvZHVjdG8ge1xuICAgIHdpZHRoOiA1MCU7XG4gICAgbWluLWhlaWdodDogMzAwcHg7XG4gICAgbWFyZ2luLXJpZ2h0OiA1JTtcbiAgICBwYWRkaW5nLWJvdHRvbTogMSU7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmVkO1xuICAgIGZsb2F0OiByaWdodDtcbn0iLCIuZm9uZG8ge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDAsIDAsIDAsIDAuOCk7XG59XG5cbi5jYWphUHJvZHVjdG8ge1xuICBtYXJnaW4tYm90dG9tOiA1JTtcbiAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XG4gIGJvcmRlci1yYWRpdXM6IDIwcHg7XG59XG5cbiN0aXR1bG8ge1xuICBtYXJnaW4tdG9wOiAtMiU7XG4gIGZvbnQtc2l6ZTogNTBweDtcbn1cblxuLlB1amFyIHtcbiAgd2lkdGg6IDQwJTtcbiAgcGFkZGluZy10b3A6IDAuNjUlO1xuICBwYWRkaW5nLWJvdHRvbTogMC42NSU7XG4gIGZvbnQtc2l6ZTogMjBweDtcbn1cblxuI2JvdG9uUHVqYXIge1xuICB3aWR0aDogMjAlO1xuICBib3JkZXI6IDJweCBzb2xpZCBibGFjaztcbiAgZm9udC1zaXplOiAyMHB4O1xufVxuXG4jYm90b25Db21wcmFyWWEge1xuICB3aWR0aDogMzclO1xuICBib3JkZXI6IDJweCBzb2xpZCBibGFjaztcbiAgZm9udC1zaXplOiAyMHB4O1xuICBmbG9hdDogcmlnaHQ7XG59XG5cbi5pbmZvUHJvZHVjdG8ge1xuICB3aWR0aDogNDAlO1xufVxuXG4uaW1hZ2VuUHJvZHVjdG8ge1xuICB3aWR0aDogNTAlO1xuICBtaW4taGVpZ2h0OiAzMDBweDtcbiAgbWFyZ2luLXJpZ2h0OiA1JTtcbiAgcGFkZGluZy1ib3R0b206IDElO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiByZWQ7XG4gIGZsb2F0OiByaWdodDtcbn0iXX0= */";
+    __webpack_exports__["default"] = ".fondo {\n  background-color: rgba(0, 0, 0, 0.8);\n}\n\n.cajaProducto {\n  margin-bottom: 5%;\n  background-color: white;\n  border-radius: 20px;\n}\n\n#titulo {\n  margin-top: -2%;\n  font-size: 50px;\n}\n\n.Pujar {\n  width: 40%;\n  padding-top: 0.65%;\n  padding-bottom: 0.65%;\n  font-size: 20px;\n}\n\n#botonPujar {\n  width: 20%;\n  border: 2px solid black;\n  font-size: 20px;\n}\n\n#botonComprarYa {\n  width: 37%;\n  border: 2px solid black;\n  font-size: 20px;\n  float: right;\n}\n\n.infoProducto {\n  width: 40%;\n}\n\n.imagenProducto {\n  width: 50%;\n  min-height: 300px;\n  margin-right: 5%;\n  padding-bottom: 1%;\n  background-color: red;\n  float: right;\n}\n\n@media screen and (max-width: 760px) {\n  .campo {\n    font-size: smaller;\n  }\n\n  .imagenProducto {\n    width: 100%;\n    margin-bottom: 2em;\n    float: none;\n  }\n}\n\n@media screen and (max-width: 360px) {\n  #botonPujar {\n    font-size: smaller;\n    float: none;\n    margin-right: 1em;\n  }\n\n  #botonComprarYa {\n    font-size: smaller;\n    float: none;\n  }\n\n  .Pujar {\n    margin-right: 5em;\n    margin-bottom: 1em;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3VjM20vRXNjcml0b3Jpby9BdWN0aW9uZWVyL3NyYy9hcHAvaW5zaWRlL3Zlcl9wcm9kdWN0by92ZXJfcHJvZHVjdG8uY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL2luc2lkZS92ZXJfcHJvZHVjdG8vdmVyX3Byb2R1Y3RvLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksb0NBQUE7QUNDSjs7QURFQTtFQUNJLGlCQUFBO0VBQ0EsdUJBQUE7RUFDQSxtQkFBQTtBQ0NKOztBREVBO0VBQ0ksZUFBQTtFQUNBLGVBQUE7QUNDSjs7QURFQTtFQUNJLFVBQUE7RUFDQSxrQkFBQTtFQUNBLHFCQUFBO0VBQ0EsZUFBQTtBQ0NKOztBREVBO0VBQ0ksVUFBQTtFQUNBLHVCQUFBO0VBQ0EsZUFBQTtBQ0NKOztBREVBO0VBQ0ksVUFBQTtFQUNBLHVCQUFBO0VBQ0EsZUFBQTtFQUNBLFlBQUE7QUNDSjs7QURFQTtFQUNJLFVBQUE7QUNDSjs7QURFQTtFQUNJLFVBQUE7RUFDQSxpQkFBQTtFQUNBLGdCQUFBO0VBQ0Esa0JBQUE7RUFDQSxxQkFBQTtFQUNBLFlBQUE7QUNDSjs7QURLQTtFQUVJO0lBQ0ksa0JBQUE7RUNITjs7RURNRTtJQUNJLFdBQUE7SUFDQSxrQkFBQTtJQUNBLFdBQUE7RUNITjtBQUNGOztBRE1BO0VBR0k7SUFDSSxrQkFBQTtJQUNBLFdBQUE7SUFDQSxpQkFBQTtFQ05OOztFRFNFO0lBQ0ksa0JBQUE7SUFDQSxXQUFBO0VDTk47O0VEU0U7SUFDSSxpQkFBQTtJQUNBLGtCQUFBO0VDTk47QUFDRiIsImZpbGUiOiJzcmMvYXBwL2luc2lkZS92ZXJfcHJvZHVjdG8vdmVyX3Byb2R1Y3RvLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmZvbmRvIHtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDAsIDAsIDAsIDAuODAwKTtcbn1cblxuLmNhamFQcm9kdWN0byB7XG4gICAgbWFyZ2luLWJvdHRvbTogNSU7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XG4gICAgYm9yZGVyLXJhZGl1czogMjBweDtcbn1cblxuI3RpdHVsbyB7XG4gICAgbWFyZ2luLXRvcDogLTIlO1xuICAgIGZvbnQtc2l6ZTogNTBweDtcbn1cblxuLlB1amFyIHtcbiAgICB3aWR0aDogNDAlO1xuICAgIHBhZGRpbmctdG9wOiAwLjY1JTtcbiAgICBwYWRkaW5nLWJvdHRvbTogMC42NSU7XG4gICAgZm9udC1zaXplOiAyMHB4O1xufVxuXG4jYm90b25QdWphciB7XG4gICAgd2lkdGg6IDIwJTtcbiAgICBib3JkZXI6IDJweCBzb2xpZCBibGFjaztcbiAgICBmb250LXNpemU6IDIwcHg7XG59XG5cbiNib3RvbkNvbXByYXJZYSB7XG4gICAgd2lkdGg6IDM3JTtcbiAgICBib3JkZXI6IDJweCBzb2xpZCBibGFjaztcbiAgICBmb250LXNpemU6IDIwcHg7XG4gICAgZmxvYXQ6IHJpZ2h0O1xufVxuXG4uaW5mb1Byb2R1Y3RvIHtcbiAgICB3aWR0aDogNDAlO1xufVxuXG4uaW1hZ2VuUHJvZHVjdG8ge1xuICAgIHdpZHRoOiA1MCU7XG4gICAgbWluLWhlaWdodDogMzAwcHg7XG4gICAgbWFyZ2luLXJpZ2h0OiA1JTtcbiAgICBwYWRkaW5nLWJvdHRvbTogMSU7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmVkO1xuICAgIGZsb2F0OiByaWdodDtcbn1cblxuXG5cblxuQG1lZGlhIHNjcmVlbiBhbmQgKG1heC13aWR0aDo3NjBweClcbntcbiAgICAuY2FtcG97XG4gICAgICAgIGZvbnQtc2l6ZTogc21hbGxlcjtcbiAgICB9XG5cbiAgICAuaW1hZ2VuUHJvZHVjdG97ICBcbiAgICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICAgIG1hcmdpbi1ib3R0b206IDJlbTtcbiAgICAgICAgZmxvYXQ6IG5vbmU7XG4gICAgfVxufVxuXG5AbWVkaWEgc2NyZWVuIGFuZCAobWF4LXdpZHRoOjM2MHB4KVxue1xuXG4gICAgI2JvdG9uUHVqYXJ7XG4gICAgICAgIGZvbnQtc2l6ZTogc21hbGxlcjtcbiAgICAgICAgZmxvYXQ6IG5vbmU7XG4gICAgICAgIG1hcmdpbi1yaWdodDogMWVtO1xuICAgIH1cblxuICAgICNib3RvbkNvbXByYXJZYSB7XG4gICAgICAgIGZvbnQtc2l6ZTogc21hbGxlcjtcbiAgICAgICAgZmxvYXQ6IG5vbmU7XG4gICAgfVxuXG4gICAgLlB1amFyIHtcbiAgICAgICAgbWFyZ2luLXJpZ2h0OiA1ZW07XG4gICAgICAgIG1hcmdpbi1ib3R0b206IDFlbTtcbiAgICB9XG59IiwiLmZvbmRvIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgwLCAwLCAwLCAwLjgpO1xufVxuXG4uY2FqYVByb2R1Y3RvIHtcbiAgbWFyZ2luLWJvdHRvbTogNSU7XG4gIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xuICBib3JkZXItcmFkaXVzOiAyMHB4O1xufVxuXG4jdGl0dWxvIHtcbiAgbWFyZ2luLXRvcDogLTIlO1xuICBmb250LXNpemU6IDUwcHg7XG59XG5cbi5QdWphciB7XG4gIHdpZHRoOiA0MCU7XG4gIHBhZGRpbmctdG9wOiAwLjY1JTtcbiAgcGFkZGluZy1ib3R0b206IDAuNjUlO1xuICBmb250LXNpemU6IDIwcHg7XG59XG5cbiNib3RvblB1amFyIHtcbiAgd2lkdGg6IDIwJTtcbiAgYm9yZGVyOiAycHggc29saWQgYmxhY2s7XG4gIGZvbnQtc2l6ZTogMjBweDtcbn1cblxuI2JvdG9uQ29tcHJhcllhIHtcbiAgd2lkdGg6IDM3JTtcbiAgYm9yZGVyOiAycHggc29saWQgYmxhY2s7XG4gIGZvbnQtc2l6ZTogMjBweDtcbiAgZmxvYXQ6IHJpZ2h0O1xufVxuXG4uaW5mb1Byb2R1Y3RvIHtcbiAgd2lkdGg6IDQwJTtcbn1cblxuLmltYWdlblByb2R1Y3RvIHtcbiAgd2lkdGg6IDUwJTtcbiAgbWluLWhlaWdodDogMzAwcHg7XG4gIG1hcmdpbi1yaWdodDogNSU7XG4gIHBhZGRpbmctYm90dG9tOiAxJTtcbiAgYmFja2dyb3VuZC1jb2xvcjogcmVkO1xuICBmbG9hdDogcmlnaHQ7XG59XG5cbkBtZWRpYSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDc2MHB4KSB7XG4gIC5jYW1wbyB7XG4gICAgZm9udC1zaXplOiBzbWFsbGVyO1xuICB9XG5cbiAgLmltYWdlblByb2R1Y3RvIHtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBtYXJnaW4tYm90dG9tOiAyZW07XG4gICAgZmxvYXQ6IG5vbmU7XG4gIH1cbn1cbkBtZWRpYSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDM2MHB4KSB7XG4gICNib3RvblB1amFyIHtcbiAgICBmb250LXNpemU6IHNtYWxsZXI7XG4gICAgZmxvYXQ6IG5vbmU7XG4gICAgbWFyZ2luLXJpZ2h0OiAxZW07XG4gIH1cblxuICAjYm90b25Db21wcmFyWWEge1xuICAgIGZvbnQtc2l6ZTogc21hbGxlcjtcbiAgICBmbG9hdDogbm9uZTtcbiAgfVxuXG4gIC5QdWphciB7XG4gICAgbWFyZ2luLXJpZ2h0OiA1ZW07XG4gICAgbWFyZ2luLWJvdHRvbTogMWVtO1xuICB9XG59Il19 */";
     /***/
   },
 
@@ -2631,32 +2784,107 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "myTimer",
         value: function myTimer() {
-          this.hora = new Date().getTime();
-          this.valor = this.hora - this.productoPagina.tiempoInicio;
-          var comprobar = this.valor;
-          var segundos = 0;
-          var minutos = 0;
-          var horas = 0;
+          var _iterator10 = _createForOfIteratorHelper(this.productos),
+              _step10;
 
-          if (this.valor >= 1000) {
-            segundos = Math.floor(this.valor / 1000);
-            this.valor = this.valor % 1000;
+          try {
+            for (_iterator10.s(); !(_step10 = _iterator10.n()).done;) {
+              var product = _step10.value;
+              this.hora = new Date().getTime();
+              var auxiliar = 0;
 
-            if (segundos >= 60) {
-              minutos = Math.floor(segundos / 60);
-              segundos = segundos % 60;
+              if (product.tiempoSubasta == "1") {
+                auxiliar = 1;
+              }
 
-              if (minutos >= 60) {
-                horas = Math.floor(minutos / 60);
-                minutos = minutos % 60;
+              if (product.tiempoSubasta == "2") {
+                auxiliar = 2;
+              }
+
+              if (product.tiempoSubasta == "3") {
+                auxiliar = 3;
+              }
+
+              this.valor = this.hora - product.tiempoInicio;
+              var comprobar = this.valor;
+              var segundos = 0;
+              var minutos = 0;
+              var horas = 0;
+
+              if (this.valor >= 1000) {
+                segundos = Math.floor(this.valor / 1000);
+                this.valor = this.valor % 1000;
+
+                if (segundos >= 60) {
+                  minutos = Math.floor(segundos / 60);
+                  segundos = segundos % 60;
+
+                  if (minutos >= 60) {
+                    horas = Math.floor(minutos / 60);
+                    minutos = minutos % 60;
+                  }
+                }
+              }
+
+              if (auxiliar == 1) {
+                product.tiempoFin = 23 - horas + ':' + (59 - minutos) + ':' + (59 - segundos);
+              }
+
+              if (auxiliar == 2) {
+                product.tiempoFin = 47 - horas + ':' + (59 - minutos) + ':' + (59 - segundos);
+              }
+
+              if (auxiliar == 3) {
+                product.tiempoFin = 71 - horas + ':' + (59 - minutos) + ':' + (59 - segundos);
+              }
+
+              if (comprobar > auxiliar * 86400000 - 300000) {
+                this.cambiarColor(product);
+              }
+
+              if (product.pujaActual > 100000) {
+                if (comprobar > auxiliar * 86400000 - 300000) {
+                  this.cambiarColorDestacado(product);
+                } else {
+                  this.marcarDestacado(product);
+                }
+              }
+
+              if (comprobar >= auxiliar * 86400000) {
+                this.EliminarProducto(product);
               }
             }
+          } catch (err) {
+            _iterator10.e(err);
+          } finally {
+            _iterator10.f();
           }
+        }
+      }, {
+        key: "cambiarColor",
+        value: function cambiarColor(producto) {
+          var color = document.getElementById(producto.id);
 
-          this.productoPagina.tiempoFin = 23 - horas + ':' + (59 - minutos) + ':' + (59 - segundos);
+          if (color != null) {
+            color.style.backgroundColor = "#FF9999";
+          }
+        }
+      }, {
+        key: "marcarDestacado",
+        value: function marcarDestacado(producto) {
+          var color = document.getElementById(producto.id);
 
-          if (comprobar >= 86400000) {
-            this.EliminarProducto(this.productoPagina);
+          if (color != null) {
+            color.style.backgroundColor = "#99CCFF";
+          }
+        }
+      }, {
+        key: "cambiarColorDestacado",
+        value: function cambiarColorDestacado(producto) {
+          var color = document.getElementById(producto.id);
+
+          if (color != null) {
+            color.style.backgroundColor = "#CC99FF";
           }
         }
       }, {
@@ -2673,12 +2901,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 this.productoPagina.ultimoPujador = usuarioActivo.displayName;
                 this.servicio.editProducto(this.productoPagina);
 
-                var _iterator10 = _createForOfIteratorHelper(this.usuarios),
-                    _step10;
+                var _iterator11 = _createForOfIteratorHelper(this.usuarios),
+                    _step11;
 
                 try {
-                  for (_iterator10.s(); !(_step10 = _iterator10.n()).done;) {
-                    var p = _step10.value;
+                  for (_iterator11.s(); !(_step11 = _iterator11.n()).done;) {
+                    var p = _step11.value;
 
                     if (p.email == usuarioActivo.email) {
                       if (!p.pujas.includes(this.id)) {
@@ -2690,9 +2918,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     }
                   }
                 } catch (err) {
-                  _iterator10.e(err);
+                  _iterator11.e(err);
                 } finally {
-                  _iterator10.f();
+                  _iterator11.f();
                 }
 
                 this.usuarioNuevo.email = usuarioActivo.email;
@@ -2934,12 +3162,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "iniciarSesion",
         value: function iniciarSesion() {
-          var _iterator11 = _createForOfIteratorHelper(this.usuarios),
-              _step11;
+          var _iterator12 = _createForOfIteratorHelper(this.usuarios),
+              _step12;
 
           try {
-            for (_iterator11.s(); !(_step11 = _iterator11.n()).done;) {
-              var usuario = _step11.value;
+            for (_iterator12.s(); !(_step12 = _iterator12.n()).done;) {
+              var usuario = _step12.value;
 
               if (usuario.email == this.usuario.email) {
                 if (usuario.password == this.usuario.password) {
@@ -2952,9 +3180,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               }
             }
           } catch (err) {
-            _iterator11.e(err);
+            _iterator12.e(err);
           } finally {
-            _iterator11.f();
+            _iterator12.f();
           }
 
           alert("No hay ningún usuario con ese email");
@@ -3011,7 +3239,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = ".cajaIntroduccion {\n  height: 500px;\n  color: white;\n  background: radial-gradient(black 3px, transparent 4px), radial-gradient(black 3px, transparent 4px), linear-gradient(#fff 4px, transparent 0), linear-gradient(45deg, transparent 74px, transparent 75px, #a4a4a4 75px, #a4a4a4 76px, transparent 77px, transparent 109px), linear-gradient(-45deg, transparent 75px, transparent 76px, #a4a4a4 76px, #a4a4a4 77px, transparent 78px, transparent 109px), #fff;\n  background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;\n  background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;\n}\n\n.jumbotron {\n  background-color: #ff3131;\n}\n\n.col-sm-4 {\n  background-color: #ff3131;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3VjM20vRXNjcml0b3Jpby9BdWN0aW9uZWVyL3NyYy9hcHAvcHJlc2VudGFjaW9uL3ByZXNlbnRhY2lvbi5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvcHJlc2VudGFjaW9uL3ByZXNlbnRhY2lvbi5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGFBQUE7RUFDQSxZQUFBO0VBQ0EsK1lBQ0E7RUFNRiw2RUFBQTtFQUNBLGtFQUFBO0FDTEY7O0FET0E7RUFDRSx5QkFBQTtBQ0pGOztBRE1BO0VBQ0UseUJBQUE7QUNIRiIsImZpbGUiOiJzcmMvYXBwL3ByZXNlbnRhY2lvbi9wcmVzZW50YWNpb24uY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY2FqYUludHJvZHVjY2lvbiB7XG4gICAgaGVpZ2h0OiA1MDBweDtcbiAgICBjb2xvcjogd2hpdGU7XG4gICAgYmFja2dyb3VuZDogXG4gICAgcmFkaWFsLWdyYWRpZW50KGJsYWNrIDNweCwgdHJhbnNwYXJlbnQgNHB4KSxcbiAgICByYWRpYWwtZ3JhZGllbnQoYmxhY2sgM3B4LCB0cmFuc3BhcmVudCA0cHgpLFxuICAgIGxpbmVhci1ncmFkaWVudCgjZmZmIDRweCwgdHJhbnNwYXJlbnQgMCksXG4gICAgbGluZWFyLWdyYWRpZW50KDQ1ZGVnLCB0cmFuc3BhcmVudCA3NHB4LCB0cmFuc3BhcmVudCA3NXB4LCAjYTRhNGE0IDc1cHgsICNhNGE0YTQgNzZweCwgdHJhbnNwYXJlbnQgNzdweCwgdHJhbnNwYXJlbnQgMTA5cHgpLFxuICAgIGxpbmVhci1ncmFkaWVudCgtNDVkZWcsIHRyYW5zcGFyZW50IDc1cHgsIHRyYW5zcGFyZW50IDc2cHgsICNhNGE0YTQgNzZweCwgI2E0YTRhNCA3N3B4LCB0cmFuc3BhcmVudCA3OHB4LCB0cmFuc3BhcmVudCAxMDlweCksXG4gICNmZmY7XG4gIGJhY2tncm91bmQtc2l6ZTogMTA5cHggMTA5cHgsIDEwOXB4IDEwOXB4LDEwMCUgNnB4LCAxMDlweCAxMDlweCwgMTA5cHggMTA5cHg7XG4gIGJhY2tncm91bmQtcG9zaXRpb246IDU0cHggNTVweCwgMHB4IDBweCwgMHB4IDBweCwgMHB4IDBweCwgMHB4IDBweDtcbn1cbi5qdW1ib3Ryb257XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYigyNTUsIDQ5LCA0OSk7XG59XG4uY29sLXNtLTR7XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYigyNTUsIDQ5LCA0OSk7XG59XG4iLCIuY2FqYUludHJvZHVjY2lvbiB7XG4gIGhlaWdodDogNTAwcHg7XG4gIGNvbG9yOiB3aGl0ZTtcbiAgYmFja2dyb3VuZDogcmFkaWFsLWdyYWRpZW50KGJsYWNrIDNweCwgdHJhbnNwYXJlbnQgNHB4KSwgcmFkaWFsLWdyYWRpZW50KGJsYWNrIDNweCwgdHJhbnNwYXJlbnQgNHB4KSwgbGluZWFyLWdyYWRpZW50KCNmZmYgNHB4LCB0cmFuc3BhcmVudCAwKSwgbGluZWFyLWdyYWRpZW50KDQ1ZGVnLCB0cmFuc3BhcmVudCA3NHB4LCB0cmFuc3BhcmVudCA3NXB4LCAjYTRhNGE0IDc1cHgsICNhNGE0YTQgNzZweCwgdHJhbnNwYXJlbnQgNzdweCwgdHJhbnNwYXJlbnQgMTA5cHgpLCBsaW5lYXItZ3JhZGllbnQoLTQ1ZGVnLCB0cmFuc3BhcmVudCA3NXB4LCB0cmFuc3BhcmVudCA3NnB4LCAjYTRhNGE0IDc2cHgsICNhNGE0YTQgNzdweCwgdHJhbnNwYXJlbnQgNzhweCwgdHJhbnNwYXJlbnQgMTA5cHgpLCAjZmZmO1xuICBiYWNrZ3JvdW5kLXNpemU6IDEwOXB4IDEwOXB4LCAxMDlweCAxMDlweCwgMTAwJSA2cHgsIDEwOXB4IDEwOXB4LCAxMDlweCAxMDlweDtcbiAgYmFja2dyb3VuZC1wb3NpdGlvbjogNTRweCA1NXB4LCAwcHggMHB4LCAwcHggMHB4LCAwcHggMHB4LCAwcHggMHB4O1xufVxuXG4uanVtYm90cm9uIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmMzEzMTtcbn1cblxuLmNvbC1zbS00IHtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmMzEzMTtcbn0iXX0= */";
+    __webpack_exports__["default"] = ".cajaIntroduccion {\n  height: 500px;\n  color: white;\n  background: radial-gradient(black 3px, transparent 4px), radial-gradient(black 3px, transparent 4px), linear-gradient(#fff 4px, transparent 0), linear-gradient(45deg, transparent 74px, transparent 75px, #a4a4a4 75px, #a4a4a4 76px, transparent 77px, transparent 109px), linear-gradient(-45deg, transparent 75px, transparent 76px, #a4a4a4 76px, #a4a4a4 77px, transparent 78px, transparent 109px), #fff;\n  background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;\n  background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;\n}\n\n.jumbotron {\n  background-color: #bd2727;\n}\n\n.col-sm-4 {\n  background-color: #bd2727;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3VjM20vRXNjcml0b3Jpby9BdWN0aW9uZWVyL3NyYy9hcHAvcHJlc2VudGFjaW9uL3ByZXNlbnRhY2lvbi5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvcHJlc2VudGFjaW9uL3ByZXNlbnRhY2lvbi5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGFBQUE7RUFDQSxZQUFBO0VBQ0EsK1lBQ0E7RUFNRiw2RUFBQTtFQUNBLGtFQUFBO0FDTEY7O0FET0E7RUFDRSx5QkFBQTtBQ0pGOztBRE1BO0VBQ0UseUJBQUE7QUNIRiIsImZpbGUiOiJzcmMvYXBwL3ByZXNlbnRhY2lvbi9wcmVzZW50YWNpb24uY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY2FqYUludHJvZHVjY2lvbiB7XG4gICAgaGVpZ2h0OiA1MDBweDtcbiAgICBjb2xvcjogd2hpdGU7XG4gICAgYmFja2dyb3VuZDogXG4gICAgcmFkaWFsLWdyYWRpZW50KGJsYWNrIDNweCwgdHJhbnNwYXJlbnQgNHB4KSxcbiAgICByYWRpYWwtZ3JhZGllbnQoYmxhY2sgM3B4LCB0cmFuc3BhcmVudCA0cHgpLFxuICAgIGxpbmVhci1ncmFkaWVudCgjZmZmIDRweCwgdHJhbnNwYXJlbnQgMCksXG4gICAgbGluZWFyLWdyYWRpZW50KDQ1ZGVnLCB0cmFuc3BhcmVudCA3NHB4LCB0cmFuc3BhcmVudCA3NXB4LCAjYTRhNGE0IDc1cHgsICNhNGE0YTQgNzZweCwgdHJhbnNwYXJlbnQgNzdweCwgdHJhbnNwYXJlbnQgMTA5cHgpLFxuICAgIGxpbmVhci1ncmFkaWVudCgtNDVkZWcsIHRyYW5zcGFyZW50IDc1cHgsIHRyYW5zcGFyZW50IDc2cHgsICNhNGE0YTQgNzZweCwgI2E0YTRhNCA3N3B4LCB0cmFuc3BhcmVudCA3OHB4LCB0cmFuc3BhcmVudCAxMDlweCksXG4gICNmZmY7XG4gIGJhY2tncm91bmQtc2l6ZTogMTA5cHggMTA5cHgsIDEwOXB4IDEwOXB4LDEwMCUgNnB4LCAxMDlweCAxMDlweCwgMTA5cHggMTA5cHg7XG4gIGJhY2tncm91bmQtcG9zaXRpb246IDU0cHggNTVweCwgMHB4IDBweCwgMHB4IDBweCwgMHB4IDBweCwgMHB4IDBweDtcbn1cbi5qdW1ib3Ryb257XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYigxODksIDM5LCAzOSk7O1xufVxuLmNvbC1zbS00e1xuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMTg5LCAzOSwgMzkpO1xufVxuIiwiLmNhamFJbnRyb2R1Y2Npb24ge1xuICBoZWlnaHQ6IDUwMHB4O1xuICBjb2xvcjogd2hpdGU7XG4gIGJhY2tncm91bmQ6IHJhZGlhbC1ncmFkaWVudChibGFjayAzcHgsIHRyYW5zcGFyZW50IDRweCksIHJhZGlhbC1ncmFkaWVudChibGFjayAzcHgsIHRyYW5zcGFyZW50IDRweCksIGxpbmVhci1ncmFkaWVudCgjZmZmIDRweCwgdHJhbnNwYXJlbnQgMCksIGxpbmVhci1ncmFkaWVudCg0NWRlZywgdHJhbnNwYXJlbnQgNzRweCwgdHJhbnNwYXJlbnQgNzVweCwgI2E0YTRhNCA3NXB4LCAjYTRhNGE0IDc2cHgsIHRyYW5zcGFyZW50IDc3cHgsIHRyYW5zcGFyZW50IDEwOXB4KSwgbGluZWFyLWdyYWRpZW50KC00NWRlZywgdHJhbnNwYXJlbnQgNzVweCwgdHJhbnNwYXJlbnQgNzZweCwgI2E0YTRhNCA3NnB4LCAjYTRhNGE0IDc3cHgsIHRyYW5zcGFyZW50IDc4cHgsIHRyYW5zcGFyZW50IDEwOXB4KSwgI2ZmZjtcbiAgYmFja2dyb3VuZC1zaXplOiAxMDlweCAxMDlweCwgMTA5cHggMTA5cHgsIDEwMCUgNnB4LCAxMDlweCAxMDlweCwgMTA5cHggMTA5cHg7XG4gIGJhY2tncm91bmQtcG9zaXRpb246IDU0cHggNTVweCwgMHB4IDBweCwgMHB4IDBweCwgMHB4IDBweCwgMHB4IDBweDtcbn1cblxuLmp1bWJvdHJvbiB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNiZDI3Mjc7XG59XG5cbi5jb2wtc20tNCB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNiZDI3Mjc7XG59Il19 */";
     /***/
   },
 
@@ -3170,12 +3398,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "agregarUsuario",
         value: function agregarUsuario() {
-          var _iterator12 = _createForOfIteratorHelper(this.usuarios),
-              _step12;
+          var _iterator13 = _createForOfIteratorHelper(this.usuarios),
+              _step13;
 
           try {
-            for (_iterator12.s(); !(_step12 = _iterator12.n()).done;) {
-              var usuario = _step12.value;
+            for (_iterator13.s(); !(_step13 = _iterator13.n()).done;) {
+              var usuario = _step13.value;
 
               if (usuario.nombreUsuario == this.usuario.nombreUsuario) {
                 alert("Ya exite un usuario con ese nombre");
@@ -3188,9 +3416,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               }
             }
           } catch (err) {
-            _iterator12.e(err);
+            _iterator13.e(err);
           } finally {
-            _iterator12.f();
+            _iterator13.f();
           }
 
           this.registroServicio.addUsuario(this.usuario);
