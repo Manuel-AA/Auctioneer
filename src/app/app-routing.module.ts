@@ -21,7 +21,7 @@ const routes: Routes = [
   { path: 'conocenos', component: ConocerComponent},
   { path: 'perfil/:id', component: PerfilComponent},
   { path: '', component: PresentacionComponent,pathMatch:'full'},
-  { path:'**',redirectTo:'/',pathMatch:'full'} /*redirigir a una pagina error 404 (crear otro componente)*/
+  { path:'**',redirectTo:'/',pathMatch:'full'} 
 ];
 
 @NgModule({

@@ -17,3 +17,57 @@
     width: 2.5%;
     margin-left: 22.5%;
 }
+
+@media screen and (max-width:760px)
+{
+    #icono1 {
+        width: 5%;
+        margin-left: 21%;
+    }
+    
+    #icono2 {
+        width: 5%;
+        margin-left: 21%;
+    }
+    
+    #icono3 {
+        width: 5%;
+        margin-left: 21%;
+    }
+}
+
+@media screen and (max-width:500px)
+{
+    #icono1 {
+        width: 7%;
+        margin-left: 19%;
+    }
+    
+    #icono2 {
+        width: 7%;
+        margin-left: 19%;
+    }
+    
+    #icono3 {
+        width: 7%;
+        margin-left: 19%;
+    }
+}
+
+@media screen and (max-width:360px)
+{
+    #icono1 {
+        width: 10%;
+        margin-left: 17%;
+    }
+    
+    #icono2 {
+        width: 10%;
+        margin-left: 17%;
+    }
+    
+    #icono3 {
+        width: 10%;
+        margin-left: 17%;
+    }
+}

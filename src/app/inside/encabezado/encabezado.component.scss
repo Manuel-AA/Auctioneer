@@ -24,3 +24,49 @@
 .opcionNav {
     cursor: pointer;
 }
+
+@media screen and (max-width:1280px)
+{
+    
+    #btn1 {
+        margin-left: 19%;
+        
+    }
+}
+
+@media screen and (max-width:760px)
+{
+    .logo {
+        margin-left: 38%;
+    }
+    #btn1 {
+        margin-top: 5%;
+        margin-left: 11%;
+        
+    }
+}
+
+@media screen and (max-width:500px)
+{
+    .logo {
+        margin-left: 10%;
+    }
+    #btn1 {
+        margin-top: 7%;
+        margin-left: 11%;
+        
+    }
+}
+
+@media screen and (max-width:360px)
+{
+    .logo {
+        margin-left: 0%;
+    }
+    
+    #btn1 {
+        margin-top: 12%;
+        margin-left: 0%;
+        
+    }
+} 

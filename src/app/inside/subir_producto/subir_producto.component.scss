@@ -20,3 +20,16 @@
 .datos1 {
     width: 45%;
 }
+
+@media screen and (max-width:500px)
+{
+    .cajaFormulario{
+        width: 90%;
+        margin-left: 1em;
+        margin-top: 1em;
+    }
+
+    #botonInicio{
+        margin-bottom: 2em;
+    }
+}

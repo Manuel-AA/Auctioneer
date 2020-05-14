@@ -34,3 +34,56 @@
     border: 2px solid red;
     cursor: pointer;
 }
+
+.dropdown-item{
+    cursor: pointer;
+}
+
+@media screen and (max-width:1280px)
+{
+    #dropdownMenuButton{
+        margin-top: 0em;
+        margin-bottom: 1em;
+        margin-right: 0em;
+        margin-left: -3em;
+    }
+    .form-control{
+        margin-left: 1em; 
+    }
+}
+
+@media screen and (max-width:760px)
+{
+    #dropdownMenuButton{
+        margin-top: 0em;
+        margin-bottom: 1em;
+        margin-right: 2em;
+        margin-left: 0em;
+    }
+}
+
+@media screen and (max-width:500px)
+{
+    #dropdownMenuButton{
+        margin-top: 0em;
+        margin-bottom: 1em;
+        margin-right: 0em;
+        margin-left: 7em;
+    }
+    .form-control{
+        margin-left: -2em; 
+    }
+}
+
+@media screen and (max-width:360px)
+{
+    #dropdownMenuButton{
+        margin-top: 0em;
+        margin-bottom: 1em;
+        margin-right: 0em;
+        margin-left: 5em;
+    }
+    .form-control{
+        margin-left: -3em; 
+    }
+}
